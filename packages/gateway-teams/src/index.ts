@@ -6,12 +6,11 @@
  * @public
  */
 
+// Re-export for consumer ergonomics.
+export type { TeamsMessageEvent } from "@getloopscale/gateway";
 export { TeamsAdapter } from "./adapter.js";
-export type { TeamsAdapterOptions } from "./types.js";
 
 export { mapTeamsError } from "./errors.js";
 export { normalizeTeamsActivity, stripTeamsMentions } from "./normalize.js";
 export { splitForTeams } from "./split.js";
-
-// Re-export for consumer ergonomics.
-export type { TeamsMessageEvent } from "@getloopscale/gateway";
+export type { TeamsAdapterOptions } from "./types.js";
