@@ -2,6 +2,7 @@
  * Typed errors for `@getloopscale/gateway-matrix`.
  */
 
+/** @knipignore — public input shape for `ConfigurationError` constructor (caller-extensible). */
 export interface ConfigurationErrorOptions {
   readonly code: string;
   readonly message?: string;
