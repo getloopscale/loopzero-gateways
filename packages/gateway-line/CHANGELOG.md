@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.0.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @getloopscale/sdk@1.3.0
+  - @getloopscale/gateway@2.0.0
+
+## 1.0.0
+
+### Patch Changes
+
+- Updated dependencies
+  - @getloopscale/sdk@1.2.0
+  - @getloopscale/gateway@1.0.0
+
 ## [Unreleased]
 
 ### Added — `@getloopscale/gateway-line@0.1.0` (ADRs D405-D412)
