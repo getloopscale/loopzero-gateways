@@ -1,4 +1,4 @@
-import type { MessageEvent } from "@getloopscale/gateway";
+import type { MessageEvent } from "@getloopscale/loopzero-gateway";
 import { describe, expect, it, vi } from "vitest";
 
 import { MatrixAdapter } from "../src/adapter.js";

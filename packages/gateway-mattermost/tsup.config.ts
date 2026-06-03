@@ -11,5 +11,5 @@ export default defineConfig({
   outDir: "dist",
   target: "node22",
   platform: "node",
-  external: ["@getloopscale/gateway", "@getloopscale/sdk", "@mattermost/client", "ws"],
+  external: ["@getloopscale/loopzero-gateway", "@getloopscale/loopzero-sdk", "@mattermost/client", "ws"],
 });

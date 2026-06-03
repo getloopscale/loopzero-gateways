@@ -1,14 +1,14 @@
 /**
- * `@getloopscale/gateway-whatsapp` — public API.
+ * `@getloopscale/loopzero-gateway-whatsapp` — public API.
  *
- * Multi-backend (Cloud + Web) WhatsApp adapter for `@getloopscale/gateway`.
+ * Multi-backend (Cloud + Web) WhatsApp adapter for `@getloopscale/loopzero-gateway`.
  * See README for setup walkthroughs.
  *
  * @public
  */
 
 // Re-export the MessageEvent variant for consumer-side ergonomics.
-export type { WhatsAppMessageEvent } from "@getloopscale/gateway";
+export type { WhatsAppMessageEvent } from "@getloopscale/loopzero-gateway";
 export {
   digitsOnly,
   WhatsAppAdapter,

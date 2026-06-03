@@ -1,4 +1,4 @@
-import type { MessageEvent } from "@getloopscale/gateway";
+import type { MessageEvent } from "@getloopscale/loopzero-gateway";
 import { describe, expect, it, vi } from "vitest";
 
 import { LineAdapter } from "../src/adapter.js";

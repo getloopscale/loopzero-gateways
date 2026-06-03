@@ -5,23 +5,23 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.3.0
+  - @getloopscale/loopzero-sdk@1.3.0
 
 ## 1.0.0
 
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.2.0
+  - @getloopscale/loopzero-sdk@1.2.0
 
 ## [Unreleased]
 
 ### Added — Tier 1 Expansion variants (T0.1, ADRs D389/D397/D405/D413)
 
-- `SMSMessageEvent` variant added to the `MessageEvent` discriminated union. Required for `@getloopscale/gateway-sms`.
-- `MattermostMessageEvent` variant added to the `MessageEvent` discriminated union. Required for `@getloopscale/gateway-mattermost`.
-- `LineMessageEvent` variant added to the `MessageEvent` discriminated union. Required for `@getloopscale/gateway-line`.
-- `MatrixMessageEvent` variant added to the `MessageEvent` discriminated union. Required for `@getloopscale/gateway-matrix`.
+- `SMSMessageEvent` variant added to the `MessageEvent` discriminated union. Required for `@getloopscale/loopzero-gateway-sms`.
+- `MattermostMessageEvent` variant added to the `MessageEvent` discriminated union. Required for `@getloopscale/loopzero-gateway-mattermost`.
+- `LineMessageEvent` variant added to the `MessageEvent` discriminated union. Required for `@getloopscale/loopzero-gateway-line`.
+- `MatrixMessageEvent` variant added to the `MessageEvent` discriminated union. Required for `@getloopscale/loopzero-gateway-matrix`.
 - `PlatformName` union opened to include `"sms" | "mattermost" | "line" | "matrix"` (10 platforms total).
 
 ### Changed
@@ -32,7 +32,7 @@
 
 ### Added
 
-- `EmailMessageEvent` variant added to the `MessageEvent` discriminated union (ADR D339). Required for `@getloopscale/gateway-email`.
+- `EmailMessageEvent` variant added to the `MessageEvent` discriminated union (ADR D339). Required for `@getloopscale/loopzero-gateway-email`.
 - `PlatformName` union opened to include `"email"`.
 
 ### Changed
@@ -43,7 +43,7 @@
 
 ### Added
 
-- `TeamsMessageEvent` variant added to the `MessageEvent` discriminated union (ADR D325). Required for `@getloopscale/gateway-teams`.
+- `TeamsMessageEvent` variant added to the `MessageEvent` discriminated union (ADR D325). Required for `@getloopscale/loopzero-gateway-teams`.
 - `PlatformName` union opened to include `"teams"`.
 
 ### Changed
@@ -54,7 +54,7 @@
 
 ### Added
 
-- `WhatsAppMessageEvent` variant added to the `MessageEvent` discriminated union (ADR D308). Required for `@getloopscale/gateway-whatsapp`.
+- `WhatsAppMessageEvent` variant added to the `MessageEvent` discriminated union (ADR D308). Required for `@getloopscale/loopzero-gateway-whatsapp`.
 - `PlatformName` union opened to include `"whatsapp"`.
 
 ### Changed
@@ -65,7 +65,7 @@
 
 ### Added
 
-- Initial release. Core gateway primitives for `@getloopscale/sdk`.
+- Initial release. Core gateway primitives for `@getloopscale/loopzero-sdk`.
 - `BasePlatformAdapter` abstract class — contract for transport adapters (ADR D172).
 - `MessageEvent` discriminated union with `platform` discriminator (ADR D173).
 - `GatewayRunner` — top-level orchestrator with drain timeout on `stop()` (EC-E).
@@ -74,4 +74,4 @@
 - `HookExecutor` with `pre_inbound` / `post_outbound` / `on_error` (ADRs D176, D177).
 - `ctx.reply` auto-routes to the adapter matching `event.platform` (EC-G).
 - `{ block: true, message }` from `pre_inbound` triggers auto-reply before short-circuit (EC-D).
-- All runner error log paths wrap text in `Security.redact(...)` from `@getloopscale/sdk` (EC-F, ADR D68).
+- All runner error log paths wrap text in `Security.redact(...)` from `@getloopscale/loopzero-sdk` (EC-F, ADR D68).

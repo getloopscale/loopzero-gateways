@@ -1,7 +1,7 @@
 {
-  "name": "@getloopscale/gateway-slack",
+  "name": "@getloopscale/loopzero-gateway-slack",
   "version": "0.1.0",
-  "description": "Slack (@slack/bolt) platform adapter for @getloopscale/gateway. ADRs D267-D285.",
+  "description": "Slack (@slack/bolt) platform adapter for @getloopscale/loopzero-gateway. ADRs D267-D285.",
   "license": "Apache-2.0",
   "type": "module",
   "engines": {
@@ -34,13 +34,13 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/gateway": "workspace:^",
-    "@getloopscale/sdk": "workspace:^",
+    "@getloopscale/loopzero-gateway": "workspace:^",
+    "@getloopscale/loopzero-sdk": "workspace:^",
     "@slack/bolt": "^3.20.0"
   },
   "devDependencies": {
-    "@getloopscale/gateway": "workspace:*",
-    "@getloopscale/sdk": "workspace:*",
+    "@getloopscale/loopzero-gateway": "workspace:*",
+    "@getloopscale/loopzero-sdk": "workspace:*",
     "@slack/bolt": "^3.20.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8.0",

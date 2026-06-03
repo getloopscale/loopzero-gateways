@@ -1,13 +1,13 @@
-# @getloopscale/gateway-telegram
+# @getloopscale/loopzero-gateway-telegram
 
-Telegram platform adapter for `@getloopscale/gateway`. Wraps [grammy](https://grammy.dev/) in the `BasePlatformAdapter` contract.
+Telegram platform adapter for `@getloopscale/loopzero-gateway`. Wraps [grammy](https://grammy.dev/) in the `BasePlatformAdapter` contract.
 
 > **Status: 0.1.0 — pre-release.**
 
 ## Install
 
 ```bash
-pnpm add @getloopscale/gateway-telegram @getloopscale/gateway @getloopscale/sdk grammy
+pnpm add @getloopscale/loopzero-gateway-telegram @getloopscale/loopzero-gateway @getloopscale/loopzero-sdk grammy
 ```
 
 `grammy` is a peer dep — install the version your bot needs.
@@ -15,8 +15,8 @@ pnpm add @getloopscale/gateway-telegram @getloopscale/gateway @getloopscale/sdk 
 ## Usage
 
 ```typescript
-import { GatewayRunner } from "@getloopscale/gateway";
-import { TelegramAdapter } from "@getloopscale/gateway-telegram";
+import { GatewayRunner } from "@getloopscale/loopzero-gateway";
+import { TelegramAdapter } from "@getloopscale/loopzero-gateway-telegram";
 
 const adapter = new TelegramAdapter({
   token: process.env.TELEGRAM_BOT_TOKEN!,

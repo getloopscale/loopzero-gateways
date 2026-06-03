@@ -2,7 +2,7 @@
  * `WhatsAppAdapter` tests (T1.4 + EC-7, EC-8 absorbed).
  */
 
-import { BasePlatformAdapter } from "@getloopscale/gateway";
+import { BasePlatformAdapter } from "@getloopscale/loopzero-gateway";
 import { describe, expect, it, vi } from "vitest";
 
 import { digitsOnly, WhatsAppAdapter } from "../src/adapter.js";

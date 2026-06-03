@@ -14,7 +14,7 @@
  * @internal
  */
 
-import type { SlackMessageEvent } from "@getloopscale/gateway";
+import type { SlackMessageEvent } from "@getloopscale/loopzero-gateway";
 
 export interface BoltMessageBody {
   event: {

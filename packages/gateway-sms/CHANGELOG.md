@@ -5,22 +5,22 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.3.0
-  - @getloopscale/gateway@2.0.0
+  - @getloopscale/loopzero-sdk@1.3.0
+  - @getloopscale/loopzero-gateway@2.0.0
 
 ## 1.0.0
 
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.2.0
-  - @getloopscale/gateway@1.0.0
+  - @getloopscale/loopzero-sdk@1.2.0
+  - @getloopscale/loopzero-gateway@1.0.0
 
 ## [Unreleased]
 
-### Added — `@getloopscale/gateway-sms@0.1.0` (ADRs D389-D396)
+### Added — `@getloopscale/loopzero-gateway-sms@0.1.0` (ADRs D389-D396)
 
-- Initial release of the SMS platform adapter for `@getloopscale/gateway`.
+- Initial release of the SMS platform adapter for `@getloopscale/loopzero-gateway`.
 - Multi-backend opt-in: Twilio + Plivo + Vonage (D389). Each peer-dep is optional; install only what you use.
 - `SMSAdapter` extending `BasePlatformAdapter` with:
   - `connect()` / `disconnect()` lifecycle (idempotent)

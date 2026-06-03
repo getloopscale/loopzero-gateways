@@ -1,22 +1,22 @@
-# @getloopscale/gateway-matrix
+# @getloopscale/loopzero-gateway-matrix
 
-Matrix protocol platform adapter for [`@getloopscale/gateway`](../gateway).
+Matrix protocol platform adapter for [`@getloopscale/loopzero-gateway`](../gateway).
 
 Decentralized federation. Works with matrix.org, element.io, self-hosted Synapse/Dendrite, etc. Bot in `@bot:matrix.org` can receive from `@alice:element.io` via federation built-in.
 
 ## Install
 
 ```bash
-pnpm add @getloopscale/sdk @getloopscale/gateway @getloopscale/gateway-matrix
+pnpm add @getloopscale/loopzero-sdk @getloopscale/loopzero-gateway @getloopscale/loopzero-gateway-matrix
 pnpm add matrix-js-sdk  # ~2MB peer-dep
 ```
 
 ## Quick start
 
 ```ts
-import { Agent } from "@getloopscale/sdk";
-import { GatewayRunner } from "@getloopscale/gateway";
-import { MatrixAdapter } from "@getloopscale/gateway-matrix";
+import { Agent } from "@getloopscale/loopzero-sdk";
+import { GatewayRunner } from "@getloopscale/loopzero-gateway";
+import { MatrixAdapter } from "@getloopscale/loopzero-gateway-matrix";
 
 const adapter = new MatrixAdapter({
   homeserverUrl: "https://matrix.org",

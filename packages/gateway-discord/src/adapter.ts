@@ -1,5 +1,5 @@
 /**
- * `DiscordAdapter` — wraps discord.js in the `@getloopscale/gateway`
+ * `DiscordAdapter` — wraps discord.js in the `@getloopscale/loopzero-gateway`
  * `BasePlatformAdapter` contract (T6.1, ADRs D171, D179).
  *
  * - `connect()` calls `client.login(token)` and awaits the `ready` event.
@@ -11,8 +11,8 @@
  * @public
  */
 
-import type { DiscordMessageEvent, MessageEvent as GatewayMessageEvent } from "@getloopscale/gateway";
-import { BasePlatformAdapter, type OutboundMessage, type SendResult } from "@getloopscale/gateway";
+import type { DiscordMessageEvent, MessageEvent as GatewayMessageEvent } from "@getloopscale/loopzero-gateway";
+import { BasePlatformAdapter, type OutboundMessage, type SendResult } from "@getloopscale/loopzero-gateway";
 import { Client, DiscordAPIError, Events, GatewayIntentBits, type Message } from "discord.js";
 
 export interface DiscordAdapterOptions {

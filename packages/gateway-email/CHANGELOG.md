@@ -5,22 +5,22 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.3.0
-  - @getloopscale/gateway@2.0.0
+  - @getloopscale/loopzero-sdk@1.3.0
+  - @getloopscale/loopzero-gateway@2.0.0
 
 ## 1.0.0
 
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.2.0
-  - @getloopscale/gateway@1.0.0
+  - @getloopscale/loopzero-sdk@1.2.0
+  - @getloopscale/loopzero-gateway@1.0.0
 
 ## [0.1.0] - 2026-05-24
 
 ### Added
 
-- Initial release. Email platform adapter for `@getloopscale/gateway` (Roadmap v1.4 #4).
+- Initial release. Email platform adapter for `@getloopscale/loopzero-gateway` (Roadmap v1.4 #4).
 - `EmailAdapter` extending `BasePlatformAdapter` (ADRs D327-D339).
 - Community-standard stack: `nodemailer@^8` (SMTP) + `imapflow@^1` (IMAP IDLE) + `mailparser@^3` (RFC 5322).
 - IMAP IDLE preferred, 15s polling fallback (D328).

@@ -8,7 +8,7 @@
  * @internal
  */
 
-import type { SMSMessageEvent } from "@getloopscale/gateway";
+import type { SMSMessageEvent } from "@getloopscale/loopzero-gateway";
 
 import type { SMSInbound } from "./backend-types.js";
 

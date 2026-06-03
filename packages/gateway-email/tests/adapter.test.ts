@@ -4,7 +4,7 @@
  * Uses fake `IImapClient` + `ISmtpClient` injected via `__imapFactory` / `__smtpFactory`.
  */
 
-import { BasePlatformAdapter, type MessageEvent } from "@getloopscale/gateway";
+import { BasePlatformAdapter, type MessageEvent } from "@getloopscale/loopzero-gateway";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { EmailAdapter } from "../src/adapter.js";

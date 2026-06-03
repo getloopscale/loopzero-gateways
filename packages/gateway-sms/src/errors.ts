@@ -1,5 +1,5 @@
 /**
- * Typed errors for `@getloopscale/gateway-sms` (D389-D396).
+ * Typed errors for `@getloopscale/loopzero-gateway-sms` (D389-D396).
  *
  * - `ConfigurationError` — programmer error at construction time
  *   (missing signing secret, missing backend SDK install, malformed

@@ -5,22 +5,22 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.3.0
-  - @getloopscale/gateway@2.0.0
+  - @getloopscale/loopzero-sdk@1.3.0
+  - @getloopscale/loopzero-gateway@2.0.0
 
 ## 1.0.0
 
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.2.0
-  - @getloopscale/gateway@1.0.0
+  - @getloopscale/loopzero-sdk@1.2.0
+  - @getloopscale/loopzero-gateway@1.0.0
 
 ## [Unreleased]
 
-### Added — `@getloopscale/gateway-mattermost@0.1.0` (ADRs D397-D404)
+### Added — `@getloopscale/loopzero-gateway-mattermost@0.1.0` (ADRs D397-D404)
 
-- Initial release of the Mattermost platform adapter for `@getloopscale/gateway`.
+- Initial release of the Mattermost platform adapter for `@getloopscale/loopzero-gateway`.
 - `@mattermost/client@^9.0.0` peer-dep (modern v4 REST + WebSocket gateway).
 - `MattermostAdapter` extending `BasePlatformAdapter`:
   - `connect()` initializes Client4 + WebSocketClient; caches bot userId via `getMe()`.

@@ -1,13 +1,13 @@
 /**
- * `@getloopscale/gateway-teams` — public API.
+ * `@getloopscale/loopzero-gateway-teams` — public API.
  *
- * Microsoft Teams adapter for `@getloopscale/gateway`, built on `@microsoft/teams.apps@^2`.
+ * Microsoft Teams adapter for `@getloopscale/loopzero-gateway`, built on `@microsoft/teams.apps@^2`.
  *
  * @public
  */
 
 // Re-export for consumer ergonomics.
-export type { TeamsMessageEvent } from "@getloopscale/gateway";
+export type { TeamsMessageEvent } from "@getloopscale/loopzero-gateway";
 export { TeamsAdapter } from "./adapter.js";
 
 export { mapTeamsError } from "./errors.js";

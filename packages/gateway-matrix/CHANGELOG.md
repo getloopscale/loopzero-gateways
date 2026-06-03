@@ -5,22 +5,22 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.3.0
-  - @getloopscale/gateway@2.0.0
+  - @getloopscale/loopzero-sdk@1.3.0
+  - @getloopscale/loopzero-gateway@2.0.0
 
 ## 1.0.0
 
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.2.0
-  - @getloopscale/gateway@1.0.0
+  - @getloopscale/loopzero-sdk@1.2.0
+  - @getloopscale/loopzero-gateway@1.0.0
 
 ## [Unreleased]
 
-### Added — `@getloopscale/gateway-matrix@0.1.0` (ADRs D413-D421)
+### Added — `@getloopscale/loopzero-gateway-matrix@0.1.0` (ADRs D413-D421)
 
-- Initial release of the Matrix protocol adapter for `@getloopscale/gateway`.
+- Initial release of the Matrix protocol adapter for `@getloopscale/loopzero-gateway`.
 - `matrix-js-sdk@^32.0.0` peer-dep (lazy import — full SDK is ~2MB).
 - `MatrixAdapter` extending `BasePlatformAdapter`:
   - `connect()` initializes `MatrixClient` with `homeserverUrl + accessToken + userId`; starts sync loop with `initialSyncLimit: 10` (D414, D415).

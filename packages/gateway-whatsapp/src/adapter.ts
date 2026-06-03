@@ -1,5 +1,5 @@
 /**
- * `WhatsAppAdapter` — WhatsApp platform adapter for `@getloopscale/gateway`
+ * `WhatsAppAdapter` — WhatsApp platform adapter for `@getloopscale/loopzero-gateway`
  * (Adoption Roadmap v1.4 #2; ADRs D303-D314).
  *
  * Multi-backend (Cloud + Web) — backend chosen via `WhatsAppAdapterOptions.backend`.
@@ -15,7 +15,7 @@ import {
   type OutboundMessage,
   type SendResult,
   type WhatsAppMessageEvent,
-} from "@getloopscale/gateway";
+} from "@getloopscale/loopzero-gateway";
 
 import type {
   WhatsAppBackend,

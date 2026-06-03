@@ -4,7 +4,7 @@
  * @internal
  */
 
-import type { SendResult } from "@getloopscale/gateway";
+import type { SendResult } from "@getloopscale/loopzero-gateway";
 
 interface SlackErrorLike {
   code?: string;

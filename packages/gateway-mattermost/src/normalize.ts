@@ -7,7 +7,7 @@
  * - Posts with `root_id !== ""` → `"thread"` with `topicId = root_id` (D399).
  */
 
-import type { MattermostMessageEvent } from "@getloopscale/gateway";
+import type { MattermostMessageEvent } from "@getloopscale/loopzero-gateway";
 
 import type { MattermostChannel, MattermostPost } from "./types.js";
 

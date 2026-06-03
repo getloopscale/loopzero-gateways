@@ -1,6 +1,6 @@
-# `@getloopscale/gateway-email`
+# `@getloopscale/loopzero-gateway-email`
 
-Email platform adapter for `@getloopscale/gateway`. Built on the community-standard 2026 Node email stack: `nodemailer` (SMTP) + `imapflow` (IMAP IDLE) + `mailparser` (RFC 5322 parsing).
+Email platform adapter for `@getloopscale/loopzero-gateway`. Built on the community-standard 2026 Node email stack: `nodemailer` (SMTP) + `imapflow` (IMAP IDLE) + `mailparser` (RFC 5322 parsing).
 
 Status: **v0.1.0 pre-release**. Pre-1.0 contract per ADR D338 — breaking changes allowed within 0.x.
 

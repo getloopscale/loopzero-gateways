@@ -1,5 +1,5 @@
 /**
- * Typed errors for `@getloopscale/gateway-mattermost`.
+ * Typed errors for `@getloopscale/loopzero-gateway-mattermost`.
  */
 
 /** @knipignore — public input shape for `ConfigurationError` constructor (caller-extensible). */

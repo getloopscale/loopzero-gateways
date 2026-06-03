@@ -1,7 +1,7 @@
 {
-  "name": "@getloopscale/gateway-email",
+  "name": "@getloopscale/loopzero-gateway-email",
   "version": "0.1.0",
-  "description": "Email platform adapter for @getloopscale/gateway. Community-standard 2026 stack: nodemailer + imapflow + mailparser. ADRs D327-D339.",
+  "description": "Email platform adapter for @getloopscale/loopzero-gateway. Community-standard 2026 stack: nodemailer + imapflow + mailparser. ADRs D327-D339.",
   "license": "Apache-2.0",
   "type": "module",
   "engines": {
@@ -35,15 +35,15 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/gateway": "workspace:^",
-    "@getloopscale/sdk": "workspace:^",
+    "@getloopscale/loopzero-gateway": "workspace:^",
+    "@getloopscale/loopzero-sdk": "workspace:^",
     "nodemailer": "^8.0.0",
     "imapflow": "^1.0.0",
     "mailparser": "^3.0.0"
   },
   "devDependencies": {
-    "@getloopscale/gateway": "workspace:*",
-    "@getloopscale/sdk": "workspace:*",
+    "@getloopscale/loopzero-gateway": "workspace:*",
+    "@getloopscale/loopzero-sdk": "workspace:*",
     "@types/nodemailer": "^8.0.0",
     "@types/mailparser": "^3.4.0",
     "imapflow": "^1.3.0",

@@ -1,4 +1,4 @@
-import type { MessageEvent, OutboundMessage } from "@getloopscale/gateway";
+import type { MessageEvent, OutboundMessage } from "@getloopscale/loopzero-gateway";
 import { describe, expect, it, vi } from "vitest";
 
 import { MattermostAdapter, parsePostFromWS } from "../src/adapter.js";

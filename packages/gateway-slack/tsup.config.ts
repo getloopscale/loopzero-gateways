@@ -11,5 +11,5 @@ export default defineConfig({
   outDir: "dist",
   target: "node22",
   platform: "node",
-  external: ["@getloopscale/gateway", "@getloopscale/sdk", "@slack/bolt", "@slack/web-api"],
+  external: ["@getloopscale/loopzero-gateway", "@getloopscale/loopzero-sdk", "@slack/bolt", "@slack/web-api"],
 });

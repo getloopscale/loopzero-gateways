@@ -1,5 +1,5 @@
 /**
- * `SlackAdapter` — Slack platform adapter for `@getloopscale/gateway` (Adoption
+ * `SlackAdapter` — Slack platform adapter for `@getloopscale/loopzero-gateway` (Adoption
  * Roadmap #7; ADRs D267-D285).
  *
  * Transport: Socket Mode via `@slack/bolt` (D267, D268).
@@ -24,7 +24,7 @@ import {
   type MessageEvent as GatewayMessageEvent,
   type OutboundMessage,
   type SendResult,
-} from "@getloopscale/gateway";
+} from "@getloopscale/loopzero-gateway";
 
 import { mapSlackError } from "./errors.js";
 import { type BoltMessageBody, normalizeSlackEvent } from "./normalize.js";

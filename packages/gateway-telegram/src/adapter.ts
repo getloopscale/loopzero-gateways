@@ -1,5 +1,5 @@
 /**
- * `TelegramAdapter` — wraps grammy in the `@getloopscale/gateway`
+ * `TelegramAdapter` — wraps grammy in the `@getloopscale/loopzero-gateway`
  * `BasePlatformAdapter` contract (T5.1, ADR D171).
  *
  * - `connect()` calls `bot.start()` in the background; never throws on
@@ -13,8 +13,8 @@
  * @public
  */
 
-import type { MessageEvent as GatewayMessageEvent, TelegramMessageEvent } from "@getloopscale/gateway";
-import { BasePlatformAdapter, type OutboundMessage, type SendResult } from "@getloopscale/gateway";
+import type { MessageEvent as GatewayMessageEvent, TelegramMessageEvent } from "@getloopscale/loopzero-gateway";
+import { BasePlatformAdapter, type OutboundMessage, type SendResult } from "@getloopscale/loopzero-gateway";
 import { Bot, type Context, GrammyError, HttpError } from "grammy";
 
 import { splitForTelegram } from "./split.js";

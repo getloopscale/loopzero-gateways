@@ -10,7 +10,7 @@ import {
   type MessageEvent as GatewayMessageEvent,
   type OutboundMessage,
   type SendResult,
-} from "@getloopscale/gateway";
+} from "@getloopscale/loopzero-gateway";
 
 import { type LineSdkClient, loadLineSdk, makeClient } from "./client.js";
 import { ConfigurationError } from "./errors.js";

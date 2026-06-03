@@ -1,4 +1,4 @@
-// Public API for @getloopscale/gateway-line (ADRs D405-D412).
+// Public API for @getloopscale/loopzero-gateway-line (ADRs D405-D412).
 
 export { LineAdapter } from "./adapter.js";
 export { ConfigurationError, SDKNotInstalledError } from "./errors.js";

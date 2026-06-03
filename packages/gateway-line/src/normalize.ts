@@ -9,7 +9,7 @@
  * D410: source.type mapping `user` → `dm`; `group`/`room` → `group`.
  */
 
-import type { LineMessageEvent } from "@getloopscale/gateway";
+import type { LineMessageEvent } from "@getloopscale/loopzero-gateway";
 
 import type { LineWebhookEvent } from "./types.js";
 

@@ -1,5 +1,5 @@
 /**
- * `EmailAdapter` — Email platform adapter for `@getloopscale/gateway`
+ * `EmailAdapter` — Email platform adapter for `@getloopscale/loopzero-gateway`
  * (Adoption Roadmap v1.4 #4; ADRs D327-D339).
  *
  * Stack: nodemailer (SMTP) + imapflow (IMAP IDLE) + mailparser (RFC 5322).
@@ -14,7 +14,7 @@ import {
   type MessageEvent as GatewayMessageEvent,
   type OutboundMessage,
   type SendResult,
-} from "@getloopscale/gateway";
+} from "@getloopscale/loopzero-gateway";
 
 import { mapEmailError } from "./errors.js";
 import { isAllowedSender, isAutomatedSender } from "./filters.js";
