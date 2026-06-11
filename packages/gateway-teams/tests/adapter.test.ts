@@ -2,7 +2,7 @@
  * `TeamsAdapter` tests (T1.3 + EC-1, EC-7).
  */
 
-import { BasePlatformAdapter } from "@getloopscale/gateway";
+import { BasePlatformAdapter } from "@getloopscale/loopzero-gateway";
 import { describe, expect, it, vi } from "vitest";
 
 import { TeamsAdapter } from "../src/adapter.js";

@@ -5,7 +5,7 @@
  * @internal
  */
 
-import type { SendResult } from "@getloopscale/gateway";
+import type { SendResult } from "@getloopscale/loopzero-gateway";
 
 /** Canonical inbound shape every backend produces. */
 export interface SMSInbound {

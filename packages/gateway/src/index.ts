@@ -1,4 +1,4 @@
-// Public API for @getloopscale/gateway (Hermes #gateway-port, ADRs D170-D181).
+// Public API for @getloopscale/loopzero-gateway (Hermes #gateway-port, ADRs D170-D181).
 
 // Adapter contract
 export {

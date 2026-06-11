@@ -5,22 +5,22 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.3.0
-  - @getloopscale/gateway@2.0.0
+  - @getloopscale/loopzero-sdk@1.3.0
+  - @getloopscale/loopzero-gateway@2.0.0
 
 ## 1.0.0
 
 ### Patch Changes
 
 - Updated dependencies
-  - @getloopscale/sdk@1.2.0
-  - @getloopscale/gateway@1.0.0
+  - @getloopscale/loopzero-sdk@1.2.0
+  - @getloopscale/loopzero-gateway@1.0.0
 
 ## [Unreleased]
 
-### Added — `@getloopscale/gateway-line@0.1.0` (ADRs D405-D412)
+### Added — `@getloopscale/loopzero-gateway-line@0.1.0` (ADRs D405-D412)
 
-- Initial release of the LINE Messaging API adapter for `@getloopscale/gateway`.
+- Initial release of the LINE Messaging API adapter for `@getloopscale/loopzero-gateway`.
 - `@line/bot-sdk@^9.0.0` peer-dep (lazy import + signature support).
 - Webhook-only transport (D406) — `createWebhookServer({ adapter, path, port })` with raw-body capture, HMAC-SHA256 signature middleware (D408), and 401 BEFORE handler dispatch.
 - LineAdapter extends BasePlatformAdapter:

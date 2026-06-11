@@ -1,7 +1,7 @@
 {
-  "name": "@getloopscale/gateway-sms",
+  "name": "@getloopscale/loopzero-gateway-sms",
   "version": "0.1.0",
-  "description": "SMS platform adapter for @getloopscale/gateway. Multi-backend (Twilio + Plivo + Vonage). ADRs D389-D396.",
+  "description": "SMS platform adapter for @getloopscale/loopzero-gateway. Multi-backend (Twilio + Plivo + Vonage). ADRs D389-D396.",
   "license": "Apache-2.0",
   "type": "module",
   "engines": {
@@ -35,8 +35,8 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/gateway": "workspace:^",
-    "@getloopscale/sdk": "workspace:^",
+    "@getloopscale/loopzero-gateway": "workspace:^",
+    "@getloopscale/loopzero-sdk": "workspace:^",
     "@vonage/server-sdk": "^3.0.0",
     "express": "^4.18.0",
     "libphonenumber-js": "^1.10.0",
@@ -58,12 +58,12 @@
     }
   },
   "devDependencies": {
+    "@getloopscale/loopzero-gateway": "workspace:*",
+    "@getloopscale/loopzero-sdk": "workspace:*",
     "@types/express": "^4.17.0",
-    "@getloopscale/gateway": "workspace:*",
-    "@getloopscale/sdk": "workspace:*",
     "libphonenumber-js": "^1.10.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8.0",
-    "vitest": "^3.0.0"
+    "vitest": "^4.1.8"
   }
 }

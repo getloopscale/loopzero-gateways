@@ -10,7 +10,7 @@ import {
   type MessageEvent as GatewayMessageEvent,
   type OutboundMessage,
   type SendResult,
-} from "@getloopscale/gateway";
+} from "@getloopscale/loopzero-gateway";
 
 import {
   type ConnectOptions,

@@ -1,4 +1,4 @@
-// Public API for @getloopscale/gateway-matrix (ADRs D413-D421).
+// Public API for @getloopscale/loopzero-gateway-matrix (ADRs D413-D421).
 
 export { MatrixAdapter } from "./adapter.js";
 export { AliasCache } from "./alias.js";

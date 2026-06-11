@@ -1,5 +1,5 @@
 /**
- * Typed errors for `@getloopscale/gateway-line`.
+ * Typed errors for `@getloopscale/loopzero-gateway-line`.
  */
 
 /** @knipignore — public input shape for `ConfigurationError` constructor (caller-extensible). */

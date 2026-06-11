@@ -1,6 +1,6 @@
-# @getloopscale/gateway-sms
+# @getloopscale/loopzero-gateway-sms
 
-SMS platform adapter for [`@getloopscale/gateway`](../gateway).
+SMS platform adapter for [`@getloopscale/loopzero-gateway`](../gateway).
 
 Three backends, opt-in via peer-dep:
 
@@ -13,7 +13,7 @@ Three backends, opt-in via peer-dep:
 ## Install
 
 ```bash
-pnpm add @getloopscale/sdk @getloopscale/gateway @getloopscale/gateway-sms
+pnpm add @getloopscale/loopzero-sdk @getloopscale/loopzero-gateway @getloopscale/loopzero-gateway-sms
 
 # Then install ONE of the backends you actually use:
 pnpm add twilio              # for Twilio
@@ -26,9 +26,9 @@ You also need `libphonenumber-js` (E.164 normalization) and `express` (webhook s
 ## Quick start (Twilio)
 
 ```ts
-import { Agent } from "@getloopscale/sdk";
-import { GatewayRunner } from "@getloopscale/gateway";
-import { SMSAdapter, createWebhookServer } from "@getloopscale/gateway-sms";
+import { Agent } from "@getloopscale/loopzero-sdk";
+import { GatewayRunner } from "@getloopscale/loopzero-gateway";
+import { SMSAdapter, createWebhookServer } from "@getloopscale/loopzero-gateway-sms";
 
 const adapter = new SMSAdapter({
   backend: "twilio",
@@ -95,7 +95,7 @@ TWILIO_ACCOUNT_SID=... \
 TWILIO_AUTH_TOKEN=... \
 TWILIO_FROM=+1... \
 TWILIO_TO=+55... \
-pnpm --filter @getloopscale/gateway-sms test
+pnpm --filter @getloopscale/loopzero-gateway-sms test
 ```
 
 The live smoke sends one real SMS through Twilio's API (test creds work; they cost ~$0.01/SMS in production accounts). Skip by leaving `SMS_LIVE_SMOKE` unset (default).

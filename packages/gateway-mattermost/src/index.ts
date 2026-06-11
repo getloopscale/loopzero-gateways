@@ -1,4 +1,4 @@
-// Public API for @getloopscale/gateway-mattermost (ADRs D397-D404).
+// Public API for @getloopscale/loopzero-gateway-mattermost (ADRs D397-D404).
 
 export { MattermostAdapter, parsePostFromWS } from "./adapter.js";
 export { connectMattermost, getChannelCached, wsUrlFromBase } from "./client.js";

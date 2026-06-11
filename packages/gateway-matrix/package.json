@@ -1,7 +1,7 @@
 {
-  "name": "@getloopscale/gateway-matrix",
+  "name": "@getloopscale/loopzero-gateway-matrix",
   "version": "0.1.0",
-  "description": "Matrix protocol platform adapter for @getloopscale/gateway. ADRs D413-D421.",
+  "description": "Matrix protocol platform adapter for @getloopscale/loopzero-gateway. ADRs D413-D421.",
   "license": "Apache-2.0",
   "type": "module",
   "engines": {
@@ -35,8 +35,8 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/gateway": "workspace:^",
-    "@getloopscale/sdk": "workspace:^",
+    "@getloopscale/loopzero-gateway": "workspace:^",
+    "@getloopscale/loopzero-sdk": "workspace:^",
     "matrix-js-sdk": "^32.0.0"
   },
   "peerDependenciesMeta": {
@@ -45,10 +45,10 @@
     }
   },
   "devDependencies": {
-    "@getloopscale/gateway": "workspace:*",
-    "@getloopscale/sdk": "workspace:*",
+    "@getloopscale/loopzero-gateway": "workspace:*",
+    "@getloopscale/loopzero-sdk": "workspace:*",
     "tsup": "^8.5.0",
     "typescript": "^5.8.0",
-    "vitest": "^3.0.0"
+    "vitest": "^4.1.8"
   }
 }

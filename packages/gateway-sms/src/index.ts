@@ -1,4 +1,4 @@
-// Public API for @getloopscale/gateway-sms (ADRs D389-D396).
+// Public API for @getloopscale/loopzero-gateway-sms (ADRs D389-D396).
 
 export { SMSAdapter } from "./adapter.js";
 export { BackendNotInstalledError, ConfigurationError } from "./errors.js";

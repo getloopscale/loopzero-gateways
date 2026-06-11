@@ -1,5 +1,5 @@
 /**
- * Public option types for `@getloopscale/gateway-email` (ADRs D327-D339).
+ * Public option types for `@getloopscale/loopzero-gateway-email` (ADRs D327-D339).
  *
  * @public
  */

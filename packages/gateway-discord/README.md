@@ -1,20 +1,20 @@
-# @getloopscale/gateway-discord
+# @getloopscale/loopzero-gateway-discord
 
-Discord platform adapter for `@getloopscale/gateway`. Wraps [discord.js](https://discord.js.org/) in the `BasePlatformAdapter` contract.
+Discord platform adapter for `@getloopscale/loopzero-gateway`. Wraps [discord.js](https://discord.js.org/) in the `BasePlatformAdapter` contract.
 
 > **Status: 0.1.0 — pre-release.**
 
 ## Install
 
 ```bash
-pnpm add @getloopscale/gateway-discord @getloopscale/gateway @getloopscale/sdk discord.js
+pnpm add @getloopscale/loopzero-gateway-discord @getloopscale/loopzero-gateway @getloopscale/loopzero-sdk discord.js
 ```
 
 ## Usage
 
 ```typescript
-import { GatewayRunner } from "@getloopscale/gateway";
-import { DiscordAdapter } from "@getloopscale/gateway-discord";
+import { GatewayRunner } from "@getloopscale/loopzero-gateway";
+import { DiscordAdapter } from "@getloopscale/loopzero-gateway-discord";
 
 const adapter = new DiscordAdapter({
   token: process.env.DISCORD_BOT_TOKEN!,

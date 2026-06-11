@@ -1,11 +1,11 @@
-# @getloopscale/gateway-slack
+# @getloopscale/loopzero-gateway-slack
 
-Slack platform adapter for `@getloopscale/gateway`. Adoption Roadmap #7; ADRs D267-D285.
+Slack platform adapter for `@getloopscale/loopzero-gateway`. Adoption Roadmap #7; ADRs D267-D285.
 
 ## Install
 
 ```bash
-pnpm add @getloopscale/gateway-slack @getloopscale/gateway @getloopscale/sdk @slack/bolt @slack/web-api
+pnpm add @getloopscale/loopzero-gateway-slack @getloopscale/loopzero-gateway @getloopscale/loopzero-sdk @slack/bolt @slack/web-api
 ```
 
 ## Setup
@@ -19,8 +19,8 @@ pnpm add @getloopscale/gateway-slack @getloopscale/gateway @getloopscale/sdk @sl
 ## Usage
 
 ```typescript
-import { SlackAdapter } from "@getloopscale/gateway-slack";
-import type { GatewayMessageEvent } from "@getloopscale/gateway";
+import { SlackAdapter } from "@getloopscale/loopzero-gateway-slack";
+import type { GatewayMessageEvent } from "@getloopscale/loopzero-gateway";
 
 const adapter = new SlackAdapter({
   botToken: process.env.SLACK_BOT_TOKEN!,    // xoxb-...

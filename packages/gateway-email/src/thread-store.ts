@@ -7,7 +7,7 @@
  * @internal
  */
 
-import type { EmailMessageEvent } from "@getloopscale/gateway";
+import type { EmailMessageEvent } from "@getloopscale/loopzero-gateway";
 
 /**
  * Sentinel runtime export — workaround for rollup-plugin-dts deep type-only

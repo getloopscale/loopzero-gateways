@@ -1,7 +1,7 @@
 {
-  "name": "@getloopscale/gateway-discord",
+  "name": "@getloopscale/loopzero-gateway-discord",
   "version": "0.1.0",
-  "description": "Discord (discord.js) platform adapter for @getloopscale/gateway. ADRs D171, D179.",
+  "description": "Discord (discord.js) platform adapter for @getloopscale/loopzero-gateway. ADRs D171, D179.",
   "license": "Apache-2.0",
   "type": "module",
   "engines": {
@@ -34,16 +34,16 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/gateway": "workspace:^",
-    "@getloopscale/sdk": "workspace:^",
+    "@getloopscale/loopzero-gateway": "workspace:^",
+    "@getloopscale/loopzero-sdk": "workspace:^",
     "discord.js": "^14.16.0"
   },
   "devDependencies": {
-    "@getloopscale/gateway": "workspace:*",
-    "@getloopscale/sdk": "workspace:*",
+    "@getloopscale/loopzero-gateway": "workspace:*",
+    "@getloopscale/loopzero-sdk": "workspace:*",
     "discord.js": "^14.16.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8.0",
-    "vitest": "^3.0.0"
+    "vitest": "^4.1.8"
   }
 }

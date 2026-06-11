@@ -5,7 +5,7 @@
  * @internal
  */
 
-import type { TeamsMessageEvent } from "@getloopscale/gateway";
+import type { TeamsMessageEvent } from "@getloopscale/loopzero-gateway";
 
 /**
  * Sentinel runtime export — workaround for rollup-plugin-dts deep type-only

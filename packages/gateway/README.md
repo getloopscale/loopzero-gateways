@@ -1,16 +1,16 @@
-# @getloopscale/gateway
+# @getloopscale/loopzero-gateway
 
-Multi-platform messaging gateway for `@getloopscale/sdk`. Transport-agnostic primitives — adapters live in separate peer-dep packages.
+Multi-platform messaging gateway for `@getloopscale/loopzero-sdk`. Transport-agnostic primitives — adapters live in separate peer-dep packages.
 
 > **Status: 0.1.0 — pre-release.** Breaking changes allowed within the `0.x` line per semver.
 
 ## Install
 
 ```bash
-pnpm add @getloopscale/gateway @getloopscale/sdk
+pnpm add @getloopscale/loopzero-gateway @getloopscale/loopzero-sdk
 # Plus one or more transport adapters:
-pnpm add @getloopscale/gateway-telegram grammy
-pnpm add @getloopscale/gateway-discord discord.js
+pnpm add @getloopscale/loopzero-gateway-telegram grammy
+pnpm add @getloopscale/loopzero-gateway-discord discord.js
 ```
 
 ## Architecture (5 pieces)
@@ -26,9 +26,9 @@ pnpm add @getloopscale/gateway-discord discord.js
 ## Minimal example
 
 ```typescript
-import { Agent } from "@getloopscale/sdk";
-import { GatewayRunner, SessionRouter } from "@getloopscale/gateway";
-import { TelegramAdapter } from "@getloopscale/gateway-telegram";
+import { Agent } from "@getloopscale/loopzero-sdk";
+import { GatewayRunner, SessionRouter } from "@getloopscale/loopzero-gateway";
+import { TelegramAdapter } from "@getloopscale/loopzero-gateway-telegram";
 
 const router = new SessionRouter();
 const adapter = new TelegramAdapter({ token: process.env.TELEGRAM_BOT_TOKEN! });

@@ -1,22 +1,22 @@
-# @getloopscale/gateway-line
+# @getloopscale/loopzero-gateway-line
 
-LINE Messaging API platform adapter for [`@getloopscale/gateway`](../gateway).
+LINE Messaging API platform adapter for [`@getloopscale/loopzero-gateway`](../gateway).
 
 APAC consumer dominant — Japan (~85M MAU), Taiwan, Thailand. Webhook-only inbound (LINE doesn't offer a WebSocket gateway). HMAC-SHA256 signature validation on every POST.
 
 ## Install
 
 ```bash
-pnpm add @getloopscale/sdk @getloopscale/gateway @getloopscale/gateway-line
+pnpm add @getloopscale/loopzero-sdk @getloopscale/loopzero-gateway @getloopscale/loopzero-gateway-line
 pnpm add @line/bot-sdk express
 ```
 
 ## Quick start
 
 ```ts
-import { Agent } from "@getloopscale/sdk";
-import { GatewayRunner } from "@getloopscale/gateway";
-import { LineAdapter, createWebhookServer } from "@getloopscale/gateway-line";
+import { Agent } from "@getloopscale/loopzero-sdk";
+import { GatewayRunner } from "@getloopscale/loopzero-gateway";
+import { LineAdapter, createWebhookServer } from "@getloopscale/loopzero-gateway-line";
 
 const adapter = new LineAdapter({
   channelSecret: process.env.LINE_CHANNEL_SECRET!,

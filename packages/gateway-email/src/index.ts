@@ -1,13 +1,13 @@
 /**
- * `@getloopscale/gateway-email` — public API.
+ * `@getloopscale/loopzero-gateway-email` — public API.
  *
- * Email adapter for `@getloopscale/gateway`, built on `nodemailer` + `imapflow` + `mailparser`.
+ * Email adapter for `@getloopscale/loopzero-gateway`, built on `nodemailer` + `imapflow` + `mailparser`.
  *
  * @public
  */
 
 // Re-export the MessageEvent variant.
-export type { EmailMessageEvent } from "@getloopscale/gateway";
+export type { EmailMessageEvent } from "@getloopscale/loopzero-gateway";
 export { EmailAdapter } from "./adapter.js";
 export { mapEmailError } from "./errors.js";
 export { extractAddr, isAllowedSender, isAutomatedSender } from "./filters.js";

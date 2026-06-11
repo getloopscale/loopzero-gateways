@@ -7,7 +7,7 @@
  * @internal
  */
 
-import type { EmailMessageEvent } from "@getloopscale/gateway";
+import type { EmailMessageEvent } from "@getloopscale/loopzero-gateway";
 import { simpleParser } from "mailparser";
 
 /**

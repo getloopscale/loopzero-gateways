@@ -1,5 +1,5 @@
 /**
- * Public option types for `@getloopscale/gateway-teams` (ADRs D315-D326).
+ * Public option types for `@getloopscale/loopzero-gateway-teams` (ADRs D315-D326).
  *
  * @public
  */

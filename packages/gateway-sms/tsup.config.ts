@@ -12,8 +12,8 @@ export default defineConfig({
   target: "node22",
   platform: "node",
   external: [
-    "@getloopscale/gateway",
-    "@getloopscale/sdk",
+    "@getloopscale/loopzero-gateway",
+    "@getloopscale/loopzero-sdk",
     "twilio",
     "plivo",
     "@vonage/server-sdk",

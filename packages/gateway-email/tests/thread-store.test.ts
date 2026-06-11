@@ -2,7 +2,7 @@
  * `ThreadStore` tests (T3.2 + D337).
  */
 
-import type { EmailMessageEvent } from "@getloopscale/gateway";
+import type { EmailMessageEvent } from "@getloopscale/loopzero-gateway";
 import { describe, expect, it } from "vitest";
 
 import { ThreadStore } from "../src/thread-store.js";

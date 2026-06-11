@@ -22,7 +22,7 @@
  * @public
  */
 
-import { Security } from "@getloopscale/sdk";
+import { Security } from "@getloopscale/loopzero-sdk";
 
 import type { BasePlatformAdapter, SendResult } from "../adapter/base.js";
 import { type GatewayHook, HookExecutor } from "../hooks/types.js";

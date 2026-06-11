@@ -1,22 +1,22 @@
-# @getloopscale/gateway-mattermost
+# @getloopscale/loopzero-gateway-mattermost
 
-Mattermost platform adapter for [`@getloopscale/gateway`](../gateway).
+Mattermost platform adapter for [`@getloopscale/loopzero-gateway`](../gateway).
 
 Works with self-hosted Mattermost (Docker / Kubernetes / bare metal) and Mattermost Cloud. WebSocket gateway for real-time inbound, REST v4 for outbound.
 
 ## Install
 
 ```bash
-pnpm add @getloopscale/sdk @getloopscale/gateway @getloopscale/gateway-mattermost
+pnpm add @getloopscale/loopzero-sdk @getloopscale/loopzero-gateway @getloopscale/loopzero-gateway-mattermost
 pnpm add @mattermost/client ws
 ```
 
 ## Quick start
 
 ```ts
-import { Agent } from "@getloopscale/sdk";
-import { GatewayRunner } from "@getloopscale/gateway";
-import { MattermostAdapter } from "@getloopscale/gateway-mattermost";
+import { Agent } from "@getloopscale/loopzero-sdk";
+import { GatewayRunner } from "@getloopscale/loopzero-gateway";
+import { MattermostAdapter } from "@getloopscale/loopzero-gateway-mattermost";
 
 const adapter = new MattermostAdapter({
   baseUrl: "https://mattermost.acme.com",

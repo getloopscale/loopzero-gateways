@@ -4,7 +4,7 @@
  * @public
  */
 
-import type { MatrixMessageEvent } from "@getloopscale/gateway";
+import type { MatrixMessageEvent } from "@getloopscale/loopzero-gateway";
 
 import { detectChannelType } from "./room-state.js";
 import type { MatrixEventLike, MatrixRoomLike } from "./types.js";

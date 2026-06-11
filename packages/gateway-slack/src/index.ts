@@ -1,5 +1,5 @@
 /**
- * Public API for `@getloopscale/gateway-slack`.
+ * Public API for `@getloopscale/loopzero-gateway-slack`.
  *
  * @public
  */
