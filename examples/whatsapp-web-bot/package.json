@@ -1,0 +1,19 @@
+{
+  "name": "example-whatsapp-web-bot",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "run": "tsx --env-file=.env run.ts"
+  },
+  "dependencies": {
+    "@getloopscale/loopzero-gateway": "file:../../packages/gateway",
+    "@getloopscale/loopzero-gateway-whatsapp": "file:../../packages/gateway-whatsapp",
+    "@getloopscale/loopzero-sdk": "file:../../packages/sdk",
+    "whatsapp-web.js": "^1.23.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.22.0",
+    "typescript": "^5.8.0"
+  }
+}

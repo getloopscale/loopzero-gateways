@@ -1,0 +1,32 @@
+{
+  "name": "@getloopscale/loopzero-example-telegram-pro",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bash ../../tools/dev.sh tsx --env-file=.env src/index.ts",
+    "build": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@honcho-ai/sdk": "^2.1.0",
+    "@getloopscale/loopzero-memory-honcho": "file:../../packages/memory-honcho",
+    "@getloopscale/loopzero-memory-mem0": "file:../../packages/memory-mem0",
+    "@getloopscale/loopzero-gateway": "file:../../packages/gateway",
+    "@getloopscale/loopzero-gateway-telegram": "file:../../packages/gateway-telegram",
+    "@getloopscale/loopzero-memory-supermemory": "file:../../packages/memory-supermemory",
+    "@getloopscale/loopzero-sdk": "file:../../packages/sdk",
+    "grammy": "^1.30.0",
+    "mem0ai": "^3.0.0",
+    "supermemory": "^4.21.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "better-sqlite3": "^12.10.0",
+    "sqlite-vec": "^0.1.9",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
