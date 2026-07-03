@@ -34,10 +34,10 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-sdk": "^1.9.0"
+    "@getloopscale/loopzero-sdk": "^2.18.0"
   },
   "devDependencies": {
-    "@getloopscale/loopzero-sdk": "^1.9.0",
+    "@getloopscale/loopzero-sdk": "^2.18.0",
     "tsup": "^8.5.0",
     "typescript": "^5.8.0",
     "vitest": "^4.1.8",
