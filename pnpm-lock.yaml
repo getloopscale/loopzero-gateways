@@ -26,6 +26,9 @@ importers:
       '@getloopscale/loopzero-gateway':
         specifier: workspace:*
         version: link:../packages/gateway
+      '@getloopscale/loopzero-gateway-slack':
+        specifier: workspace:*
+        version: link:../packages/gateway-slack
       '@getloopscale/loopzero-gateway-telegram':
         specifier: workspace:*
         version: link:../packages/gateway-telegram
