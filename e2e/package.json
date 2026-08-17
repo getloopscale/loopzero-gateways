@@ -18,6 +18,7 @@
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",
     "@getloopscale/loopzero-gateway-discord": "workspace:*",
+    "@getloopscale/loopzero-gateway-email": "workspace:*",
     "@getloopscale/loopzero-gateway-slack": "workspace:*",
     "@getloopscale/loopzero-gateway-telegram": "workspace:*",
     "@types/node": "^22.10.0",
