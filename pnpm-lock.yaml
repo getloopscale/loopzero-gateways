@@ -50,9 +50,18 @@ importers:
       '@getloopscale/loopzero-gateway-slack':
         specifier: workspace:*
         version: link:../packages/gateway-slack
+      '@getloopscale/loopzero-gateway-sms':
+        specifier: workspace:*
+        version: link:../packages/gateway-sms
+      '@getloopscale/loopzero-gateway-teams':
+        specifier: workspace:*
+        version: link:../packages/gateway-teams
       '@getloopscale/loopzero-gateway-telegram':
         specifier: workspace:*
         version: link:../packages/gateway-telegram
+      '@getloopscale/loopzero-gateway-whatsapp':
+        specifier: workspace:*
+        version: link:../packages/gateway-whatsapp
       '@types/node':
         specifier: ^22.10.0
         version: 22.19.21
