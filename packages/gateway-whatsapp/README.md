@@ -4,4 +4,3 @@ WhatsApp platform adapter for `@getloopscale/loopzero-gateway`. Multi-backend (M
 
 Status: **v0.1.0 pre-release**. Pre-1.0 contract per ADR D314 — breaking changes allowed within 0.x.
 
-See `examples/whatsapp-bot/` for a full reference implementation.
