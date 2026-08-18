@@ -20,10 +20,12 @@
     "mattermost:down": "tsx scripts/teardown-docker.ts mattermost"
   },
   "devDependencies": {
+    "@line/bot-sdk": "^9.0.0",
     "@mattermost/client": "^10.0.0",
     "@getloopscale/loopzero-gateway": "workspace:*",
     "@getloopscale/loopzero-gateway-discord": "workspace:*",
     "@getloopscale/loopzero-gateway-email": "workspace:*",
+    "@getloopscale/loopzero-gateway-line": "workspace:*",
     "@getloopscale/loopzero-gateway-matrix": "workspace:*",
     "@getloopscale/loopzero-gateway-mattermost": "workspace:*",
     "@getloopscale/loopzero-gateway-slack": "workspace:*",
