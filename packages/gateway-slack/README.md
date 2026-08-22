@@ -20,7 +20,7 @@ pnpm add @getloopscale/loopzero-gateway-slack @getloopscale/loopzero-gateway @ge
 
 ```typescript
 import { SlackAdapter } from "@getloopscale/loopzero-gateway-slack";
-import type { GatewayMessageEvent } from "@getloopscale/loopzero-gateway";
+import type { MessageEvent } from "@getloopscale/loopzero-gateway";
 
 const adapter = new SlackAdapter({
   botToken: process.env.SLACK_BOT_TOKEN!,    // xoxb-...
@@ -31,7 +31,7 @@ const adapter = new SlackAdapter({
 
 await adapter.connect();
 
-adapter.onInbound(async (event: GatewayMessageEvent) => {
+adapter.onInbound(async (event: MessageEvent) => {
   if (event.platform !== "slack") return;
   await adapter.sendMessage({
     channel: event.channel,
