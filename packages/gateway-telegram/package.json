@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-telegram",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Telegram (grammy) platform adapter for @getloopscale/loopzero-gateway. ADR D171.",
   "license": "Apache-2.0",
   "type": "module",
@@ -34,7 +34,7 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": "workspace:^",
+    "@getloopscale/loopzero-gateway": ">=0.6.0 <1.0.0",
     "@getloopscale/loopzero-sdk": "^2.18.0",
     "grammy": "^1.30.0"
   },
