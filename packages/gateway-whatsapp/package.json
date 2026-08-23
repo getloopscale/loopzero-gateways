@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-whatsapp",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "WhatsApp platform adapter for @getloopscale/loopzero-gateway. Multi-backend (Meta Cloud API + whatsapp-web.js bridge). ADRs D303-D314.",
   "license": "Apache-2.0",
   "type": "module",
