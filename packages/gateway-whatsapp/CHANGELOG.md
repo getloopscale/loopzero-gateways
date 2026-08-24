@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.3.1
+
+### Patch Changes
+
+- Drop the unused `@getloopscale/loopzero-sdk` peer dependency, so a LoopZero app can install an adapter.
+
+  Every adapter declared `peer @getloopscale/loopzero-sdk@^2.18.0` and imported the SDK in **zero** source files.
+  The framework ships `@getloopscale/loopzero-sdk@4.x`, so `npm install @getloopscale/loopzero-gateway-line` into a LoopZero app
+  failed outright with `ERESOLVE`.
+
+  The core's range was widened in `@getloopscale/loopzero-gateway@0.7.0`, which was not enough on its own: an
+  adapter's own manifest still carried the pin, so installing one still failed even against the fixed
+  core. Measured in a real app before and after.
+
 ## 0.3.0
 
 ### Minor Changes
