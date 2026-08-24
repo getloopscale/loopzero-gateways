@@ -49,13 +49,12 @@ own quality gates.
 
 ## Index
 
-16 items — **Open** 8 · **In flight** 0 · **Closed** 8
+16 items — **Open** 7 · **In flight** 0 · **Closed** 9
 
-### Open (8)
+### Open (7)
 
 | Item | Title | Status | Severity |
 |---|---|---|---|
-| [`B-009`](#b-009--loopzeros-channel-seam-names-our-packages-as-the-translator-and-no-adapter-can-translate----) | LoopZero's channel seam names our packages as the translator, and no adapter can translate | `triaged` | — |
 | [`B-010`](#b-010--ten-adapters-use-seven-different-names-for-the-same-credential----) | Ten adapters use seven different names for the same credential | `raw` | — |
 | [`B-011`](#b-011--nothing-documents-how-the-three-repositories-fit-together----) | Nothing documents how the three repositories fit together | `raw` | — |
 | [`B-012`](#b-012--the-sdk-sits-in-the-middle-of-the-triad-wired-to-a-single-utility----) | The SDK sits in the middle of the triad wired to a single utility | `raw` | — |
@@ -68,7 +67,7 @@ own quality gates.
 
 _None._
 
-### Closed (8)
+### Closed (9)
 
 | Item | Title | Status | Severity |
 |---|---|---|---|
@@ -80,6 +79,7 @@ _None._
 | [`B-006`](#b-006--whatsappcloudbackendconnect-reports-success-without-authenticating----) | `WhatsAppCloudBackend.connect()` reports success without authenticating | `shipped` | — |
 | [`B-007`](#b-007--no-loopzero-app-can-install-a-gateway-at-all----) | No LoopZero app can install a gateway at all | `shipped` | — |
 | [`B-008`](#b-008--a-gateway-cannot-be-written-outside-this-repository----) | A gateway cannot be written outside this repository | `shipped` | — |
+| [`B-009`](#b-009--loopzeros-channel-seam-names-our-packages-as-the-translator-and-no-adapter-can-translate----) | LoopZero's channel seam names our packages as the translator, and no adapter can translate | `shipped` | — |
 
 <!-- BACKLOG-INDEX:END -->
 
@@ -299,7 +299,7 @@ source: human
 opportunity: `.claude/knowledge-base/discoveries/opportunities/gateway-inbound-translation-opportunity.md` (SHIPPABLE_WITH_CAVEATS)
 evidence: LoopZero ships `handleChannelWebhook(request, urlPath, { validators, onMessage })`, which owns the route and the signature gate and then hands the app `ChannelMessage { agent, platform, payload: unknown }`. Its own docblock states the division of labour: "the seam is where an app wires the SDK gateway package (`@getloopscale/loopzero-gateway-*`) that translates the payload into an agent turn — LoopZero provides the route + signature gate, NOT the gateway's parsing". Measured against the ten adapters' barrels: none exports a payload translator. The mapping exists but is unreachable — Telegram's lives inside `normalizeEvent(ctx: Context)` in `packages/gateway-telegram/src/adapter.ts:198`, soldered to grammy's type and callable only from the polling loop; Slack's `normalizeSlackEvent` is not exported from the package.
 why_now: an app wiring the seam today must reimplement the platform's wire format by hand — written out during the measurement to confirm the cost, and it is exactly the work the framework says the gateway package spares them. The two halves of a seam both sides already agreed on have never met.
-status: triaged
+status: shipped
 dod:
   - each adapter whose platform LoopZero already validates exports a pure `parseInbound(payload) -> event | null`
   - one mapping serves both the polling path and the webhook path, so the two cannot drift into dialects
@@ -318,6 +318,16 @@ dod:
 > translator does not by itself make them usable under `loopzero dev` — that needs a lifecycle in
 > LoopZero. Decisions recorded as D426 (one mapping, both paths) and D427 (export only what was
 > called).
+
+> **SHIPPED 2026-08-24** as `@getloopscale/loopzero-gateway-telegram@0.2.0` and `@getloopscale/loopzero-gateway-sms@0.2.0`
+> (PRs #68, #69). `line` and `whatsapp` unchanged — both already had the shape, which is what the
+> measurement refuted the item's own words with. Two adversarial review passes found a BLOCKER (the
+> line written to prevent ADR D428 was causing it — four documented sender configurations threw out
+> of `onMessage` after the 200), the declared return type unenforced (`text: 5` produced a numeric
+> `text`), and nine surviving mutants across two rounds. Eighteen of nineteen mutations now turn a
+> gate red; the nineteenth is documented as having no observable effect rather than claimed as
+> covered. Accepted against the npm packages in a real app: 3/3 platforms translated, zero lines of
+> platform knowledge, three negatives returning `null` without throwing.
 
 ## B-010 — Ten adapters use seven different names for the same credential   [ ]
 
