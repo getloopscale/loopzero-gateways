@@ -69,9 +69,9 @@ if (event !== null) {
 
 `parseInbound` returns `null` and never throws. Measured against `loopzero@0.48.14`: `onMessage` is
 awaited **before** the 200 is built, and nothing inside `handleChannelWebhook` catches — so a throw
-on an unparseable payload means the 200 is never built. The rejection reaches the route's error
-boundary and LoopZero answers **500**: the platform sees a failed delivery where it expected an
-acknowledgement.
+on an unparseable payload means the 200 is never built. Mounted in a LoopZero route, the rejection
+reaches that route's error boundary and is answered **500**: the platform sees a failed delivery
+where it expected an acknowledgement.
 
 `parseInbound` under that name exists on `@getloopscale/loopzero-gateway-telegram` and `@getloopscale/loopzero-gateway-sms`.
 Every other adapter exports its translation under its own name — `gateway-line` has
