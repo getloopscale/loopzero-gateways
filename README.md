@@ -10,7 +10,7 @@ Multi-channel gateway packages for the LoopScale ecosystem, extracted from `loop
 | `@getloopscale/loopzero-gateway-telegram` | Telegram (grammy) |
 | `@getloopscale/loopzero-gateway-discord` | Discord (discord.js) |
 | `@getloopscale/loopzero-gateway-slack` | Slack (@slack/bolt) |
-| `@getloopscale/loopzero-gateway-whatsapp` | WhatsApp (Meta Cloud API + whatsapp-web.js) |
+| `@getloopscale/loopzero-gateway-whatsapp` | WhatsApp (Meta Cloud API + whatsapp-web.js + Baileys) |
 | `@getloopscale/loopzero-gateway-teams` | Microsoft Teams |
 | `@getloopscale/loopzero-gateway-email` | Email (nodemailer + imapflow) |
 | `@getloopscale/loopzero-gateway-sms` | SMS (Twilio / Plivo / Vonage) |
