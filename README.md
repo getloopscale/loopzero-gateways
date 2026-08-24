@@ -24,25 +24,32 @@ Receiving a message spans three repositories, and each owns one part of it.
 
 | Repository | Its half |
 |---|---|
-| [`loopzero`](https://github.com/getloopscale/loopzero) | The HTTP route and the signature check. `handleChannelWebhook` validates the request, then hands your app the raw body as `payload: unknown` |
+| [`loopzero`](https://github.com/getloopscale/loopzero) | The HTTP route and the signature check. `handleChannelWebhook` verifies the signature, parses the body, and hands your app the parsed JSON as `payload: unknown` |
 | **`loopzero-gateways`** (here) | Translating that payload. `parseInbound` turns it into a canonical `MessageEvent`, so your app never re-declares a platform's wire format |
-| [`loopzero-sdk`](https://github.com/getloopscale/loopzero-sdk) | Measured today: one redaction helper, used when logging a handler error. Whether it should do more is open — see `BACKLOG.md` B-012 |
+| [`loopzero-sdk`](https://github.com/getloopscale/loopzero-sdk) | Measured today: one redaction helper, called at two sites when logging a throw. Whether it should do more is open — see `BACKLOG.md` B-012 |
 
 ```ts
-// In a LoopZero route. The signature was already checked before this runs.
+// Inside handleChannelWebhook's onMessage. The signature and the JSON parse already happened.
 import { parseInbound } from "@getloopscale/loopzero-gateway-telegram";
 
-const event = parseInbound(await request.json());
+const event = parseInbound(message.payload);
 if (event !== null) {
   console.log(`${event.channel.id}: ${event.text}`);
 }
 ```
 
-`parseInbound` returns `null` and never throws — `onMessage` runs after LoopZero has already answered
-200, so there is no status left to change. Adapters whose platform uses a long-lived connection
-rather than a webhook (Discord, Slack, Mattermost, Matrix, e-mail) do not go through this seam; they
-own their transport, and running one alongside a LoopZero server needs a process lifecycle that does
-not exist yet.
+`parseInbound` returns `null` and never throws. Measured against `loopzero@0.48.14`: your `onMessage`
+is awaited **before** the 200 is built, and nothing catches around it — so a throw on an unparseable
+payload escapes the route and answers an error where the platform expected an acknowledgement.
+Returning `null` lets an app ignore a message it cannot read and still answer normally.
+
+`parseInbound` itself exists on `@getloopscale/loopzero-gateway-telegram` and `@getloopscale/loopzero-gateway-sms` today. The
+other adapters export their own translation — `lineEventToMessageEvent`, `normalizeTeamsActivity`,
+`parseWebhookPayload` composed with `normalizeInboundMessages` for WhatsApp Cloud — under their own
+names, and those return `undefined` rather than `null`. Adapters whose transport is a long-lived
+connection (Discord, Slack, Mattermost, Matrix, e-mail, and the `whatsapp-web` backend) do not go
+through this seam at all; they own their transport, and running one alongside a LoopZero server needs
+a process lifecycle that does not exist yet.
 
 ## Relationship to `@getloopscale/loopzero-sdk`
 
