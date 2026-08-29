@@ -74,6 +74,63 @@ on an unparseable payload means the 200 is never built. Mounted in a LoopZero ro
 reaches that route's error boundary and is answered **500**: the platform sees a failed delivery
 where it expected an acknowledgement.
 
+### WhatsApp, since `loopzero@0.60.0`
+
+Until that release this was impossible rather than undocumented: `loopzero/server/webhook`
+exported no `whatsapp` validator, so the `validators` map could not carry one and the path
+answered 404 by construction. Meta's subscribe handshake had no seam at all
+([getloopscale/loopzero#556](https://github.com/getloopscale/loopzero/issues/556), filed from
+here). Both halves exist now, and the wiring needs three things that are easy to miss:
+
+```ts
+import { handleChannelWebhook } from "loopzero/server/agent";
+import { route } from "loopzero/server/define";
+import { whatsapp, whatsappSubscribe } from "loopzero/server/webhook";
+import { normalizeInboundMessages, parseWebhookPayload } from "@getloopscale/loopzero-gateway-whatsapp";
+
+const handle = ({ request }: { request: Request }) =>
+  handleChannelWebhook(request, new URL(request.url).pathname, {
+    validators: { whatsapp: whatsapp({ appSecret: process.env.META_APP_SECRET! }) },
+    subscribe: { whatsapp: whatsappSubscribe({ verifyToken: process.env.META_VERIFY_TOKEN! }) },
+    onMessage: async ({ payload }) => {
+      const envelope = parseWebhookPayload(payload);
+      if (envelope === null) return; // not a shape we know — answer normally
+      for (const event of normalizeInboundMessages(envelope)) {
+        console.log(`${event.from}: ${event.text}`);
+      }
+    },
+  });
+
+// BOTH verbs, and `.csrf(false)` on each.
+export const GET = route().csrf(false).policy("public").handler(handle).build();
+export const POST = route().csrf(false).policy("public").handler(handle).build();
+```
+
+- **`GET` as well as `POST`.** Meta calls the endpoint once with
+  `?hub.mode=subscribe&hub.verify_token=…&hub.challenge=…` and expects the challenge echoed as
+  `text/plain` before it delivers anything. That is what `subscribe` answers. A `GET` on a
+  platform that has a validator and no `subscribe` entry is **405**, not 404 — configured, but
+  it does not do handshakes.
+- **`.csrf(false)` on both.** Without it the route answers `403 CSRF_INVALID: Missing
+  X-LoopZero-Action header` before the signature is ever checked, and Meta will never send that
+  header. `policy("public")` answers a different question — may an unauthenticated caller reach
+  this — and does not lift the CSRF gate. The HMAC is strictly stronger than the header it
+  replaces, and Meta carries no session for a third-party page to ride.
+- **`appSecret` is the Meta *app secret*,** not the access token. It accepts an array so a
+  rotation can verify against either.
+
+This package also exports `verifyWebhookSignature` and `verifyWebhookSubscription`, which do
+the same two jobs. Use loopzero's when you are on this seam; ours exist for an app that is not,
+and they are what `gateway-sms` uses through its own `createWebhookServer`.
+
+Not verified here: the `loopzero` behaviour above was measured by the session that shipped
+0.60.0, driving a scaffolded app over HTTP. What this repository checked is narrower and
+stated as such — that `loopzero@0.60.0` does export `whatsapp` and `whatsappSubscribe` from
+`loopzero/server/webhook`, that `route` lives on `loopzero/server/define` rather than on the
+`loopzero/server` umbrella that warns it is deprecated, and that `parseWebhookPayload` takes the
+`unknown` payload `onMessage` hands over. A real delivery from Meta needs an approved app and a public URL, and
+has not happened on either side.
+
 `parseInbound` under that name exists on `@getloopscale/loopzero-gateway-telegram` and `@getloopscale/loopzero-gateway-sms`,
 with different arguments: SMS takes `(options, ctx)` because the `SignatureContext` it needs carries
 the raw body, the headers and the URL, and `ChannelMessage` provides none of the three — so it is wired through its
