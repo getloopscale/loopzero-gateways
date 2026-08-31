@@ -1,16 +1,26 @@
 ---
 "@getloopscale/loopzero-gateway": minor
-"@getloopscale/loopzero-gateway-discord": patch
-"@getloopscale/loopzero-gateway-email": patch
-"@getloopscale/loopzero-gateway-line": patch
-"@getloopscale/loopzero-gateway-matrix": patch
-"@getloopscale/loopzero-gateway-mattermost": patch
-"@getloopscale/loopzero-gateway-slack": patch
-"@getloopscale/loopzero-gateway-sms": patch
-"@getloopscale/loopzero-gateway-teams": patch
-"@getloopscale/loopzero-gateway-telegram": patch
-"@getloopscale/loopzero-gateway-whatsapp": patch
+"@getloopscale/loopzero-gateway-discord": minor
+"@getloopscale/loopzero-gateway-email": minor
+"@getloopscale/loopzero-gateway-line": minor
+"@getloopscale/loopzero-gateway-matrix": minor
+"@getloopscale/loopzero-gateway-mattermost": minor
+"@getloopscale/loopzero-gateway-slack": minor
+"@getloopscale/loopzero-gateway-sms": minor
+"@getloopscale/loopzero-gateway-teams": minor
+"@getloopscale/loopzero-gateway-telegram": minor
+"@getloopscale/loopzero-gateway-whatsapp": minor
 ---
+
+**The peer floor on `@getloopscale/loopzero-gateway` rises with this release.** Every adapter now implements
+`deliver` over `runHandler`, and neither exists in an older core — an adapter installed against one
+does not build. `dep-check` caught that by building the whole workspace against the floor each
+package claimed, which is the one thing a version range cannot tell you by reading it.
+
+The floor is set in the version commit rather than here, because a range cannot name a version that
+does not exist yet: raised in the workspace, the same gate then fails the other way round — every
+adapter declaring a floor above the core installed beside it. That is the shape `fa70153` used when
+these ranges were first written.
 
 `deliver(event)` — every adapter can now be handed an event that arrived out of band (#83).
 
