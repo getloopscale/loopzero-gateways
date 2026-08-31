@@ -1,16 +1,21 @@
 ---
 "@getloopscale/loopzero-gateway": minor
-"@getloopscale/loopzero-gateway-discord": patch
-"@getloopscale/loopzero-gateway-email": patch
-"@getloopscale/loopzero-gateway-line": patch
-"@getloopscale/loopzero-gateway-matrix": patch
-"@getloopscale/loopzero-gateway-mattermost": patch
-"@getloopscale/loopzero-gateway-slack": patch
-"@getloopscale/loopzero-gateway-sms": patch
-"@getloopscale/loopzero-gateway-teams": patch
-"@getloopscale/loopzero-gateway-telegram": patch
-"@getloopscale/loopzero-gateway-whatsapp": patch
+"@getloopscale/loopzero-gateway-discord": minor
+"@getloopscale/loopzero-gateway-email": minor
+"@getloopscale/loopzero-gateway-line": minor
+"@getloopscale/loopzero-gateway-matrix": minor
+"@getloopscale/loopzero-gateway-mattermost": minor
+"@getloopscale/loopzero-gateway-slack": minor
+"@getloopscale/loopzero-gateway-sms": minor
+"@getloopscale/loopzero-gateway-teams": minor
+"@getloopscale/loopzero-gateway-telegram": minor
+"@getloopscale/loopzero-gateway-whatsapp": minor
 ---
+
+**The peer floor on `@getloopscale/loopzero-gateway` rises to `>=0.9.0`.** Every adapter now implements `deliver`
+over `runHandler`, and neither exists below that — an adapter installed against an older core does
+not build. The `dep-check` gate caught this by building the whole workspace against the floor each
+package claims, which is the one thing a version range cannot tell you by reading it.
 
 `deliver(event)` — every adapter can now be handed an event that arrived out of band (#83).
 
