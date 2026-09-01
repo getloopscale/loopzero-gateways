@@ -25,7 +25,8 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
-    }
+    },
+    "./package.json": "./package.json"
   },
   "sideEffects": false,
   "files": [
@@ -66,5 +67,19 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/getloopscale/loopzero-gateways/issues"
+  },
+  "homepage": "https://github.com/getloopscale/loopzero-gateways/tree/main/packages/gateway-whatsapp#readme",
+  "keywords": [
+    "loopzero",
+    "gateway",
+    "whatsapp",
+    "platform",
+    "adapter",
+    "multi-backend",
+    "meta",
+    "cloud"
+  ]
 }

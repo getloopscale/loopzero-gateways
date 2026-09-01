@@ -25,7 +25,8 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist",
@@ -57,5 +58,20 @@
   "publishConfig": {
     "access": "public",
     "provenance": true
-  }
+  },
+  "sideEffects": false,
+  "bugs": {
+    "url": "https://github.com/getloopscale/loopzero-gateways/issues"
+  },
+  "homepage": "https://github.com/getloopscale/loopzero-gateways/tree/main/packages/gateway-slack#readme",
+  "keywords": [
+    "loopzero",
+    "gateway",
+    "slack",
+    "bolt",
+    "platform",
+    "adapter",
+    "adrs",
+    "d267-d285"
+  ]
 }
