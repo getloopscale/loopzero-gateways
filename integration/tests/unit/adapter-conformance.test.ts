@@ -31,6 +31,7 @@ import { IrcAdapter } from "@getloopscale/loopzero-gateway-irc";
 import { LineAdapter } from "@getloopscale/loopzero-gateway-line";
 import { MatrixAdapter } from "@getloopscale/loopzero-gateway-matrix";
 import { MattermostAdapter } from "@getloopscale/loopzero-gateway-mattermost";
+import { NextcloudTalkAdapter } from "@getloopscale/loopzero-gateway-nextcloud-talk";
 import { SignalAdapter } from "@getloopscale/loopzero-gateway-signal";
 import { SlackAdapter } from "@getloopscale/loopzero-gateway-slack";
 import { SMSAdapter } from "@getloopscale/loopzero-gateway-sms";
@@ -92,6 +93,14 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
     platform: "mattermost",
     make: () =>
       new MattermostAdapter({ baseUrl: "https://mm.invalid", accessToken: "not-a-real-token" }),
+  },
+  {
+    platform: "nextcloud_talk",
+    make: () =>
+      new NextcloudTalkAdapter({
+        baseUrl: "https://nextcloud.invalid",
+        secret: "not-a-real-bot-secret-but-forty-characters-long",
+      }),
   },
   {
     platform: "signal",

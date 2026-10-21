@@ -67,6 +67,9 @@ importers:
       '@getloopscale/loopzero-gateway-mattermost':
         specifier: workspace:*
         version: link:../packages/gateway-mattermost
+      '@getloopscale/loopzero-gateway-nextcloud-talk':
+        specifier: workspace:*
+        version: link:../packages/gateway-nextcloud-talk
       '@getloopscale/loopzero-gateway-signal':
         specifier: workspace:*
         version: link:../packages/gateway-signal
