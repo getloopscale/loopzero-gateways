@@ -29,6 +29,7 @@
     "@getloopscale/loopzero-gateway-email": "workspace:*",
     "@getloopscale/loopzero-gateway-google-chat": "workspace:*",
     "@getloopscale/loopzero-gateway-imessage": "workspace:*",
+    "@getloopscale/loopzero-gateway-irc": "workspace:*",
     "@getloopscale/loopzero-gateway-line": "workspace:*",
     "@getloopscale/loopzero-gateway-matrix": "workspace:*",
     "@getloopscale/loopzero-gateway-mattermost": "workspace:*",

@@ -27,6 +27,7 @@ import { DiscordAdapter } from "@getloopscale/loopzero-gateway-discord";
 import { EmailAdapter } from "@getloopscale/loopzero-gateway-email";
 import { GoogleChatAdapter } from "@getloopscale/loopzero-gateway-google-chat";
 import { IMessageAdapter } from "@getloopscale/loopzero-gateway-imessage";
+import { IrcAdapter } from "@getloopscale/loopzero-gateway-irc";
 import { LineAdapter } from "@getloopscale/loopzero-gateway-line";
 import { MatrixAdapter } from "@getloopscale/loopzero-gateway-matrix";
 import { MattermostAdapter } from "@getloopscale/loopzero-gateway-mattermost";
@@ -68,6 +69,10 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
   {
     platform: "imessage",
     make: () => new IMessageAdapter({ cliPath: "imsg-not-installed" }),
+  },
+  {
+    platform: "irc",
+    make: () => new IrcAdapter({ host: "irc.invalid", nick: "nobody", channels: ["#nowhere"] }),
   },
   {
     platform: "line",

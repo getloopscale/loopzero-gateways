@@ -55,6 +55,9 @@ importers:
       '@getloopscale/loopzero-gateway-imessage':
         specifier: workspace:*
         version: link:../packages/gateway-imessage
+      '@getloopscale/loopzero-gateway-irc':
+        specifier: workspace:*
+        version: link:../packages/gateway-irc
       '@getloopscale/loopzero-gateway-line':
         specifier: workspace:*
         version: link:../packages/gateway-line
