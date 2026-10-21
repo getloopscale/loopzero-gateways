@@ -14,6 +14,7 @@ Multi-channel gateway packages for the LoopScale ecosystem, extracted from `loop
 | `@getloopscale/loopzero-gateway-mattermost` | Mattermost | **full** — send and receive |
 | `@getloopscale/loopzero-gateway-email` | Email (nodemailer + imapflow) | **full** — send and receive |
 | `@getloopscale/loopzero-gateway-signal` | Signal (signal-cli JSON-RPC) | **none** — no signal-cli or registered number here; the live suite is written and has never run |
+| `@getloopscale/loopzero-gateway-imessage` | iMessage (imsg JSON-RPC, macOS) | **none** — no Mac signed in to Messages here; the live suite is written and has never run |
 | `@getloopscale/loopzero-gateway-line` | LINE Messaging API | **full** — send and receive |
 | `@getloopscale/loopzero-gateway-whatsapp` | WhatsApp (Meta Cloud API + whatsapp-web.js + Baileys) | partial — the Cloud API send is accepted by Meta, delivery and inbound not asserted here; the two unofficial backends reach a pairing QR and have never been paired here |
 | `@getloopscale/loopzero-gateway-teams` | Microsoft Teams | **none** — no credentials; four tests written, never executed |

@@ -25,6 +25,7 @@
 import type { BasePlatformAdapter } from "@getloopscale/loopzero-gateway";
 import { DiscordAdapter } from "@getloopscale/loopzero-gateway-discord";
 import { EmailAdapter } from "@getloopscale/loopzero-gateway-email";
+import { IMessageAdapter } from "@getloopscale/loopzero-gateway-imessage";
 import { LineAdapter } from "@getloopscale/loopzero-gateway-line";
 import { MatrixAdapter } from "@getloopscale/loopzero-gateway-matrix";
 import { MattermostAdapter } from "@getloopscale/loopzero-gateway-mattermost";
@@ -53,6 +54,10 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         address: "nobody@invalid",
         password: "not-a-real-password",
       }),
+  },
+  {
+    platform: "imessage",
+    make: () => new IMessageAdapter({ cliPath: "imsg-not-installed" }),
   },
   {
     platform: "line",
