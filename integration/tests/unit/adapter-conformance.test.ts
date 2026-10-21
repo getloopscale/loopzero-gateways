@@ -25,6 +25,7 @@
 import type { BasePlatformAdapter } from "@getloopscale/loopzero-gateway";
 import { DiscordAdapter } from "@getloopscale/loopzero-gateway-discord";
 import { EmailAdapter } from "@getloopscale/loopzero-gateway-email";
+import { GoogleChatAdapter } from "@getloopscale/loopzero-gateway-google-chat";
 import { IMessageAdapter } from "@getloopscale/loopzero-gateway-imessage";
 import { LineAdapter } from "@getloopscale/loopzero-gateway-line";
 import { MatrixAdapter } from "@getloopscale/loopzero-gateway-matrix";
@@ -53,6 +54,15 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         smtpHost: "smtp.invalid",
         address: "nobody@invalid",
         password: "not-a-real-password",
+      }),
+  },
+  {
+    platform: "google_chat",
+    make: () =>
+      new GoogleChatAdapter({
+        serviceAccountEmail: "nobody@not-a-project.iam.gserviceaccount.com",
+        privateKey: "not-a-real-key",
+        audience: "https://chat.invalid/google-chat",
       }),
   },
   {
