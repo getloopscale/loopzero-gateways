@@ -58,6 +58,9 @@ importers:
       '@getloopscale/loopzero-gateway-mattermost':
         specifier: workspace:*
         version: link:../packages/gateway-mattermost
+      '@getloopscale/loopzero-gateway-signal':
+        specifier: workspace:*
+        version: link:../packages/gateway-signal
       '@getloopscale/loopzero-gateway-slack':
         specifier: workspace:*
         version: link:../packages/gateway-slack
