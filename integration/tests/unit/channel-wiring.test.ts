@@ -22,11 +22,11 @@ import { computeLineSignature } from "@getloopscale/loopzero-gateway-line";
 import { TelegramAdapter } from "@getloopscale/loopzero-gateway-telegram";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { wireChannels as descriptorWired } from "../../src/channel-wiring/descriptor-wired.js";
+import { wireChannels as descriptorWired } from "./fixtures/channel-wiring/descriptor-wired.js";
 import {
   type ChannelWiring,
   wireChannels as handWired,
-} from "../../src/channel-wiring/hand-wired.js";
+} from "./fixtures/channel-wiring/hand-wired.js";
 
 const SECRET = "offline-channel-secret";
 const CONFIG = {
