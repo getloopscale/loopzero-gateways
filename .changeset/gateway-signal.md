@@ -1,15 +1,8 @@
 ---
-"@getloopscale/loopzero-gateway": minor
 "@getloopscale/loopzero-gateway-signal": minor
 ---
 
-Add `@getloopscale/loopzero-gateway-signal`, a Signal adapter, and make `signal` a first-party platform.
-
-`@getloopscale/loopzero-gateway` gains the `signal` key in `PlatformEventRegistry`, the `SignalMessageEvent`
-type, and a `channelRendering("signal")` row (`markdown`, text unchanged). `PlatformName` grows by
-one member. Code that lists every platform in a `Record<PlatformName, …>` or in a switch with a
-`never` default must add a `signal` entry, and a package that registered its own `signal` key
-through module augmentation now collides with the first-party one (TS2717) and should drop it.
+Add `@getloopscale/loopzero-gateway-signal`, a Signal adapter.
 
 `@getloopscale/loopzero-gateway-signal` (first release) exports `SignalAdapter`, which starts
 `signal-cli -a <account> jsonRpc` and talks to it over stdio. `connect()` returns `true` only once

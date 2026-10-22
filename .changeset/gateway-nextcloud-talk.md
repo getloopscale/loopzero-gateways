@@ -1,17 +1,8 @@
 ---
-"@getloopscale/loopzero-gateway": minor
 "@getloopscale/loopzero-gateway-nextcloud-talk": minor
 ---
 
-Add `@getloopscale/loopzero-gateway-nextcloud-talk`, a Nextcloud Talk bot adapter, and make `nextcloud_talk` a
-first-party platform.
-
-`@getloopscale/loopzero-gateway` gains the `nextcloud_talk` key in `PlatformEventRegistry`, the
-`NextcloudTalkMessageEvent` type, and a `channelRendering("nextcloud_talk")` row (`markdown`,
-passed through). `PlatformName` grows by one member. Code that lists every platform in a
-`Record<PlatformName, …>` or in a switch with a `never` default must add a `nextcloud_talk`
-entry, and a package that registered its own `nextcloud_talk` key through module augmentation now
-collides with the first-party one (TS2717) and should drop it.
+Add `@getloopscale/loopzero-gateway-nextcloud-talk`, a Nextcloud Talk bot adapter.
 
 `@getloopscale/loopzero-gateway-nextcloud-talk` (first release) exports `NextcloudTalkAdapter`, which runs as a
 Talk bot. Its webhook route (default port 3000, path `/nextcloud-talk`, or the caller's own Express app
