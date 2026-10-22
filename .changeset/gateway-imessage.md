@@ -1,15 +1,8 @@
 ---
-"@getloopscale/loopzero-gateway": minor
 "@getloopscale/loopzero-gateway-imessage": minor
 ---
 
-Add `@getloopscale/loopzero-gateway-imessage`, an iMessage adapter, and make `imessage` a first-party platform.
-
-`@getloopscale/loopzero-gateway` gains the `imessage` key in `PlatformEventRegistry`, the `IMessageMessageEvent`
-type, and a `channelRendering("imessage")` row (`plain`, markers removed). `PlatformName` grows by
-one member. Code that lists every platform in a `Record<PlatformName, …>` or in a switch with a
-`never` default must add an `imessage` entry, and a package that registered its own `imessage` key
-through module augmentation now collides with the first-party one (TS2717) and should drop it.
+Add `@getloopscale/loopzero-gateway-imessage`, an iMessage adapter.
 
 `@getloopscale/loopzero-gateway-imessage` (first release) exports `IMessageAdapter`, which starts `imsg rpc` and
 talks to it over stdio. `connect()` returns `true` only once `imsg` accepts `watch.subscribe`, and
