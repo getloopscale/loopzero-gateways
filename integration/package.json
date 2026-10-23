@@ -44,6 +44,7 @@
     "@getloopscale/loopzero-gateway-synology-chat": "workspace:*",
     "@getloopscale/loopzero-gateway-teams": "workspace:*",
     "@getloopscale/loopzero-gateway-telegram": "workspace:*",
+    "@getloopscale/loopzero-gateway-tlon-urbit": "workspace:*",
     "@getloopscale/loopzero-gateway-whatsapp": "workspace:*",
     "@types/express": "^5.0.6",
     "@types/node": "^26.4.0",
