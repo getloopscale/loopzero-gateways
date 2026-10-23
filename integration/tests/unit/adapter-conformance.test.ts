@@ -25,6 +25,7 @@
 import type { BasePlatformAdapter } from "@getloopscale/loopzero-gateway";
 import { DiscordAdapter } from "@getloopscale/loopzero-gateway-discord";
 import { EmailAdapter } from "@getloopscale/loopzero-gateway-email";
+import { FeishuLarkAdapter } from "@getloopscale/loopzero-gateway-feishu-lark";
 import { GoogleChatAdapter } from "@getloopscale/loopzero-gateway-google-chat";
 import { IMessageAdapter } from "@getloopscale/loopzero-gateway-imessage";
 import { IrcAdapter } from "@getloopscale/loopzero-gateway-irc";
@@ -58,6 +59,10 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         address: "nobody@invalid",
         password: "not-a-real-password",
       }),
+  },
+  {
+    platform: "feishu_lark",
+    make: () => new FeishuLarkAdapter({ appId: "cli_0000000000000000", appSecret: "not-a-secret" }),
   },
   {
     platform: "google_chat",

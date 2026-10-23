@@ -29,6 +29,7 @@
     "@getloopscale/loopzero-gateway": "workspace:*",
     "@getloopscale/loopzero-gateway-discord": "workspace:*",
     "@getloopscale/loopzero-gateway-email": "workspace:*",
+    "@getloopscale/loopzero-gateway-feishu-lark": "workspace:*",
     "@getloopscale/loopzero-gateway-google-chat": "workspace:*",
     "@getloopscale/loopzero-gateway-imessage": "workspace:*",
     "@getloopscale/loopzero-gateway-irc": "workspace:*",
