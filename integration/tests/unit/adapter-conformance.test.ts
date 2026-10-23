@@ -37,6 +37,7 @@ import { NostrAdapter } from "@getloopscale/loopzero-gateway-nostr";
 import { SignalAdapter } from "@getloopscale/loopzero-gateway-signal";
 import { SlackAdapter } from "@getloopscale/loopzero-gateway-slack";
 import { SMSAdapter } from "@getloopscale/loopzero-gateway-sms";
+import { SynologyChatAdapter } from "@getloopscale/loopzero-gateway-synology-chat";
 import { TeamsAdapter } from "@getloopscale/loopzero-gateway-teams";
 import { TelegramAdapter } from "@getloopscale/loopzero-gateway-telegram";
 import { describe, expect, it } from "vitest";
@@ -130,6 +131,15 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         authToken: "not-a-real-token",
         fromNumber: "+15550000000",
         publicUrl: "https://sms.invalid",
+      }),
+  },
+  {
+    platform: "synology_chat",
+    make: () =>
+      new SynologyChatAdapter({
+        botToken: "not-a-real-token",
+        incomingUrl:
+          "https://nas.invalid/webapi/entry.cgi?api=SYNO.Chat.External&method=chatbot&version=2&token=%22x%22",
       }),
   },
   {
