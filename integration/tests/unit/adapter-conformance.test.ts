@@ -32,6 +32,7 @@ import { LineAdapter } from "@getloopscale/loopzero-gateway-line";
 import { MatrixAdapter } from "@getloopscale/loopzero-gateway-matrix";
 import { MattermostAdapter } from "@getloopscale/loopzero-gateway-mattermost";
 import { NextcloudTalkAdapter } from "@getloopscale/loopzero-gateway-nextcloud-talk";
+import { NostrAdapter } from "@getloopscale/loopzero-gateway-nostr";
 import { SignalAdapter } from "@getloopscale/loopzero-gateway-signal";
 import { SlackAdapter } from "@getloopscale/loopzero-gateway-slack";
 import { SMSAdapter } from "@getloopscale/loopzero-gateway-sms";
@@ -101,6 +102,10 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         baseUrl: "https://nextcloud.invalid",
         secret: "not-a-real-bot-secret-but-forty-characters-long",
       }),
+  },
+  {
+    platform: "nostr",
+    make: () => new NostrAdapter({ secretKey: "1".repeat(64), relays: ["wss://relay.invalid"] }),
   },
   {
     platform: "signal",
