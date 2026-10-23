@@ -7,7 +7,13 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": [],
+  "ignore": [
+    "@getloopscale/loopzero-gateway-signal",
+    "@getloopscale/loopzero-gateway-imessage",
+    "@getloopscale/loopzero-gateway-google-chat",
+    "@getloopscale/loopzero-gateway-irc",
+    "@getloopscale/loopzero-gateway-nextcloud-talk"
+  ],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   }

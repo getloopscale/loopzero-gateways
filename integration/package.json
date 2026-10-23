@@ -19,6 +19,8 @@
     "matrix:down": "tsx scripts/teardown-docker.ts matrix",
     "mattermost:up": "tsx scripts/bootstrap-mattermost.ts",
     "mattermost:down": "tsx scripts/teardown-docker.ts mattermost",
+    "nextcloud-talk:up": "tsx scripts/bootstrap-nextcloud-talk.ts",
+    "nextcloud-talk:down": "tsx scripts/teardown-docker.ts nextcloud-talk",
     "capture:line": "tsx scripts/capture-line-user.ts"
   },
   "devDependencies": {
@@ -27,9 +29,14 @@
     "@getloopscale/loopzero-gateway": "workspace:*",
     "@getloopscale/loopzero-gateway-discord": "workspace:*",
     "@getloopscale/loopzero-gateway-email": "workspace:*",
+    "@getloopscale/loopzero-gateway-google-chat": "workspace:*",
+    "@getloopscale/loopzero-gateway-imessage": "workspace:*",
+    "@getloopscale/loopzero-gateway-irc": "workspace:*",
     "@getloopscale/loopzero-gateway-line": "workspace:*",
     "@getloopscale/loopzero-gateway-matrix": "workspace:*",
     "@getloopscale/loopzero-gateway-mattermost": "workspace:*",
+    "@getloopscale/loopzero-gateway-nextcloud-talk": "workspace:*",
+    "@getloopscale/loopzero-gateway-signal": "workspace:*",
     "@getloopscale/loopzero-gateway-slack": "workspace:*",
     "@getloopscale/loopzero-gateway-sms": "workspace:*",
     "@getloopscale/loopzero-gateway-teams": "workspace:*",
