@@ -41,6 +41,7 @@ import { SynologyChatAdapter } from "@getloopscale/loopzero-gateway-synology-cha
 import { TeamsAdapter } from "@getloopscale/loopzero-gateway-teams";
 import { TelegramAdapter } from "@getloopscale/loopzero-gateway-telegram";
 import { TlonUrbitAdapter } from "@getloopscale/loopzero-gateway-tlon-urbit";
+import { TwitchAdapter } from "@getloopscale/loopzero-gateway-twitch";
 import { describe, expect, it } from "vitest";
 
 /**
@@ -163,6 +164,15 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         shipUrl: "https://ship.invalid",
         ship: "~zod",
         code: "lidlut-tabwed-pillex-ridrup",
+      }),
+  },
+  {
+    platform: "twitch",
+    make: () =>
+      new TwitchAdapter({
+        accessToken: "not-a-real-token",
+        botUserId: "1",
+        broadcasterUserIds: ["2"],
       }),
   },
 ];
