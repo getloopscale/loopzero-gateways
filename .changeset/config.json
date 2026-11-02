@@ -7,7 +7,13 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": [],
+  "ignore": [
+    "@getloopscale/loopzero-gateway-nostr",
+    "@getloopscale/loopzero-gateway-feishu-lark",
+    "@getloopscale/loopzero-gateway-synology-chat",
+    "@getloopscale/loopzero-gateway-tlon-urbit",
+    "@getloopscale/loopzero-gateway-twitch"
+  ],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   }
