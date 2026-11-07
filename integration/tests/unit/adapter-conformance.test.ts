@@ -23,6 +23,7 @@
  */
 
 import type { BasePlatformAdapter } from "@getloopscale/loopzero-gateway";
+import { BuzzAdapter } from "@getloopscale/loopzero-gateway-buzz";
 import { ClickClackAdapter } from "@getloopscale/loopzero-gateway-clickclack";
 import { DiscordAdapter } from "@getloopscale/loopzero-gateway-discord";
 import { EmailAdapter } from "@getloopscale/loopzero-gateway-email";
@@ -175,6 +176,16 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         accessToken: "not-a-real-token",
         botUserId: "1",
         broadcasterUserIds: ["2"],
+      }),
+  },
+  {
+    platform: "buzz",
+    make: () =>
+      new BuzzAdapter({
+        baseUrl: "https://buzz.invalid",
+        token: "not-a-real-token",
+        workspaceId: "w",
+        botUserId: "b",
       }),
   },
   {
