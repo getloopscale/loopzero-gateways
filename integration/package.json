@@ -27,6 +27,7 @@
     "@line/bot-sdk": "^9.0.0",
     "@mattermost/client": "^11.9.0",
     "@getloopscale/loopzero-gateway": "workspace:*",
+    "@getloopscale/loopzero-gateway-clickclack": "workspace:*",
     "@getloopscale/loopzero-gateway-discord": "workspace:*",
     "@getloopscale/loopzero-gateway-email": "workspace:*",
     "@getloopscale/loopzero-gateway-feishu-lark": "workspace:*",

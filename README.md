@@ -23,6 +23,7 @@ Multi-channel gateway packages for the LoopScale ecosystem, extracted from `loop
 | `@getloopscale/loopzero-gateway-tlon-urbit` | Tlon / Urbit (ship HTTP channel + `chat` app pokes) | unverified — no live run yet; the wire shapes are read from OpenClaw and the live suite needs a ship |
 | `@getloopscale/loopzero-gateway-twitch` | Twitch chat (EventSub WebSocket + Helix Send Chat Message) | unverified — no live run yet; the live suite needs a bot account token and a test channel |
 | `@getloopscale/loopzero-gateway-zalo-personal` | Zalo Personal (unofficial web session through `zca-js`) | unverified — no live run yet; the live suite needs a throwaway Zalo account's session and a friend to message |
+| `@getloopscale/loopzero-gateway-clickclack` | ClickClack (bot token: REST send + realtime WebSocket) | unverified — no live run yet; the wire shapes are written from ClickClack's public docs and the live suite needs a server, a bot token and a channel |
 | `@getloopscale/loopzero-gateway-nostr` | Nostr (NIP-17 and NIP-04 direct messages over relay WebSockets) | unverified — no live run yet; the live suite needs a relay and two keys |
 | `@getloopscale/loopzero-gateway-line` | LINE Messaging API | **full** — send and receive |
 | `@getloopscale/loopzero-gateway-whatsapp` | WhatsApp (Meta Cloud API + whatsapp-web.js + Baileys) | partial — the Cloud API send is accepted by Meta, delivery and inbound not asserted here; the two unofficial backends reach a pairing QR and have never been paired here |

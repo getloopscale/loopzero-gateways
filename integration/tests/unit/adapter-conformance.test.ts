@@ -23,6 +23,7 @@
  */
 
 import type { BasePlatformAdapter } from "@getloopscale/loopzero-gateway";
+import { ClickClackAdapter } from "@getloopscale/loopzero-gateway-clickclack";
 import { DiscordAdapter } from "@getloopscale/loopzero-gateway-discord";
 import { EmailAdapter } from "@getloopscale/loopzero-gateway-email";
 import { FeishuLarkAdapter } from "@getloopscale/loopzero-gateway-feishu-lark";
@@ -174,6 +175,16 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         accessToken: "not-a-real-token",
         botUserId: "1",
         broadcasterUserIds: ["2"],
+      }),
+  },
+  {
+    platform: "clickclack",
+    make: () =>
+      new ClickClackAdapter({
+        baseUrl: "https://clickclack.invalid",
+        token: "not-a-real-token",
+        workspaceId: "w",
+        botUserId: "b",
       }),
   },
   {
