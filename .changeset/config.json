@@ -12,7 +12,8 @@
     "@getloopscale/loopzero-gateway-feishu-lark",
     "@getloopscale/loopzero-gateway-synology-chat",
     "@getloopscale/loopzero-gateway-tlon-urbit",
-    "@getloopscale/loopzero-gateway-twitch"
+    "@getloopscale/loopzero-gateway-twitch",
+    "@getloopscale/loopzero-gateway-zalo-personal"
   ],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true

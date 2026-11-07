@@ -42,6 +42,7 @@ import { TeamsAdapter } from "@getloopscale/loopzero-gateway-teams";
 import { TelegramAdapter } from "@getloopscale/loopzero-gateway-telegram";
 import { TlonUrbitAdapter } from "@getloopscale/loopzero-gateway-tlon-urbit";
 import { TwitchAdapter } from "@getloopscale/loopzero-gateway-twitch";
+import { ZaloPersonalAdapter } from "@getloopscale/loopzero-gateway-zalo-personal";
 import { describe, expect, it } from "vitest";
 
 /**
@@ -173,6 +174,13 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         accessToken: "not-a-real-token",
         botUserId: "1",
         broadcasterUserIds: ["2"],
+      }),
+  },
+  {
+    platform: "zalo_personal",
+    make: () =>
+      new ZaloPersonalAdapter({
+        credentials: { cookie: [], imei: "not-a-real-imei", userAgent: "not-a-real-agent" },
       }),
   },
 ];
