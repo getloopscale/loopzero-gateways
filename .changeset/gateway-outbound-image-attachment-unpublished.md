@@ -1,11 +1,6 @@
 ---
 "@getloopscale/loopzero-gateway-feishu-lark": patch
-"@getloopscale/loopzero-gateway-google-chat": patch
-"@getloopscale/loopzero-gateway-imessage": patch
-"@getloopscale/loopzero-gateway-irc": patch
-"@getloopscale/loopzero-gateway-nextcloud-talk": patch
 "@getloopscale/loopzero-gateway-nostr": patch
-"@getloopscale/loopzero-gateway-signal": patch
 "@getloopscale/loopzero-gateway-synology-chat": patch
 "@getloopscale/loopzero-gateway-tlon-urbit": patch
 "@getloopscale/loopzero-gateway-twitch": patch
