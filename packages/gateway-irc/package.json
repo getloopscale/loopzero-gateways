@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-irc",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "IRC platform adapter for @getloopscale/loopzero-gateway, speaking the IRC line protocol over node:tls.",
   "license": "Apache-2.0",
   "repository": {

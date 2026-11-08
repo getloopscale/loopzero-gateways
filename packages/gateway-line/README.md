@@ -15,8 +15,13 @@ Two ways to serve it. `createWebhookServer` mounts an Express route for you; or 
 yourself and hand the parsed events to `adapter.deliver(event)`, which is what makes `GatewayRunner`
 work for a webhook platform.
 
-A validator in the shape `loopzero/server/webhook` expects does not ship yet — see
-[getloopscale/loopzero#590](https://github.com/getloopscale/loopzero/issues/590).
+`lineWebhookVerifier(adapter)` is a validator in the shape `loopzero/server/webhook` expects
+(`(request) => Promise<{ ok: true } | { ok: false; reason }>`), for the framework's `validators`
+map: `validators: { line: lineWebhookVerifier(adapter) }`. It reads the raw body and the
+`x-line-signature` header. The framework does not ship a LINE validator of its own
+([getloopscale/loopzero#590](https://github.com/getloopscale/loopzero/issues/590)), so this package
+provides it.
+
 ## Install
 
 ```bash
