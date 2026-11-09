@@ -11,7 +11,6 @@
     "@getloopscale/loopzero-gateway-nostr",
     "@getloopscale/loopzero-gateway-feishu-lark",
     "@getloopscale/loopzero-gateway-synology-chat",
-    "@getloopscale/loopzero-gateway-tlon-urbit",
     "@getloopscale/loopzero-gateway-twitch",
     "@getloopscale/loopzero-gateway-zalo-personal",
     "@getloopscale/loopzero-gateway-clickclack",
