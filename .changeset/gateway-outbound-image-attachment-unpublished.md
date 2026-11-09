@@ -2,7 +2,6 @@
 "@getloopscale/loopzero-gateway-feishu-lark": patch
 "@getloopscale/loopzero-gateway-nostr": patch
 "@getloopscale/loopzero-gateway-synology-chat": patch
-"@getloopscale/loopzero-gateway-tlon-urbit": patch
 "@getloopscale/loopzero-gateway-twitch": patch
 ---
 
