@@ -49,6 +49,7 @@
     "@getloopscale/loopzero-gateway-tlon-urbit": "workspace:*",
     "@getloopscale/loopzero-gateway-twitch": "workspace:*",
     "@getloopscale/loopzero-gateway-whatsapp": "workspace:*",
+    "@getloopscale/loopzero-gateway-zalo": "workspace:*",
     "@getloopscale/loopzero-gateway-zalo-personal": "workspace:*",
     "@types/express": "^5.0.6",
     "@types/node": "^26.4.0",
