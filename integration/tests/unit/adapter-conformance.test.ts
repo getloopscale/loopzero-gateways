@@ -36,6 +36,7 @@ import { MatrixAdapter } from "@getloopscale/loopzero-gateway-matrix";
 import { MattermostAdapter } from "@getloopscale/loopzero-gateway-mattermost";
 import { NextcloudTalkAdapter } from "@getloopscale/loopzero-gateway-nextcloud-talk";
 import { NostrAdapter } from "@getloopscale/loopzero-gateway-nostr";
+import { RaftAdapter } from "@getloopscale/loopzero-gateway-raft";
 import { SignalAdapter } from "@getloopscale/loopzero-gateway-signal";
 import { SlackAdapter } from "@getloopscale/loopzero-gateway-slack";
 import { SMSAdapter } from "@getloopscale/loopzero-gateway-sms";
@@ -200,6 +201,7 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         botUserId: "b",
       }),
   },
+  { platform: "raft", make: () => new RaftAdapter({ command: "raft-not-installed" }) },
   {
     platform: "wechat",
     make: () => new WeChatAdapter({ appId: "a", appSecret: "s", token: "t" }),
