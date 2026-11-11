@@ -14,6 +14,7 @@
     "@getloopscale/loopzero-gateway-twitch",
     "@getloopscale/loopzero-gateway-zalo-personal",
     "@getloopscale/loopzero-gateway-zalo",
+    "@getloopscale/loopzero-gateway-wechat",
     "@getloopscale/loopzero-gateway-clickclack",
     "@getloopscale/loopzero-gateway-buzz"
   ],

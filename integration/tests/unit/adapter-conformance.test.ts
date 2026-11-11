@@ -44,6 +44,7 @@ import { TeamsAdapter } from "@getloopscale/loopzero-gateway-teams";
 import { TelegramAdapter } from "@getloopscale/loopzero-gateway-telegram";
 import { TlonUrbitAdapter } from "@getloopscale/loopzero-gateway-tlon-urbit";
 import { TwitchAdapter } from "@getloopscale/loopzero-gateway-twitch";
+import { WeChatAdapter } from "@getloopscale/loopzero-gateway-wechat";
 import { ZaloAdapter } from "@getloopscale/loopzero-gateway-zalo";
 import { ZaloPersonalAdapter } from "@getloopscale/loopzero-gateway-zalo-personal";
 import { describe, expect, it } from "vitest";
@@ -198,6 +199,10 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         workspaceId: "w",
         botUserId: "b",
       }),
+  },
+  {
+    platform: "wechat",
+    make: () => new WeChatAdapter({ appId: "a", appSecret: "s", token: "t" }),
   },
   {
     platform: "zalo",
