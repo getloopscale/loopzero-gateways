@@ -101,6 +101,9 @@ importers:
       '@getloopscale/loopzero-gateway-nostr':
         specifier: workspace:*
         version: link:../packages/gateway-nostr
+      '@getloopscale/loopzero-gateway-raft':
+        specifier: workspace:*
+        version: link:../packages/gateway-raft
       '@getloopscale/loopzero-gateway-signal':
         specifier: workspace:*
         version: link:../packages/gateway-signal
@@ -125,9 +128,21 @@ importers:
       '@getloopscale/loopzero-gateway-twitch':
         specifier: workspace:*
         version: link:../packages/gateway-twitch
+      '@getloopscale/loopzero-gateway-wechat':
+        specifier: workspace:*
+        version: link:../packages/gateway-wechat
+      '@getloopscale/loopzero-gateway-wecom':
+        specifier: workspace:*
+        version: link:../packages/gateway-wecom
       '@getloopscale/loopzero-gateway-whatsapp':
         specifier: workspace:*
         version: link:../packages/gateway-whatsapp
+      '@getloopscale/loopzero-gateway-yuanbao':
+        specifier: workspace:*
+        version: link:../packages/gateway-yuanbao
+      '@getloopscale/loopzero-gateway-zalo':
+        specifier: workspace:*
+        version: link:../packages/gateway-zalo
       '@getloopscale/loopzero-gateway-zalo-personal':
         specifier: workspace:*
         version: link:../packages/gateway-zalo-personal
@@ -527,6 +542,21 @@ importers:
         specifier: ^4.1.11
         version: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  packages/gateway-raft:
+    devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: ^4.1.11
+        version: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
   packages/gateway-signal:
     devDependencies:
       '@getloopscale/loopzero-gateway':
@@ -739,6 +769,36 @@ importers:
         specifier: ^4.1.11
         version: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  packages/gateway-wechat:
+    devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: ^4.1.11
+        version: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  packages/gateway-wecom:
+    devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: ^4.1.11
+        version: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
   packages/gateway-whatsapp:
     dependencies:
       baileys:
@@ -772,6 +832,36 @@ importers:
       zod:
         specifier: ^4.6.6
         version: 4.6.7
+
+  packages/gateway-yuanbao:
+    devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: ^4.1.11
+        version: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  packages/gateway-zalo:
+    devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      tsup:
+        specifier: ^8.5.0
+        version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: ^4.1.11
+        version: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
   packages/gateway-zalo-personal:
     devDependencies:

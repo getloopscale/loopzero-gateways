@@ -13,6 +13,11 @@
     "@getloopscale/loopzero-gateway-synology-chat",
     "@getloopscale/loopzero-gateway-twitch",
     "@getloopscale/loopzero-gateway-zalo-personal",
+    "@getloopscale/loopzero-gateway-zalo",
+    "@getloopscale/loopzero-gateway-wechat",
+    "@getloopscale/loopzero-gateway-wecom",
+    "@getloopscale/loopzero-gateway-yuanbao",
+    "@getloopscale/loopzero-gateway-raft",
     "@getloopscale/loopzero-gateway-clickclack",
     "@getloopscale/loopzero-gateway-buzz"
   ],
