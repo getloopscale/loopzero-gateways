@@ -47,6 +47,7 @@ import { TlonUrbitAdapter } from "@getloopscale/loopzero-gateway-tlon-urbit";
 import { TwitchAdapter } from "@getloopscale/loopzero-gateway-twitch";
 import { WeChatAdapter } from "@getloopscale/loopzero-gateway-wechat";
 import { WeComAdapter } from "@getloopscale/loopzero-gateway-wecom";
+import { YuanbaoAdapter } from "@getloopscale/loopzero-gateway-yuanbao";
 import { ZaloAdapter } from "@getloopscale/loopzero-gateway-zalo";
 import { ZaloPersonalAdapter } from "@getloopscale/loopzero-gateway-zalo-personal";
 import { describe, expect, it } from "vitest";
@@ -217,6 +218,10 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         token: "t",
         encodingAesKey: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQ",
       }),
+  },
+  {
+    platform: "yuanbao",
+    make: () => new YuanbaoAdapter({ appId: "a", appSecret: "s", callbackSecret: "c" }),
   },
   {
     platform: "zalo",
