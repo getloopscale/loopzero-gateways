@@ -8,20 +8,11 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@getloopscale/loopzero-gateway-nostr",
-    "@getloopscale/loopzero-gateway-feishu-lark",
     "@getloopscale/loopzero-gateway-synology-chat",
     "@getloopscale/loopzero-gateway-twitch",
     "@getloopscale/loopzero-gateway-zalo-personal",
     "@getloopscale/loopzero-gateway-zalo",
-    "@getloopscale/loopzero-gateway-wechat",
-    "@getloopscale/loopzero-gateway-wecom",
-    "@getloopscale/loopzero-gateway-yuanbao",
-    "@getloopscale/loopzero-gateway-qq",
-    "@getloopscale/loopzero-gateway-x",
-    "@getloopscale/loopzero-gateway-raft",
-    "@getloopscale/loopzero-gateway-clickclack",
-    "@getloopscale/loopzero-gateway-buzz"
+    "@getloopscale/loopzero-gateway-yuanbao"
   ],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
