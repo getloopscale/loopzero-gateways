@@ -47,6 +47,7 @@ import { TlonUrbitAdapter } from "@getloopscale/loopzero-gateway-tlon-urbit";
 import { TwitchAdapter } from "@getloopscale/loopzero-gateway-twitch";
 import { WeChatAdapter } from "@getloopscale/loopzero-gateway-wechat";
 import { WeComAdapter } from "@getloopscale/loopzero-gateway-wecom";
+import { XAdapter } from "@getloopscale/loopzero-gateway-x";
 import { YuanbaoAdapter } from "@getloopscale/loopzero-gateway-yuanbao";
 import { ZaloAdapter } from "@getloopscale/loopzero-gateway-zalo";
 import { ZaloPersonalAdapter } from "@getloopscale/loopzero-gateway-zalo-personal";
@@ -217,6 +218,19 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         agentId: 1,
         token: "t",
         encodingAesKey: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQ",
+      }),
+  },
+  {
+    platform: "x",
+    make: () =>
+      new XAdapter({
+        userId: "1",
+        username: "bot",
+        clientId: "c",
+        clientSecret: "s",
+        refreshToken: "r",
+        allowFrom: ["alice"],
+        pollIntervalMs: 0,
       }),
   },
   {
