@@ -36,6 +36,7 @@ import { MatrixAdapter } from "@getloopscale/loopzero-gateway-matrix";
 import { MattermostAdapter } from "@getloopscale/loopzero-gateway-mattermost";
 import { NextcloudTalkAdapter } from "@getloopscale/loopzero-gateway-nextcloud-talk";
 import { NostrAdapter } from "@getloopscale/loopzero-gateway-nostr";
+import { RaftAdapter } from "@getloopscale/loopzero-gateway-raft";
 import { SignalAdapter } from "@getloopscale/loopzero-gateway-signal";
 import { SlackAdapter } from "@getloopscale/loopzero-gateway-slack";
 import { SMSAdapter } from "@getloopscale/loopzero-gateway-sms";
@@ -44,6 +45,10 @@ import { TeamsAdapter } from "@getloopscale/loopzero-gateway-teams";
 import { TelegramAdapter } from "@getloopscale/loopzero-gateway-telegram";
 import { TlonUrbitAdapter } from "@getloopscale/loopzero-gateway-tlon-urbit";
 import { TwitchAdapter } from "@getloopscale/loopzero-gateway-twitch";
+import { WeChatAdapter } from "@getloopscale/loopzero-gateway-wechat";
+import { WeComAdapter } from "@getloopscale/loopzero-gateway-wecom";
+import { YuanbaoAdapter } from "@getloopscale/loopzero-gateway-yuanbao";
+import { ZaloAdapter } from "@getloopscale/loopzero-gateway-zalo";
 import { ZaloPersonalAdapter } from "@getloopscale/loopzero-gateway-zalo-personal";
 import { describe, expect, it } from "vitest";
 
@@ -197,6 +202,30 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         workspaceId: "w",
         botUserId: "b",
       }),
+  },
+  { platform: "raft", make: () => new RaftAdapter({ command: "raft-not-installed" }) },
+  {
+    platform: "wechat",
+    make: () => new WeChatAdapter({ appId: "a", appSecret: "s", token: "t" }),
+  },
+  {
+    platform: "wecom",
+    make: () =>
+      new WeComAdapter({
+        corpId: "c",
+        corpSecret: "s",
+        agentId: 1,
+        token: "t",
+        encodingAesKey: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQ",
+      }),
+  },
+  {
+    platform: "yuanbao",
+    make: () => new YuanbaoAdapter({ appId: "a", appSecret: "s", callbackSecret: "c" }),
+  },
+  {
+    platform: "zalo",
+    make: () => new ZaloAdapter({ appId: "a", oaSecretKey: "s", accessToken: "t" }),
   },
   {
     platform: "zalo_personal",
