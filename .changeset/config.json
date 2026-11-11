@@ -17,6 +17,7 @@
     "@getloopscale/loopzero-gateway-wechat",
     "@getloopscale/loopzero-gateway-wecom",
     "@getloopscale/loopzero-gateway-yuanbao",
+    "@getloopscale/loopzero-gateway-qq",
     "@getloopscale/loopzero-gateway-x",
     "@getloopscale/loopzero-gateway-raft",
     "@getloopscale/loopzero-gateway-clickclack",

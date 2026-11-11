@@ -51,6 +51,7 @@
     "@getloopscale/loopzero-gateway-whatsapp": "workspace:*",
     "@getloopscale/loopzero-gateway-wechat": "workspace:*",
     "@getloopscale/loopzero-gateway-wecom": "workspace:*",
+    "@getloopscale/loopzero-gateway-qq": "workspace:*",
     "@getloopscale/loopzero-gateway-x": "workspace:*",
     "@getloopscale/loopzero-gateway-yuanbao": "workspace:*",
     "@getloopscale/loopzero-gateway-raft": "workspace:*",

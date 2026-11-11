@@ -36,6 +36,7 @@ import { MatrixAdapter } from "@getloopscale/loopzero-gateway-matrix";
 import { MattermostAdapter } from "@getloopscale/loopzero-gateway-mattermost";
 import { NextcloudTalkAdapter } from "@getloopscale/loopzero-gateway-nextcloud-talk";
 import { NostrAdapter } from "@getloopscale/loopzero-gateway-nostr";
+import { QQAdapter } from "@getloopscale/loopzero-gateway-qq";
 import { RaftAdapter } from "@getloopscale/loopzero-gateway-raft";
 import { SignalAdapter } from "@getloopscale/loopzero-gateway-signal";
 import { SlackAdapter } from "@getloopscale/loopzero-gateway-slack";
@@ -232,6 +233,10 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         allowFrom: ["alice"],
         pollIntervalMs: 0,
       }),
+  },
+  {
+    platform: "qq",
+    make: () => new QQAdapter({ appId: "a", appSecret: "s" }),
   },
   {
     platform: "yuanbao",
