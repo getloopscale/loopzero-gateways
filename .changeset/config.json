@@ -7,13 +7,6 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": [
-    "@getloopscale/loopzero-gateway-synology-chat",
-    "@getloopscale/loopzero-gateway-twitch",
-    "@getloopscale/loopzero-gateway-zalo-personal",
-    "@getloopscale/loopzero-gateway-zalo",
-    "@getloopscale/loopzero-gateway-yuanbao"
-  ],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   }
