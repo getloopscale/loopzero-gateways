@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-matrix",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Matrix protocol platform adapter for @getloopscale/loopzero-gateway. ADRs D413-D421.",
   "license": "Apache-2.0",
   "repository": {
