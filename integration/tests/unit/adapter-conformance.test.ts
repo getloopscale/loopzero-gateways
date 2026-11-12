@@ -36,6 +36,7 @@ import { MatrixAdapter } from "@getloopscale/loopzero-gateway-matrix";
 import { MattermostAdapter } from "@getloopscale/loopzero-gateway-mattermost";
 import { NextcloudTalkAdapter } from "@getloopscale/loopzero-gateway-nextcloud-talk";
 import { NostrAdapter } from "@getloopscale/loopzero-gateway-nostr";
+import { QQAdapter } from "@getloopscale/loopzero-gateway-qq";
 import { RaftAdapter } from "@getloopscale/loopzero-gateway-raft";
 import { SignalAdapter } from "@getloopscale/loopzero-gateway-signal";
 import { SlackAdapter } from "@getloopscale/loopzero-gateway-slack";
@@ -47,6 +48,7 @@ import { TlonUrbitAdapter } from "@getloopscale/loopzero-gateway-tlon-urbit";
 import { TwitchAdapter } from "@getloopscale/loopzero-gateway-twitch";
 import { WeChatAdapter } from "@getloopscale/loopzero-gateway-wechat";
 import { WeComAdapter } from "@getloopscale/loopzero-gateway-wecom";
+import { XAdapter } from "@getloopscale/loopzero-gateway-x";
 import { YuanbaoAdapter } from "@getloopscale/loopzero-gateway-yuanbao";
 import { ZaloAdapter } from "@getloopscale/loopzero-gateway-zalo";
 import { ZaloPersonalAdapter } from "@getloopscale/loopzero-gateway-zalo-personal";
@@ -218,6 +220,23 @@ const ADAPTERS: readonly { platform: string; make: () => BasePlatformAdapter }[]
         token: "t",
         encodingAesKey: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQ",
       }),
+  },
+  {
+    platform: "x",
+    make: () =>
+      new XAdapter({
+        userId: "1",
+        username: "bot",
+        clientId: "c",
+        clientSecret: "s",
+        refreshToken: "r",
+        allowFrom: ["alice"],
+        pollIntervalMs: 0,
+      }),
+  },
+  {
+    platform: "qq",
+    make: () => new QQAdapter({ appId: "a", appSecret: "s" }),
   },
   {
     platform: "yuanbao",
