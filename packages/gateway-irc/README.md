@@ -96,3 +96,7 @@ A real-account send-and-receive run and a live LoopBot reply have **not been ver
 sandbox: no IRC account credentials or running LoopBot instance were supplied. Before claiming
 live parity, record the run date, network, account (never its password), channel or DM target,
 inbound message, and observed reply from an independent IRC client.
+
+## Capabilities
+
+`adapter.capabilities` reports `maxMessageChars` is left undefined: IRC's limit is 512 bytes per line, not characters. `threads` is `false`.
