@@ -46,6 +46,7 @@
     "@getloopscale/loopzero-sdk": ">=2.18.0 <6"
   },
   "devDependencies": {
+    "@getloopscale/loopzero-agents": "16.5.0",
     "@getloopscale/loopzero-gateway": "workspace:*",
     "@getloopscale/loopzero-presenter": "^0.10.0",
     "@getloopscale/loopzero-sdk": "^5.9.0",
