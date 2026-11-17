@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-agent",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "Agent bridge for @getloopscale/loopzero-gateway: run a LoopZero SDK agent turn to text and deliver text to a channel rendered for its platform.",
   "license": "Apache-2.0",
   "repository": {
@@ -46,6 +46,7 @@
     "@getloopscale/loopzero-sdk": ">=2.18.0 <6"
   },
   "devDependencies": {
+    "@getloopscale/loopzero-agents": "16.5.0",
     "@getloopscale/loopzero-gateway": "workspace:*",
     "@getloopscale/loopzero-presenter": "^0.10.0",
     "@getloopscale/loopzero-sdk": "^5.9.0",
