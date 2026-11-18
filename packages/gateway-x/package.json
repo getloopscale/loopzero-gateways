@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-x",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "X (Twitter) adapter for @getloopscale/loopzero-gateway: mentions of the bot account in, public replies out, over the X API v2.",
   "license": "Apache-2.0",
   "repository": {
@@ -41,7 +41,7 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.16.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.20.0 <1.0.0"
   },
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",
