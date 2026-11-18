@@ -156,3 +156,27 @@ message it drops.
 ## Capabilities
 
 `adapter.capabilities.maxMessageChars` is `8000` (the splitter limit) and `threads` is `false`. See `@getloopscale/loopzero-gateway` for the field meanings.
+
+## Channel descriptor
+
+`teamsChannel` describes the channel as data, for `createChannels` and `configFromEnv` from
+`@getloopscale/loopzero-gateway`.
+
+| Field | Env | Required | Secret |
+| --- | --- | --- | --- |
+| `clientId` | `TEAMS_CLIENT_ID` | yes | no |
+| `clientSecret` | `TEAMS_CLIENT_SECRET` | yes | yes |
+| `tenantId` | `TEAMS_TENANT_ID` | yes | no |
+| `botDisplayName` | `TEAMS_BOT_DISPLAY_NAME` | no | no |
+| `requireMention` | `TEAMS_REQUIRE_MENTION` | no | no |
+
+```ts
+import { configFromEnv, createChannels } from "@getloopscale/loopzero-gateway";
+import { teamsChannel } from "@getloopscale/loopzero-gateway-teams";
+
+const { config, missing } = configFromEnv(teamsChannel, process.env, "APP_");
+const { adapters, rejected } = createChannels([{ descriptor: teamsChannel, config }]);
+```
+
+`create` refuses a value of the wrong type with a `GatewayConfigurationError` (`invalid_config`,
+naming the key).
