@@ -1,8 +1,4 @@
-import type {
-  GatewayContext,
-  GatewayHandler,
-  MessageEvent,
-} from "@getloopscale/loopzero-gateway";
+import type { GatewayContext, GatewayHandler, MessageEvent } from "@getloopscale/loopzero-gateway";
 import { channelRendering, maskSecrets } from "@getloopscale/loopzero-gateway";
 import {
   type AgentOutputEvent,
