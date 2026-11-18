@@ -4,4 +4,4 @@
 "@getloopscale/loopzero-gateway-zalo-personal": minor
 ---
 
-Export `synologyChatChannel`, `twitchChannel` and `zaloPersonalChannel`: `ChannelDescriptor`s with env bindings for `createChannels` and `configFromEnv`. Requires `@getloopscale/loopzero-gateway >=0.20.0`.
+Export `synologyChatChannel`, `twitchChannel` and `zaloPersonalChannel`: `ChannelDescriptor`s with env bindings for `createChannels` and `configFromEnv`. Requires `@getloopscale/loopzero-gateway >=0.22.0`.
