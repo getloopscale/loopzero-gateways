@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-google-chat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Google Chat platform adapter for @getloopscale/loopzero-gateway: verifies Chat's signed requests and replies through the Chat REST API.",
   "license": "Apache-2.0",
   "repository": {
@@ -41,7 +41,7 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.12.0 <1.0.0",
+    "@getloopscale/loopzero-gateway": ">=0.20.0 <1.0.0",
     "express": "^4.18.0 || ^5.0.0"
   },
   "devDependencies": {
