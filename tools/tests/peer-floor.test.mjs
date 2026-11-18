@@ -25,9 +25,9 @@ describe("check-peer-floor", () => {
     for (const a of Object.values(byName)) expect(a).toMatch(/^\d+\.\d+\.\d+$/);
     expect(byName["@getloopscale/loopzero-gateway-zalo"]).toBe("0.15.0");
     expect(byName["@getloopscale/loopzero-gateway-qq"]).toBe("0.16.0");
-    expect(byName["@getloopscale/loopzero-gateway-buzz"]).toBe("0.20.0");
-    expect(byName["@getloopscale/loopzero-gateway-clickclack"]).toBe("0.20.0");
-    expect(byName["@getloopscale/loopzero-gateway-feishu-lark"]).toBe("0.20.0");
+    expect(byName["@getloopscale/loopzero-gateway-buzz"]).toBe("0.22.0");
+    expect(byName["@getloopscale/loopzero-gateway-clickclack"]).toBe("0.22.0");
+    expect(byName["@getloopscale/loopzero-gateway-feishu-lark"]).toBe("0.22.0");
   });
 });
 
