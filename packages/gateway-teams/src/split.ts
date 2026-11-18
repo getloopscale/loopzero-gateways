@@ -20,7 +20,8 @@ import { chunkText } from "@getloopscale/loopzero-gateway";
  */
 export const __splitMarker: unique symbol = Symbol("split");
 
-const TEAMS_MAX_TEXT = 8000;
+/** The most characters one Teams message carries here; also the splitter window. */
+export const TEAMS_MAX_TEXT = 8000;
 
 /**
  * Split `text` into chunks Teams accepts — a fixed 8000-character window.
