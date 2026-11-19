@@ -49,3 +49,21 @@ scripted fake. No send-and-receive run against a real account has been recorded.
 ## Capabilities
 
 `adapter.capabilities` reports `maxMessageChars` is the splitter's limit (exported from this package) and `threads` is `false`; other fields follow the defaults of `@getloopscale/loopzero-gateway`.
+
+## Channel descriptor
+
+`zaloPersonalChannel` is a `ChannelDescriptor` (transport `socket`) for `createChannels`; bind it to the environment with `configFromEnv` (needs `@getloopscale/loopzero-gateway >=0.22.0`).
+
+```ts
+import { configFromEnv, createChannels } from "@getloopscale/loopzero-gateway";
+import { zaloPersonalChannel } from "@getloopscale/loopzero-gateway-zalo-personal";
+
+const { config, missing } = configFromEnv(zaloPersonalChannel, process.env, "APP_");
+const { adapters, rejected } = createChannels([{ descriptor: zaloPersonalChannel, config }]);
+```
+
+| Env name | Option | Required | Secret |
+| --- | --- | --- | --- |
+| `ZALO_PERSONAL_CREDENTIALS` | `credentials` (JSON text of `{ cookie, imei, userAgent }`) | yes | yes |
+
+Options without an env name are programmatic only. `create` makes no network call and throws a `GatewayConfigurationError` (`invalid_config`, naming the key) for a wrongly typed value.

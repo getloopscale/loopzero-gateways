@@ -182,7 +182,7 @@ exist yet.
 
 ## Relationship to `@getloopscale/loopzero-sdk`
 
-Only `@getloopscale/loopzero-gateway` (the core) declares a peer on `@getloopscale/loopzero-sdk`, at `>=2.18.0 <5`, and uses it
+`@getloopscale/loopzero-gateway` (the core) and `@getloopscale/loopzero-gateway-agent` declare a peer on `@getloopscale/loopzero-sdk`, at `>=4.62.0 <6`. The core uses it
 for one thing: redacting a throw before it reaches a log, at two call sites. The ten adapters name it
 only as a `devDependency` and mark it external at build time; none of them imports it, which is what
 B-007 measured before removing the peer each had inherited. So installing an adapter does not pull
