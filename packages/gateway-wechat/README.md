@@ -56,3 +56,50 @@ are written from WeChat's Official Account documentation and tested against a sc
 ## Capabilities
 
 `adapter.capabilities.maxMessageChars` is `600` (the splitter limit) and `threads` is `false`. See `@getloopscale/loopzero-gateway` for the field meanings.
+
+## Channel descriptor
+
+`wechatChannel` describes the channel as data, for `createChannels` and `configFromEnv` from
+`@getloopscale/loopzero-gateway`.
+
+| Field | Env | Required | Secret |
+| --- | --- | --- | --- |
+| `appId` | `WECHAT_APP_ID` | yes | no |
+| `appSecret` | `WECHAT_APP_SECRET` | yes | yes |
+| `token` | `WECHAT_TOKEN` | yes | yes |
+
+```ts
+import { configFromEnv, createChannels } from "@getloopscale/loopzero-gateway";
+import { wechatChannel } from "@getloopscale/loopzero-gateway-wechat";
+
+const { config, missing } = configFromEnv(wechatChannel, process.env, "APP_");
+const { adapters, rejected } = createChannels([
+  { descriptor: wechatChannel, config, envPrefix: "APP_" },
+]);
+```
+
+Pass the same prefix as `envPrefix` to `createChannels`: a missing required value is then rejected with
+`missing_required_config` naming the full variable (for example `APP_WECHAT_APP_ID`).
+
+The descriptor is constructor-only (`transport: "socket"`); your app still mounts the callback route.
+
+`create` refuses a value of the wrong type with a `GatewayConfigurationError` (`invalid_config`,
+naming the key) and makes no network call.
+
+## Mount with `createWebhookHandler`
+
+`wechatChannel` declares `transport: "webhook"`, so one Fetch route serves it:
+
+```ts
+import { configFromEnv, createChannels, createWebhookHandler } from "@getloopscale/loopzero-gateway";
+import { wechatChannel } from "@getloopscale/loopzero-gateway-wechat";
+
+const { adapters, channels } = createChannels([
+  { descriptor: wechatChannel, config: configFromEnv(wechatChannel, process.env).config },
+]);
+// Subscribe with adapter.onInbound(...) and start the adapters, then:
+export const onWebhook = createWebhookHandler({ channels, isStarted: () => true });
+// Route `/webhooks/wechat` to onWebhook(request).
+```
+
+The route takes `GET` (the server-URL check, answered with the `echostr`) and `POST`. The signature is read from the query; a wrong one is a 401, and a 503 (no handler subscribed) stays 503 so WeChat retries.
