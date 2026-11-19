@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.1
+
+### Patch Changes
+
+- 021127c: `@getloopscale/loopzero-gateway-line` keeps its own config readers instead of importing `channelConfigReaders`, which `@getloopscale/loopzero-gateway@0.21.0` does not export, so it loads against any core its peer range admits.
+- `@getloopscale/loopzero-gateway-line` keeps its own copy of the channel config readers until `@getloopscale/loopzero-gateway@0.22.0` ships `channelConfigReaders`, so it works with every `@getloopscale/loopzero-gateway` its `>=0.21.0` peer floor admits (#564).
+
 ## 0.7.0
 
 ### Minor Changes
