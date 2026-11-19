@@ -41,7 +41,7 @@
     "test:mutation": "stryker run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-sdk": ">=2.18.0 <6"
+    "@getloopscale/loopzero-sdk": ">=4.62.0 <6"
   },
   "devDependencies": {
     "@stryker-mutator/core": "10",
