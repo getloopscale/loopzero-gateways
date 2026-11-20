@@ -45,7 +45,7 @@
     "nostr-tools": "^2.25.2"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.15.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.23.0 <1.0.0"
   },
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",
