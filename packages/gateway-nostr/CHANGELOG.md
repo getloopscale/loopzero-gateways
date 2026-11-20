@@ -1,5 +1,11 @@
 # @getloopscale/loopzero-gateway-nostr
 
+## 0.2.0
+
+### Minor Changes
+
+- 35d9d91: Export a `ChannelDescriptor` with environment variable bindings: `ircChannel`, `nextcloudTalkChannel` and `nostrChannel`, for use with `createChannels` and `configFromEnv`. The `@getloopscale/loopzero-gateway` peer floor is `>=0.23.0`, the release that adds the `readNumber`, `readList` and `readBooleanString` readers the descriptors call.
+
 ## 0.1.1
 
 ### Patch Changes
