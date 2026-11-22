@@ -1,5 +1,11 @@
 # @getloopscale/loopzero-gateway-agent
 
+## 0.3.2
+
+### Patch Changes
+
+- 6d42c80: Widen the `@getloopscale/loopzero-sdk` peer range to `>=5.3.0 <10` so npm admits SDK 6, 7, 8 and 9.
+
 ## 0.3.1
 
 ### Patch Changes
