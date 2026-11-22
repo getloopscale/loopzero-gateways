@@ -4,8 +4,7 @@ WhatsApp platform adapter for `@getloopscale/loopzero-gateway`. Three backends b
 `WhatsAppBackend` interface: the Meta WhatsApp Business Cloud API, a `whatsapp-web.js`
 subprocess bridge, and a `baileys` socket.
 
-Pre-1.0 contract per ADR D314 — breaking changes allowed within 0.x. (This line used to
-pin a version number, and named 0.1.0 while the package shipped 0.3.2.)
+Pre-1.0 contract per ADR D314 — breaking changes allowed within 0.x.
 
 
 ## How inbound arrives
