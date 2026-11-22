@@ -1,5 +1,11 @@
 # @getloopscale/loopzero-gateway-zalo-personal
 
+## 0.3.1
+
+### Patch Changes
+
+- 1758ec9: Replace the hand-written bounded dedup sets with `SeenIds` from `@getloopscale/loopzero-gateway`; behavior is unchanged.
+
 ## 0.3.0
 
 ### Minor Changes
