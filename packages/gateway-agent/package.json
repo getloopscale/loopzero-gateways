@@ -43,7 +43,7 @@
   "peerDependencies": {
     "@getloopscale/loopzero-gateway": ">=0.19.0 <1.0.0",
     "@getloopscale/loopzero-presenter": ">=0.10.0 <1.0.0",
-    "@getloopscale/loopzero-sdk": ">=5.3.0 <9"
+    "@getloopscale/loopzero-sdk": ">=5.3.0 <10"
   },
   "devDependencies": {
     "@getloopscale/loopzero-agents": "16.5.0",
