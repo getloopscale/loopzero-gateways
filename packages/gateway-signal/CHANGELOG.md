@@ -1,5 +1,15 @@
 # @getloopscale/loopzero-gateway-signal
 
+## 0.4.0
+
+### Minor Changes
+
+- 6f73151: Remove the two package-local copies of the line-framed JSON-RPC client: `gateway-signal` and `gateway-imessage` now use the one `JsonRpcLineClient` exported by `@getloopscale/loopzero-gateway`, so a single implementation exists. Raises their `@getloopscale/loopzero-gateway` peer floor to `>=0.27.0`, the first core release that exports it.
+
+### Patch Changes
+
+- 03c3a2c: Use the core `JsonRpcLineClient` instead of a local copy, and raise the `@getloopscale/loopzero-gateway` peer floor to 0.27.0.
+
 ## 0.3.0
 
 ### Minor Changes
