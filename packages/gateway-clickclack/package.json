@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-clickclack",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "ClickClack platform adapter for @getloopscale/loopzero-gateway, over the REST API and realtime WebSocket with a bot token.",
   "license": "Apache-2.0",
   "repository": {
@@ -41,7 +41,7 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.21.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.26.0 <1.0.0"
   },
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",

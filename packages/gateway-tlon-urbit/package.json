@@ -44,7 +44,7 @@
     "@urbit/aura": "3.0.0"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.20.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.26.0 <1.0.0"
   },
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",
