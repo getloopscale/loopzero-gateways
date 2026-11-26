@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-mattermost",
-  "version": "0.5.0",
+  "version": "0.1.0",
   "description": "Mattermost platform adapter for @getloopscale/loopzero-gateway. WebSocket gateway + REST. ADRs D397-D404.",
   "license": "Apache-2.0",
   "repository": {
@@ -43,7 +43,7 @@
   },
   "peerDependencies": {
     "@mattermost/client": "^9.0.0 || ^11.0.0",
-    "@getloopscale/loopzero-gateway": ">=0.21.0 <1.0.0",
+    "@getloopscale/loopzero-gateway": ">=0.1.0 <1.0.0",
     "ws": "^8.0.0"
   },
   "peerDependenciesMeta": {
@@ -59,7 +59,7 @@
     "@stryker-mutator/core": "10",
     "@stryker-mutator/vitest-runner": "10",
     "@getloopscale/loopzero-gateway": "workspace:*",
-    "@getloopscale/loopzero-sdk": "^4.62.0",
+    "@getloopscale/loopzero-sdk": "^0.1.0",
     "tsup": "^8.5.0",
     "typescript": "5.9.3",
     "vitest": "^4.1.11",

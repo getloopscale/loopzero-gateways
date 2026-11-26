@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway",
-  "version": "0.32.0",
+  "version": "0.1.0",
   "description": "Multi-platform messaging gateway core for @getloopscale/loopzero-sdk — transport-agnostic primitives (BasePlatformAdapter, MessageEvent, SessionRouter, DeliveryRouter, GatewayRunner, hooks). Inspired by hermes-agent/gateway. ADRs D170-D181.",
   "license": "Apache-2.0",
   "repository": {
@@ -41,13 +41,13 @@
     "test:mutation": "stryker run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-sdk": ">=4.62.0 <16"
+    "@getloopscale/loopzero-sdk": ">=0.1.0 <1.0.0"
   },
   "devDependencies": {
     "@stryker-mutator/core": "10",
     "@stryker-mutator/vitest-runner": "10",
-    "@getloopscale/loopzero-presenter": "^0.10.0",
-    "@getloopscale/loopzero-sdk": "^15.0.0",
+    "@getloopscale/loopzero-presenter": "^0.1.0",
+    "@getloopscale/loopzero-sdk": "^0.1.0",
     "tsup": "^8.5.0",
     "typescript": "5.9.3",
     "vitest": "^4.1.11",

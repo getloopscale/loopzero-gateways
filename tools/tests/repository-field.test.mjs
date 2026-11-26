@@ -40,7 +40,7 @@ describe("repositoryProblem", () => {
   it("catches a remote that points somewhere else", () => {
     // The org moved once already. A stale remote passes every local gate and fails only at
     // publish, which is the most expensive place to find out.
-    const stale = { repository: { url: "git+https://github.com/getloopscale/loopzero-gateways.git" } };
+    const stale = { repository: { url: "git+https://github.com/former-org/loopzero-gateways.git" } };
     expect(repositoryProblem(stale, "x")).toContain("not git+https://github.com/getloopscale/");
   });
 

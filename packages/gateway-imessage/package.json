@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-imessage",
-  "version": "0.3.1",
+  "version": "0.1.0",
   "description": "iMessage platform adapter for @getloopscale/loopzero-gateway, driving imsg's JSON-RPC mode over stdio on a signed-in Mac.",
   "license": "Apache-2.0",
   "repository": {
@@ -41,7 +41,7 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.27.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.1.0 <1.0.0"
   },
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",

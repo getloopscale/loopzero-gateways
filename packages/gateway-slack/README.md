@@ -8,7 +8,7 @@ Slack platform adapter for `@getloopscale/loopzero-gateway`. Adoption Roadmap #7
 **Socket Mode.** Bolt holds the connection; events reach `onInbound` once `connect()` resolves.
 There is no webhook to host and nothing for an application to authenticate.
 
-Slack's platform also supports HTTP events with a signing secret, and `loopzero/server/webhook`
+Slack's platform also supports HTTP events with a signing secret, and `@getloopscale/loopzero/server/webhook`
 exports `slack()` for that — but this adapter uses Socket Mode, so it is not the path in play here.
 ## Install
 

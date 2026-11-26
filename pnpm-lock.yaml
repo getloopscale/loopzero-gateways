@@ -38,6 +38,9 @@ importers:
       '@changesets/cli':
         specifier: ^2.31.0
         version: 2.31.1(@types/node@22.20.5)
+      '@getloopscale/loopzero':
+        specifier: ^0.1.0
+        version: 0.1.0(@getloopscale/loopzero-sdk@0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(@vitejs/plugin-react@4.7.0(vite@7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(csstype@3.2.3)(react-dom@19.3.1(react@19.3.1))(react-router@8.5.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)(tsx@4.23.15)(typescript@5.9.3)(vite@7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(zod@4.6.7)
       '@types/node':
         specifier: ^22.20.1
         version: 22.20.5
@@ -47,21 +50,12 @@ importers:
       knip:
         specifier: ^5.88.1
         version: 5.88.1(@types/node@22.20.5)(typescript@5.9.3)
-      loopzero:
-        specifier: ^0.60.0
-        version: 0.60.0(@opentelemetry/api@1.10.0)(@getloopscale/loopzero-sdk@15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(@types/node@22.20.5)(@types/ws@8.18.2)(csstype@3.2.3)(jiti@2.7.0)(react-dom@19.3.1(react@19.3.1))(react-router@8.5.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(yaml@2.9.1)(zod@4.6.7)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
 
   integration:
     devDependencies:
-      '@line/bot-sdk':
-        specifier: ^9.0.0
-        version: 9.9.0
-      '@mattermost/client':
-        specifier: ^11.9.0
-        version: 11.9.0(@mattermost/types@11.9.0(typescript@5.9.3))(typescript@5.9.3)
       '@getloopscale/loopzero-gateway':
         specifier: workspace:*
         version: link:../packages/gateway
@@ -155,6 +149,12 @@ importers:
       '@getloopscale/loopzero-gateway-zalo-personal':
         specifier: workspace:*
         version: link:../packages/gateway-zalo-personal
+      '@line/bot-sdk':
+        specifier: ^9.0.0
+        version: 9.9.0
+      '@mattermost/client':
+        specifier: ^11.9.0
+        version: 11.9.0(@mattermost/types@11.9.0(typescript@5.9.3))(typescript@5.9.3)
       '@types/express':
         specifier: ^5.0.6
         version: 5.0.6
@@ -209,18 +209,18 @@ importers:
 
   packages/gateway:
     devDependencies:
+      '@getloopscale/loopzero-presenter':
+        specifier: ^0.1.0
+        version: 0.1.0(@getloopscale/loopzero-sdk@0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@stryker-mutator/core':
         specifier: '10'
         version: 10.1.1(@types/node@26.6.6)
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-presenter':
-        specifier: ^0.10.0
-        version: 0.10.0(@getloopscale/loopzero-sdk@15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)
-      '@getloopscale/loopzero-sdk':
-        specifier: ^15.0.0
-        version: 15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       tsup:
         specifier: ^8.5.0
         version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
@@ -237,17 +237,17 @@ importers:
   packages/gateway-agent:
     devDependencies:
       '@getloopscale/loopzero-agents':
-        specifier: 16.5.0
-        version: 16.5.0(@opentelemetry/api@1.10.0)(@getloopscale/loopzero-http@1.2.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7))(@types/ws@8.18.2)(react@19.3.1)(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(zod@4.6.7)
+        specifier: 0.1.0
+        version: 0.1.0(@getloopscale/loopzero-http@0.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7))(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(react@19.3.1)(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(zod@4.6.7)
       '@getloopscale/loopzero-gateway':
         specifier: workspace:*
         version: link:../gateway
       '@getloopscale/loopzero-presenter':
-        specifier: ^0.10.0
-        version: 0.10.0(@getloopscale/loopzero-sdk@5.14.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)
+        specifier: ^0.1.0
+        version: 0.1.0(@getloopscale/loopzero-sdk@0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)
       '@getloopscale/loopzero-sdk':
-        specifier: ^5.9.0
-        version: 5.14.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       tsup:
         specifier: ^8.5.0
         version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
@@ -296,18 +296,18 @@ importers:
 
   packages/gateway-discord:
     devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@stryker-mutator/core':
         specifier: '10'
         version: 10.1.1(@types/node@26.6.6)
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-gateway':
-        specifier: workspace:*
-        version: link:../gateway
-      '@getloopscale/loopzero-sdk':
-        specifier: ^4.62.0
-        version: 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       discord.js:
         specifier: ^14.27.0
         version: 14.28.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
@@ -326,18 +326,18 @@ importers:
 
   packages/gateway-email:
     devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@stryker-mutator/core':
         specifier: '10'
         version: 10.1.1(@types/node@26.6.6)
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-gateway':
-        specifier: workspace:*
-        version: link:../gateway
-      '@getloopscale/loopzero-sdk':
-        specifier: ^4.62.0
-        version: 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@types/mailparser':
         specifier: ^3.4.0
         version: 3.9.0
@@ -368,12 +368,12 @@ importers:
 
   packages/gateway-feishu-lark:
     devDependencies:
-      '@larksuiteoapi/node-sdk':
-        specifier: 1.76.0
-        version: 1.76.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@getloopscale/loopzero-gateway':
         specifier: workspace:*
         version: link:../gateway
+      '@larksuiteoapi/node-sdk':
+        specifier: 1.76.0
+        version: 1.76.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       tsup:
         specifier: ^8.5.0
         version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
@@ -437,6 +437,12 @@ importers:
 
   packages/gateway-line:
     devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@line/bot-sdk':
         specifier: ^11.2.0
         version: 11.4.0
@@ -446,12 +452,6 @@ importers:
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-gateway':
-        specifier: workspace:*
-        version: link:../gateway
-      '@getloopscale/loopzero-sdk':
-        specifier: ^4.62.0
-        version: 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@types/express':
         specifier: ^5.0.6
         version: 5.0.6
@@ -473,18 +473,18 @@ importers:
 
   packages/gateway-matrix:
     devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@stryker-mutator/core':
         specifier: '10'
         version: 10.1.1(@types/node@26.6.6)
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-gateway':
-        specifier: workspace:*
-        version: link:../gateway
-      '@getloopscale/loopzero-sdk':
-        specifier: ^4.62.0
-        version: 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       matrix-js-sdk:
         specifier: ^42.2.0
         version: 42.4.0
@@ -507,6 +507,12 @@ importers:
         specifier: ^8.0.0
         version: 8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@mattermost/client':
         specifier: 11.9.0
         version: 11.9.0(@mattermost/types@11.9.0(typescript@5.9.3))(typescript@5.9.3)
@@ -516,12 +522,6 @@ importers:
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-gateway':
-        specifier: workspace:*
-        version: link:../gateway
-      '@getloopscale/loopzero-sdk':
-        specifier: ^4.62.0
-        version: 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       tsup:
         specifier: ^8.5.0
         version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
@@ -622,6 +622,12 @@ importers:
 
   packages/gateway-slack:
     devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@slack/bolt':
         specifier: ^4.6.0
         version: 4.7.3(@types/express@5.0.6)(bufferutil@4.1.0)(utf-8-validate@5.0.10)
@@ -631,12 +637,6 @@ importers:
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-gateway':
-        specifier: workspace:*
-        version: link:../gateway
-      '@getloopscale/loopzero-sdk':
-        specifier: ^4.62.0
-        version: 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       tsup:
         specifier: ^8.5.0
         version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
@@ -652,18 +652,18 @@ importers:
 
   packages/gateway-sms:
     devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@stryker-mutator/core':
         specifier: '10'
         version: 10.1.1(@types/node@26.6.6)
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-gateway':
-        specifier: workspace:*
-        version: link:../gateway
-      '@getloopscale/loopzero-sdk':
-        specifier: ^4.62.0
-        version: 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@types/express':
         specifier: ^5.0.6
         version: 5.0.6
@@ -718,6 +718,12 @@ importers:
 
   packages/gateway-teams:
     devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@microsoft/teams.apps':
         specifier: ^2.0.15
         version: 2.2.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
@@ -730,12 +736,6 @@ importers:
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-gateway':
-        specifier: workspace:*
-        version: link:../gateway
-      '@getloopscale/loopzero-sdk':
-        specifier: ^4.62.0
-        version: 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       tsup:
         specifier: ^8.5.0
         version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
@@ -755,18 +755,18 @@ importers:
         specifier: ^2.6.13
         version: 2.6.13
     devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@stryker-mutator/core':
         specifier: '10'
         version: 10.1.1(@types/node@26.6.6)
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-gateway':
-        specifier: workspace:*
-        version: link:../gateway
-      '@getloopscale/loopzero-sdk':
-        specifier: ^4.62.0
-        version: 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       grammy:
         specifier: ^1.30.0
         version: 1.46.0
@@ -856,18 +856,18 @@ importers:
         specifier: ^1.23.0
         version: 1.34.7(bare-buffer@3.7.1)(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)
     devDependencies:
+      '@getloopscale/loopzero-gateway':
+        specifier: workspace:*
+        version: link:../gateway
+      '@getloopscale/loopzero-sdk':
+        specifier: ^0.1.0
+        version: 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       '@stryker-mutator/core':
         specifier: '10'
         version: 10.1.1(@types/node@26.6.6)
       '@stryker-mutator/vitest-runner':
         specifier: '10'
         version: 10.1.1(@stryker-mutator/core@10.1.1(@types/node@26.6.6))(vitest@4.1.12)
-      '@getloopscale/loopzero-gateway':
-        specifier: workspace:*
-        version: link:../gateway
-      '@getloopscale/loopzero-sdk':
-        specifier: ^4.62.0
-        version: 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
       tsup:
         specifier: ^8.5.0
         version: 8.5.1(jiti@2.7.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.9.1)
@@ -1744,6 +1744,167 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@getloopscale/loopzero-agents@0.1.0':
+    resolution: {integrity: sha512-xjdPQlLrNQiU79V4ysW1Kt8VOE00TJ7nq85RrwUDvt0Jc4oucWaxQpntoHtadbjZzIOe4PdR150MPkUJ9kySlw==}
+    engines: {node: '>=22.12.0'}
+    peerDependencies:
+      '@getloopscale/loopzero-http': '>=0.1.0 <1.0.0'
+      '@jitl/quickjs-wasmfile-release-sync': 0.32.0
+      quickjs-emscripten-core: 0.32.0
+      react: '>=18'
+      ws: '>=8'
+      zod: ^4.6.6
+    peerDependenciesMeta:
+      '@jitl/quickjs-wasmfile-release-sync':
+        optional: true
+      quickjs-emscripten-core:
+        optional: true
+      react:
+        optional: true
+      ws:
+        optional: true
+
+  '@getloopscale/loopzero-http@0.1.0':
+    resolution: {integrity: sha512-M72AwPOBSh0ykadLxVtigA1K8PtrPjSzXe9eDn+tFPujMUIN3oVq3geEhoGYdH0KxDdz3eI2Y6ucxWEc2Nc2+A==}
+    engines: {node: '>=22.12.0'}
+    peerDependencies:
+      '@getloopscale/loopzero-di': '>=0.1.0 <1.0.0'
+      '@swc/core': '>=1.3.0'
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+      reflect-metadata: ^0.2.2
+      zod: ^4.6.6
+    peerDependenciesMeta:
+      '@getloopscale/loopzero-di':
+        optional: true
+      '@swc/core':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
+  '@getloopscale/loopzero-presenter@0.1.0':
+    resolution: {integrity: sha512-hAukVZgGjqAn5UQArs2d7gxU0R4HySfOzJZebwgdYgM/Qet2aq0/FVtM1yAGfAT3Xm6vs7visp5uxJMjATs5nQ==}
+    engines: {node: '>=22.12.0'}
+    peerDependencies:
+      '@getloopscale/loopzero-sdk': '>=0.1.0 <1.0.0'
+      zod: ^4.6.6
+    peerDependenciesMeta:
+      '@getloopscale/loopzero-sdk':
+        optional: true
+      zod:
+        optional: true
+
+  '@getloopscale/loopzero-sdk-tools@0.1.0':
+    resolution: {integrity: sha512-KegYhT3deMhjqTmFHZcRm1NtH4U8QfEmBTcwExBe7sNrai5SL23uh0EBX0qzbhigryhVTAqh3PnaEigLNKVL5A==}
+    engines: {node: '>=22.12.0'}
+    peerDependencies:
+      '@getloopscale/loopzero-sdk': '>=0.1.0 <1.0.0'
+      mammoth: ^1.13.0
+      simple-git: ^4.0.1
+      unpdf: ^2.1.0
+      vitest: '>=2.0.0'
+      zod: ^4.6.6
+    peerDependenciesMeta:
+      mammoth:
+        optional: true
+      simple-git:
+        optional: true
+      unpdf:
+        optional: true
+      vitest:
+        optional: true
+
+  '@getloopscale/loopzero-sdk@0.1.0':
+    resolution: {integrity: sha512-KsNmQpVMQDhCXFdFj8JnAESEquKGNgMOZyWAxwCgwhc+OpZx6JiguJweu88GWjvL3diIsHJDPBpWA51DBdaOJA==}
+    engines: {node: '>=22.12.0'}
+    peerDependencies:
+      '@lancedb/lancedb': ^0.30.0
+      '@opentelemetry/api': ^1.9.0
+      '@opentelemetry/exporter-metrics-otlp-http': ^0.223.0
+      '@opentelemetry/exporter-prometheus': ^0.223.0
+      '@opentelemetry/exporter-trace-otlp-http': ^0.223.0
+      '@opentelemetry/resources': ^2.0.0
+      '@opentelemetry/sdk-logs': ^0.223.0
+      '@opentelemetry/sdk-metrics': ^2.0.0
+      '@opentelemetry/sdk-trace-base': ^2.0.0
+      '@types/ws': '>=8.0.0'
+      better-sqlite3: ^12.0.0
+      onnxruntime-node: '>=1.17.0'
+      proper-lockfile: ^4.1.2
+      sqlite-vec: ^0.1.0
+      ws: '>=8.0.0'
+    peerDependenciesMeta:
+      '@lancedb/lancedb':
+        optional: true
+      '@opentelemetry/api':
+        optional: true
+      '@opentelemetry/exporter-metrics-otlp-http':
+        optional: true
+      '@opentelemetry/exporter-prometheus':
+        optional: true
+      '@opentelemetry/exporter-trace-otlp-http':
+        optional: true
+      '@opentelemetry/resources':
+        optional: true
+      '@opentelemetry/sdk-logs':
+        optional: true
+      '@opentelemetry/sdk-metrics':
+        optional: true
+      '@opentelemetry/sdk-trace-base':
+        optional: true
+      '@types/ws':
+        optional: true
+      better-sqlite3:
+        optional: true
+      onnxruntime-node:
+        optional: true
+      proper-lockfile:
+        optional: true
+      sqlite-vec:
+        optional: true
+      ws:
+        optional: true
+
+  '@getloopscale/loopzero@0.1.0':
+    resolution: {integrity: sha512-BsnW7HPUNVyquWl+Raqz/6rZGkkU3vMSRZgOv3zWdWpgu3JIgcJ4/ON+o6P+1I8Fmwk2At/k5Xtm2pDqLFG+vw==}
+    engines: {node: '>=22.12.0'}
+    hasBin: true
+    peerDependencies:
+      '@getloopscale/loopzero-sdk': '>=0.1.0 <1.0.0'
+      '@getloopscale/loopzero-ui': '>=0.1.0 <1.0.0'
+      '@vitejs/plugin-react': ^4.7.0
+      db0: ^0.3.0
+      react: ^19.0.0
+      react-dom: ^19.0.0
+      react-router: ^7.0.0 || ^8.0.0
+      tsx: ^4.22.4
+      typescript: ^5.9.3
+      unstorage: ^1.10.0
+      vite: ^7.3.7
+      ws: ^8.20.1
+      zod: ^4.6.6
+    peerDependenciesMeta:
+      '@getloopscale/loopzero-sdk':
+        optional: true
+      '@getloopscale/loopzero-ui':
+        optional: true
+      '@vitejs/plugin-react':
+        optional: true
+      db0:
+        optional: true
+      tsx:
+        optional: true
+      typescript:
+        optional: true
+      unstorage:
+        optional: true
+      vite:
+        optional: true
+      ws:
+        optional: true
+
   '@grammyjs/types@5.0.0':
     resolution: {integrity: sha512-iq1Qrq1iPKkB8yAa0qSuIURMZOCuqTY5pWy5gHpCeL1oQ+GPadGhw/cDTVE8waJwuCzacUzuIjRv1sESvk7u7A==}
 
@@ -2594,242 +2755,6 @@ packages:
       '@stryker-mutator/core': 10.1.1
       vitest: '>=2.0.0'
 
-  '@getloopscale/loopzero-agents@12.1.0':
-    resolution: {integrity: sha512-bhIHm06ltIlCSq+YNcpOyPG83AdqbxyKkZEseK92weznP905/BZmY83dohDXd+g5AtZJt8lFx7SSo3R+mCIUAA==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@getloopscale/loopzero-http': '>=0.1.0-alpha.0'
-      react: '>=18'
-      zod: ^4.6.6
-    peerDependenciesMeta:
-      react:
-        optional: true
-
-  '@getloopscale/loopzero-agents@16.5.0':
-    resolution: {integrity: sha512-+AbcFhgmlCbmRoAdGrX0Fg9TCX1ofFNsuUsbRRbpRg/yuW941S8YEZMyqAjrcxUsrKxotMyBu/cdG86iyfDypQ==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@jitl/quickjs-wasmfile-release-sync': 0.32.0
-      '@getloopscale/loopzero-http': '>=2.1.0-next.0'
-      quickjs-emscripten-core: 0.32.0
-      react: '>=18'
-      zod: ^4.6.6
-    peerDependenciesMeta:
-      '@jitl/quickjs-wasmfile-release-sync':
-        optional: true
-      quickjs-emscripten-core:
-        optional: true
-      react:
-        optional: true
-
-  '@getloopscale/loopzero-http@1.2.0':
-    resolution: {integrity: sha512-apgyDiJd2ojgN7XNw1QOFv83g4tCCWTxiGzC3rJih0OOxd8sYuhbhZKn8A++cjhHxTt2Rjv91rmpiWH3QavGSQ==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@swc/core': '>=1.3.0'
-      react: '>=18.0.0'
-      react-dom: '>=18.0.0'
-      reflect-metadata: ^0.2.2
-      zod: ^4.6.6
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      react:
-        optional: true
-      react-dom:
-        optional: true
-
-  '@getloopscale/loopzero-presenter@0.10.0':
-    resolution: {integrity: sha512-isnmEsYpYhNnHfN9Jv5nulZLSISFFynoHtChArrpqJ2KYdGioQ0SJS/MnsvD4Ycl774voP0JvYj+FvJi2mtPyg==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@getloopscale/loopzero-sdk': ^5.3.0
-      zod: ^4.6.6
-
-  '@getloopscale/loopzero-presenter@0.11.0':
-    resolution: {integrity: sha512-wNU7mmRI4CHxZ0n+XTJZsu0NOdiQ8TfqVE4BxwlZUNlz2kdum82wOwaJhNE4NcSo5N6cKOf5u6DsJfrcaO3zuA==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@getloopscale/loopzero-sdk': ^5.3.0
-      zod: ^4.6.6
-
-  '@getloopscale/loopzero-presenter@0.8.0':
-    resolution: {integrity: sha512-L3MSD/X4oZ4XJAZfLCSuO83SPH47jId/gtIIpx51Swgx8lpYJrZBEREbIGuUeMUhYVs6EYofxi1fcs+xNMmYgw==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@getloopscale/loopzero-sdk': ^4.49.0
-      zod: ^4.6.6
-
-  '@getloopscale/loopzero-sdk-tools@0.27.6':
-    resolution: {integrity: sha512-eVBgcJsY/5VQeXJrmswg1O4TbxhHCgQuEQ1zB+LHwPxIrnKlvr2VvaxMZKuA6w7ZYRQXEuZgiKt/mecPHIuC9w==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@getloopscale/loopzero-sdk': '>=5.0.0-next.1'
-      simple-git: ^4.0.1
-      vitest: '>=2.0.0'
-      zod: ^4.6.6
-    peerDependenciesMeta:
-      simple-git:
-        optional: true
-      vitest:
-        optional: true
-
-  '@getloopscale/loopzero-sdk-tools@0.29.0':
-    resolution: {integrity: sha512-O96htwfh40QlQgEAcWbSMqdJ9555XjpqWqopoT3sGQ7B4QW58v7sQw0a0WgILeJUlR8EXxmMDK8RP7LBRNFMuQ==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@getloopscale/loopzero-sdk': '>=5.0.0-next.1'
-      mammoth: ^1.13.0
-      simple-git: ^4.0.1
-      unpdf: ^2.1.0
-      vitest: '>=2.0.0'
-      zod: ^4.6.6
-    peerDependenciesMeta:
-      mammoth:
-        optional: true
-      simple-git:
-        optional: true
-      unpdf:
-        optional: true
-      vitest:
-        optional: true
-
-  '@getloopscale/loopzero-sdk@15.0.0':
-    resolution: {integrity: sha512-ldvYg6aLjEqUPyCJLGDmydMdHxRYE7zmTlDgf/sUTJboKgj+exwsj2tz5gIPhTvyEBu7Q6/crzBvFf9ptZsF6A==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@lancedb/lancedb': ^0.30.0
-      '@opentelemetry/api': ^1.9.0
-      '@opentelemetry/exporter-metrics-otlp-http': ^0.223.0
-      '@opentelemetry/exporter-prometheus': ^0.223.0
-      '@opentelemetry/exporter-trace-otlp-http': ^0.223.0
-      '@opentelemetry/resources': ^2.0.0
-      '@opentelemetry/sdk-logs': ^0.223.0
-      '@opentelemetry/sdk-metrics': ^2.0.0
-      '@opentelemetry/sdk-trace-base': ^2.0.0
-      '@types/ws': '>=8.0.0'
-      better-sqlite3: ^12.0.0
-      onnxruntime-node: '>=1.17.0'
-      proper-lockfile: ^4.1.2
-      sqlite-vec: ^0.1.0
-      ws: '>=8.0.0'
-    peerDependenciesMeta:
-      '@lancedb/lancedb':
-        optional: true
-      '@opentelemetry/api':
-        optional: true
-      '@opentelemetry/exporter-metrics-otlp-http':
-        optional: true
-      '@opentelemetry/exporter-prometheus':
-        optional: true
-      '@opentelemetry/exporter-trace-otlp-http':
-        optional: true
-      '@opentelemetry/resources':
-        optional: true
-      '@opentelemetry/sdk-logs':
-        optional: true
-      '@opentelemetry/sdk-metrics':
-        optional: true
-      '@opentelemetry/sdk-trace-base':
-        optional: true
-      '@types/ws':
-        optional: true
-      better-sqlite3:
-        optional: true
-      onnxruntime-node:
-        optional: true
-      proper-lockfile:
-        optional: true
-      sqlite-vec:
-        optional: true
-      ws:
-        optional: true
-
-  '@getloopscale/loopzero-sdk@4.63.5':
-    resolution: {integrity: sha512-FuK4+ewwkCQkHGQ9aavRKpXuh8eKWsw4PiscIqY+64yT8n5X3l3348jMbgaIMskOkCL5iuzrj3E1b5nayjsN6g==}
-    engines: {node: '>=22.12.0'}
-    hasBin: true
-    peerDependencies:
-      '@lancedb/lancedb': ^0.30.0
-      '@opentelemetry/api': ^1.9.0
-      '@types/ws': '>=8.0.0'
-      better-sqlite3: ^12.0.0
-      proper-lockfile: ^4.1.2
-      sqlite-vec: ^0.1.0
-      ws: '>=8.0.0'
-    peerDependenciesMeta:
-      '@lancedb/lancedb':
-        optional: true
-      '@opentelemetry/api':
-        optional: true
-      '@types/ws':
-        optional: true
-      better-sqlite3:
-        optional: true
-      proper-lockfile:
-        optional: true
-      sqlite-vec:
-        optional: true
-      ws:
-        optional: true
-
-  '@getloopscale/loopzero-sdk@5.14.0':
-    resolution: {integrity: sha512-a5U0pCfr/MNqWNWa1lEaFQ8W6MEKucsLksPQLcs/Dtx3H5ePjXP03OaFPUijRmqc1MDfFbzsFJVt9AwFJwUEMg==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@lancedb/lancedb': ^0.30.0
-      '@opentelemetry/api': ^1.9.0
-      '@types/ws': '>=8.0.0'
-      better-sqlite3: ^12.0.0
-      proper-lockfile: ^4.1.2
-      sqlite-vec: ^0.1.0
-      ws: '>=8.0.0'
-    peerDependenciesMeta:
-      '@lancedb/lancedb':
-        optional: true
-      '@opentelemetry/api':
-        optional: true
-      '@types/ws':
-        optional: true
-      better-sqlite3:
-        optional: true
-      proper-lockfile:
-        optional: true
-      sqlite-vec:
-        optional: true
-      ws:
-        optional: true
-
-  '@getloopscale/loopzero-sdk@5.23.0':
-    resolution: {integrity: sha512-zn0CEqZf4SE23leY7Lx+PzEdTvUrKVBG9l6kUAgk6ny2++pFHDve81NOV3JSzY7Xiqi03WoVunAlnOUMRN/tQA==}
-    engines: {node: '>=22.12.0'}
-    peerDependencies:
-      '@lancedb/lancedb': ^0.30.0
-      '@opentelemetry/api': ^1.9.0
-      '@types/ws': '>=8.0.0'
-      better-sqlite3: ^12.0.0
-      onnxruntime-node: '>=1.17.0'
-      proper-lockfile: ^4.1.2
-      sqlite-vec: ^0.1.0
-      ws: '>=8.0.0'
-    peerDependenciesMeta:
-      '@lancedb/lancedb':
-        optional: true
-      '@opentelemetry/api':
-        optional: true
-      '@types/ws':
-        optional: true
-      better-sqlite3:
-        optional: true
-      onnxruntime-node:
-        optional: true
-      proper-lockfile:
-        optional: true
-      sqlite-vec:
-        optional: true
-      ws:
-        optional: true
-
   '@tokenizer/inflate@0.4.1':
     resolution: {integrity: sha512-2mAv+8pkG6GIZiF1kNg1jAjh27IDxEPKwdGul3snfztFerfPGI1LjDezZp3i7BElXompqEtPmoPx6c2wgtWsOA==}
     engines: {node: '>=18'}
@@ -3582,15 +3507,18 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
-  devalue@6.0.3:
-    resolution: {integrity: sha512-3woMEITftG1wKeO/4d/QXH1DVKctTSZg3jNGPpjp9hNr5Hos8MCFF5McTML5ZtgKDObm2R591B0spRp2IVernA==}
-    engines: {node: '>=18'}
+  devalue@5.9.4:
+    resolution: {integrity: sha512-sPAT4pztbu6586/hrhOnMKS17IJrvg12mXiSPSS3W5qDeN2RGgvZ0diZCm31dBbnevfVmujNO3IM2wrS4Y2Rhg==}
 
   devtools-protocol@0.0.1581282:
     resolution: {integrity: sha512-nv7iKtNZQshSW2hKzYNr46nM/Cfh5SEvE2oV0/SEGgc9XupIY5ggf84Cz8eJIkBce7S3bmTAauFD6aysMpnqsQ==}
 
   diff-match-patch@1.0.5:
     resolution: {integrity: sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==}
+
+  diff@8.0.4:
+    resolution: {integrity: sha512-DPi0FmjiSU5EvQV0++GFDOJ9ASQUVFh5kD+OzOnYdi7n3Wpm9hWWGfB/O2blfHcMVTL5WkQXSnRiK9makhrcnw==}
+    engines: {node: '>=0.3.1'}
 
   dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
@@ -4766,6 +4694,9 @@ packages:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
 
+  parse-diff@0.12.0:
+    resolution: {integrity: sha512-2Xr5mW4Bqd4CqYq2zttfw/RZraK+KcRuJvNkJzbDk3ea67Ap525XeTvBdtDE5tigJMVzIx/DMUzsShAf6+5SCA==}
+
   parse-json@5.2.0:
     resolution: {integrity: sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==}
     engines: {node: '>=8'}
@@ -5341,35 +5272,6 @@ packages:
   thenify@3.3.1:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
 
-  loopzero@0.60.0:
-    resolution: {integrity: sha512-Fq3jpcKlIMRX+bmN2gTowJgSUTDlddQLSftjUb5NFC5HsAxmt8JeKFiCRD5X1+WqmTEgcl7UvXV81XtThhkpJg==}
-    engines: {node: '>=22.12.0'}
-    hasBin: true
-    peerDependencies:
-      '@getloopscale/loopzero-sdk': ^4.52.1
-      '@getloopscale/loopzero-studio': '>=0.2.0 <1'
-      '@getloopscale/loopzero-ui': ^1.1.0
-      db0: ^0.3.0
-      react: ^19.0.0
-      react-dom: ^19.0.0
-      react-router: ^7.0.0 || ^8.0.0
-      unstorage: ^1.10.0
-      ws: ^8.20.1
-      zod: ^4.6.6
-    peerDependenciesMeta:
-      '@getloopscale/loopzero-sdk':
-        optional: true
-      '@getloopscale/loopzero-studio':
-        optional: true
-      '@getloopscale/loopzero-ui':
-        optional: true
-      db0:
-        optional: true
-      unstorage:
-        optional: true
-      ws:
-        optional: true
-
   thread-stream@3.2.0:
     resolution: {integrity: sha512-zLBvqpwr4Esa0kRjcrzGU6zL25lePWaCLMx0RQFrmteozIfeNdaMLpG5U7PeHzvlFkAWaRKA9/KVW4F60iB+qw==}
 
@@ -5806,6 +5708,11 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
+  yaml@2.9.0:
+    resolution: {integrity: sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA==}
+    engines: {node: '>= 14.6'}
+    hasBin: true
+
   yaml@2.9.1:
     resolution: {integrity: sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==}
     engines: {node: '>= 14.6'}
@@ -5853,7 +5760,8 @@ snapshots:
       '@babel/helper-validator-identifier': 8.0.6
       js-tokens: 10.0.0
 
-  '@babel/compat-data@7.29.7': {}
+  '@babel/compat-data@7.29.7':
+    optional: true
 
   '@babel/compat-data@8.0.5': {}
 
@@ -5876,6 +5784,7 @@ snapshots:
       semver: 6.3.2
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@babel/core@8.0.10':
     dependencies:
@@ -5903,6 +5812,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
       jsesc: 3.1.0
+    optional: true
 
   '@babel/generator@8.0.10':
     dependencies:
@@ -5933,6 +5843,7 @@ snapshots:
       browserslist: 4.29.5
       lru-cache: 5.1.1
       semver: 6.3.2
+    optional: true
 
   '@babel/helper-compilation-targets@8.0.7':
     dependencies:
@@ -5953,7 +5864,8 @@ snapshots:
       '@babel/traverse': 8.0.10
       verkit: 0.5.0
 
-  '@babel/helper-globals@7.29.7': {}
+  '@babel/helper-globals@7.29.7':
+    optional: true
 
   '@babel/helper-globals@8.0.6': {}
 
@@ -5968,6 +5880,7 @@ snapshots:
       '@babel/types': 7.29.11
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@babel/helper-module-imports@8.0.0':
     dependencies:
@@ -5982,6 +5895,7 @@ snapshots:
       '@babel/traverse': 7.29.13
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@babel/helper-module-transforms@8.1.0(@babel/core@8.0.10)':
     dependencies:
@@ -5994,7 +5908,8 @@ snapshots:
     dependencies:
       '@babel/types': 8.1.0
 
-  '@babel/helper-plugin-utils@7.29.7': {}
+  '@babel/helper-plugin-utils@7.29.7':
+    optional: true
 
   '@babel/helper-plugin-utils@8.0.1(@babel/core@8.0.10)':
     dependencies:
@@ -6020,7 +5935,8 @@ snapshots:
 
   '@babel/helper-validator-identifier@8.0.6': {}
 
-  '@babel/helper-validator-option@7.29.7': {}
+  '@babel/helper-validator-option@7.29.7':
+    optional: true
 
   '@babel/helper-validator-option@8.0.0': {}
 
@@ -6028,6 +5944,7 @@ snapshots:
     dependencies:
       '@babel/template': 7.29.7
       '@babel/types': 7.29.11
+    optional: true
 
   '@babel/helpers@8.1.0':
     dependencies:
@@ -6099,11 +6016,13 @@ snapshots:
     dependencies:
       '@babel/core': 7.29.13
       '@babel/helper-plugin-utils': 7.29.7
+    optional: true
 
   '@babel/plugin-transform-react-jsx-source@7.29.7(@babel/core@7.29.13)':
     dependencies:
       '@babel/core': 7.29.13
       '@babel/helper-plugin-utils': 7.29.7
+    optional: true
 
   '@babel/plugin-transform-react-jsx@8.0.1(@babel/core@8.0.10)':
     dependencies:
@@ -6156,6 +6075,7 @@ snapshots:
       '@babel/code-frame': 7.29.7
       '@babel/parser': 7.29.13
       '@babel/types': 7.29.11
+    optional: true
 
   '@babel/template@8.0.0':
     dependencies:
@@ -6174,6 +6094,7 @@ snapshots:
       debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@babel/traverse@8.0.10':
     dependencies:
@@ -6641,6 +6562,121 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
+  '@getloopscale/loopzero-agents@0.1.0(@getloopscale/loopzero-http@0.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7))(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(react@19.3.1)(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(zod@4.6.7)':
+    dependencies:
+      '@getloopscale/loopzero-http': 0.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7)
+      '@getloopscale/loopzero-presenter': 0.1.0(@getloopscale/loopzero-sdk@0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)
+      '@getloopscale/loopzero-sdk': 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+      '@getloopscale/loopzero-sdk-tools': 0.1.0(@getloopscale/loopzero-sdk@0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(vitest@4.1.12)(zod@4.6.7)
+      yaml: 2.9.0
+      zod: 4.6.7
+    optionalDependencies:
+      react: 19.3.1
+      ws: 8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+    transitivePeerDependencies:
+      - '@lancedb/lancedb'
+      - '@opentelemetry/api'
+      - '@opentelemetry/exporter-metrics-otlp-http'
+      - '@opentelemetry/exporter-prometheus'
+      - '@opentelemetry/exporter-trace-otlp-http'
+      - '@opentelemetry/resources'
+      - '@opentelemetry/sdk-logs'
+      - '@opentelemetry/sdk-metrics'
+      - '@opentelemetry/sdk-trace-base'
+      - '@types/ws'
+      - better-sqlite3
+      - mammoth
+      - onnxruntime-node
+      - proper-lockfile
+      - simple-git
+      - sqlite-vec
+      - unpdf
+      - vitest
+
+  '@getloopscale/loopzero-http@0.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7)':
+    dependencies:
+      reflect-metadata: 0.2.2
+      zod: 4.6.7
+    optionalDependencies:
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
+
+  '@getloopscale/loopzero-presenter@0.1.0(@getloopscale/loopzero-sdk@0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)':
+    dependencies:
+      diff: 8.0.4
+      parse-diff: 0.12.0
+    optionalDependencies:
+      '@getloopscale/loopzero-sdk': 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+      zod: 4.6.7
+
+  '@getloopscale/loopzero-sdk-tools@0.1.0(@getloopscale/loopzero-sdk@0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(vitest@4.1.12)(zod@4.6.7)':
+    dependencies:
+      '@getloopscale/loopzero-sdk': 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+      zod: 4.6.7
+    optionalDependencies:
+      vitest: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@4.1.12)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  '@getloopscale/loopzero-sdk@0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
+    dependencies:
+      croner: 9.1.0
+      jsonrepair: 3.15.0
+      zod: 4.6.7
+    optionalDependencies:
+      '@opentelemetry/api': 1.10.0
+      '@types/ws': 8.18.2
+      ws: 8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+
+  '@getloopscale/loopzero@0.1.0(@getloopscale/loopzero-sdk@0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(@vitejs/plugin-react@4.7.0(vite@7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)))(csstype@3.2.3)(react-dom@19.3.1(react@19.3.1))(react-router@8.5.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)(tsx@4.23.15)(typescript@5.9.3)(vite@7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(zod@4.6.7)':
+    dependencies:
+      '@getloopscale/loopzero-agents': 0.1.0(@getloopscale/loopzero-http@0.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7))(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(react@19.3.1)(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(zod@4.6.7)
+      '@getloopscale/loopzero-http': 0.1.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7)
+      '@getloopscale/loopzero-presenter': 0.1.0(@getloopscale/loopzero-sdk@0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)
+      busboy: 1.6.0
+      cac: 6.7.14
+      cron-parser: 5.10.4
+      devalue: 5.9.4
+      dotenv: 16.6.1
+      dotenv-expand: 11.0.7
+      goober: 2.1.19(csstype@3.2.3)
+      picomatch: 4.0.7
+      react: 19.3.1
+      react-dom: 19.3.1(react@19.3.1)
+      react-router: 8.5.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      reflect-metadata: 0.2.2
+      superjson: 2.2.6
+      zod: 4.6.7
+    optionalDependencies:
+      '@getloopscale/loopzero-sdk': 0.1.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
+      '@vitejs/plugin-react': 4.7.0(vite@7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+      tsx: 4.23.15
+      typescript: 5.9.3
+      vite: 7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      ws: 8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+    transitivePeerDependencies:
+      - '@getloopscale/loopzero-di'
+      - '@jitl/quickjs-wasmfile-release-sync'
+      - '@lancedb/lancedb'
+      - '@opentelemetry/api'
+      - '@opentelemetry/exporter-metrics-otlp-http'
+      - '@opentelemetry/exporter-prometheus'
+      - '@opentelemetry/exporter-trace-otlp-http'
+      - '@opentelemetry/resources'
+      - '@opentelemetry/sdk-logs'
+      - '@opentelemetry/sdk-metrics'
+      - '@opentelemetry/sdk-trace-base'
+      - '@swc/core'
+      - '@types/ws'
+      - better-sqlite3
+      - csstype
+      - mammoth
+      - onnxruntime-node
+      - proper-lockfile
+      - quickjs-emscripten-core
+      - simple-git
+      - sqlite-vec
+      - unpdf
+      - vitest
+
   '@grammyjs/types@5.0.0': {}
 
   '@hapi/boom@9.1.4':
@@ -6909,6 +6945,7 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
+    optional: true
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
@@ -7221,7 +7258,8 @@ snapshots:
 
   '@remix-run/route-pattern@0.22.1': {}
 
-  '@rolldown/pluginutils@1.0.0-beta.27': {}
+  '@rolldown/pluginutils@1.0.0-beta.27':
+    optional: true
 
   '@rollup/rollup-android-arm-eabi@4.68.0':
     optional: true
@@ -7477,136 +7515,6 @@ snapshots:
       tslib: 2.8.1
       vitest: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@4.1.12)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
-  '@getloopscale/loopzero-agents@12.1.0(@opentelemetry/api@1.10.0)(@getloopscale/loopzero-http@1.2.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7))(@types/ws@8.18.2)(react@19.3.1)(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(zod@4.6.7)':
-    dependencies:
-      '@getloopscale/loopzero-http': 1.2.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7)
-      '@getloopscale/loopzero-presenter': 0.8.0(@getloopscale/loopzero-sdk@4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)
-      '@getloopscale/loopzero-sdk': 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      '@getloopscale/loopzero-sdk-tools': 0.27.6(@getloopscale/loopzero-sdk@4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(vitest@4.1.12)(zod@4.6.7)
-      zod: 4.6.7
-    optionalDependencies:
-      react: 19.3.1
-    transitivePeerDependencies:
-      - '@lancedb/lancedb'
-      - '@opentelemetry/api'
-      - '@types/ws'
-      - better-sqlite3
-      - proper-lockfile
-      - simple-git
-      - sqlite-vec
-      - vitest
-      - ws
-
-  '@getloopscale/loopzero-agents@16.5.0(@opentelemetry/api@1.10.0)(@getloopscale/loopzero-http@1.2.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7))(@types/ws@8.18.2)(react@19.3.1)(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(zod@4.6.7)':
-    dependencies:
-      '@getloopscale/loopzero-http': 1.2.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7)
-      '@getloopscale/loopzero-presenter': 0.11.0(@getloopscale/loopzero-sdk@5.23.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)
-      '@getloopscale/loopzero-sdk': 5.23.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      '@getloopscale/loopzero-sdk-tools': 0.29.0(@getloopscale/loopzero-sdk@5.23.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(vitest@4.1.12)(zod@4.6.7)
-      zod: 4.6.7
-    optionalDependencies:
-      react: 19.3.1
-    transitivePeerDependencies:
-      - '@lancedb/lancedb'
-      - '@opentelemetry/api'
-      - '@types/ws'
-      - better-sqlite3
-      - mammoth
-      - onnxruntime-node
-      - proper-lockfile
-      - simple-git
-      - sqlite-vec
-      - unpdf
-      - vitest
-      - ws
-
-  '@getloopscale/loopzero-http@1.2.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7)':
-    dependencies:
-      reflect-metadata: 0.2.2
-      zod: 4.6.7
-    optionalDependencies:
-      react: 19.3.1
-      react-dom: 19.3.1(react@19.3.1)
-
-  '@getloopscale/loopzero-presenter@0.10.0(@getloopscale/loopzero-sdk@15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)':
-    dependencies:
-      '@getloopscale/loopzero-sdk': 15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      zod: 4.6.7
-
-  '@getloopscale/loopzero-presenter@0.10.0(@getloopscale/loopzero-sdk@5.14.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)':
-    dependencies:
-      '@getloopscale/loopzero-sdk': 5.14.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      zod: 4.6.7
-
-  '@getloopscale/loopzero-presenter@0.11.0(@getloopscale/loopzero-sdk@5.23.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)':
-    dependencies:
-      '@getloopscale/loopzero-sdk': 5.23.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      zod: 4.6.7
-
-  '@getloopscale/loopzero-presenter@0.8.0(@getloopscale/loopzero-sdk@15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)':
-    dependencies:
-      '@getloopscale/loopzero-sdk': 15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      zod: 4.6.7
-
-  '@getloopscale/loopzero-presenter@0.8.0(@getloopscale/loopzero-sdk@4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)':
-    dependencies:
-      '@getloopscale/loopzero-sdk': 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      zod: 4.6.7
-
-  '@getloopscale/loopzero-sdk-tools@0.27.6(@getloopscale/loopzero-sdk@4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(vitest@4.1.12)(zod@4.6.7)':
-    dependencies:
-      '@getloopscale/loopzero-sdk': 4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      zod: 4.6.7
-    optionalDependencies:
-      vitest: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@22.20.5)(@vitest/coverage-v8@4.1.12)(vite@7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
-
-  '@getloopscale/loopzero-sdk-tools@0.29.0(@getloopscale/loopzero-sdk@5.23.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(vitest@4.1.12)(zod@4.6.7)':
-    dependencies:
-      '@getloopscale/loopzero-sdk': 5.23.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      zod: 4.6.7
-    optionalDependencies:
-      vitest: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@4.1.12)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
-
-  '@getloopscale/loopzero-sdk@15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
-    dependencies:
-      croner: 9.1.0
-      jsonrepair: 3.15.0
-      zod: 4.6.7
-    optionalDependencies:
-      '@opentelemetry/api': 1.10.0
-      '@types/ws': 8.18.2
-      ws: 8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-
-  '@getloopscale/loopzero-sdk@4.63.5(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
-    dependencies:
-      croner: 9.1.0
-      jsonrepair: 3.15.0
-      zod: 4.6.7
-    optionalDependencies:
-      '@opentelemetry/api': 1.10.0
-      '@types/ws': 8.18.2
-      ws: 8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-
-  '@getloopscale/loopzero-sdk@5.14.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
-    dependencies:
-      croner: 9.1.0
-      jsonrepair: 3.15.0
-      zod: 4.6.7
-    optionalDependencies:
-      '@opentelemetry/api': 1.10.0
-      '@types/ws': 8.18.2
-      ws: 8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-
-  '@getloopscale/loopzero-sdk@5.23.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))':
-    dependencies:
-      croner: 9.1.0
-      jsonrepair: 3.15.0
-      zod: 4.6.7
-    optionalDependencies:
-      '@opentelemetry/api': 1.10.0
-      '@types/ws': 8.18.2
-      ws: 8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-
   '@tokenizer/inflate@0.4.1':
     dependencies:
       debug: 4.4.3
@@ -7630,19 +7538,23 @@ snapshots:
       '@types/babel__generator': 7.27.0
       '@types/babel__template': 7.4.4
       '@types/babel__traverse': 7.28.0
+    optional: true
 
   '@types/babel__generator@7.27.0':
     dependencies:
       '@babel/types': 7.29.11
+    optional: true
 
   '@types/babel__template@7.4.4':
     dependencies:
       '@babel/parser': 7.29.13
       '@babel/types': 7.29.11
+    optional: true
 
   '@types/babel__traverse@7.28.0':
     dependencies:
       '@babel/types': 7.29.11
+    optional: true
 
   '@types/body-parser@1.19.6':
     dependencies:
@@ -7761,6 +7673,7 @@ snapshots:
       vite: 7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@vitest/coverage-v8@4.1.12(vitest@4.1.12)':
     dependencies:
@@ -7774,7 +7687,7 @@ snapshots:
       obug: 2.2.1
       std-env: 4.3.0
       tinyrainbow: 3.2.0
-      vitest: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@4.1.12)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+      vitest: 4.1.12(@opentelemetry/api@1.10.0)(@types/node@22.20.5)(@vitest/coverage-v8@4.1.12)(vite@7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
   '@vitest/expect@4.1.12':
     dependencies:
@@ -7792,7 +7705,6 @@ snapshots:
       magic-string: 0.30.21
     optionalDependencies:
       vite: 7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-    optional: true
 
   '@vitest/mocker@4.1.12(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))':
     dependencies:
@@ -8466,11 +8378,13 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
-  devalue@6.0.3: {}
+  devalue@5.9.4: {}
 
   devtools-protocol@0.0.1581282: {}
 
   diff-match-patch@1.0.5: {}
+
+  diff@8.0.4: {}
 
   dir-glob@3.0.1:
     dependencies:
@@ -9454,6 +9368,7 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+    optional: true
 
   lru-cache@7.18.3: {}
 
@@ -9778,6 +9693,8 @@ snapshots:
     dependencies:
       callsites: 3.1.0
 
+  parse-diff@0.12.0: {}
+
   parse-json@5.2.0:
     dependencies:
       '@babel/code-frame': 7.29.7
@@ -10048,7 +9965,8 @@ snapshots:
       react: 19.3.1
       scheduler: 0.28.0
 
-  react-refresh@0.17.0: {}
+  react-refresh@0.17.0:
+    optional: true
 
   react-router@8.5.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
@@ -10208,7 +10126,8 @@ snapshots:
     dependencies:
       parseley: 0.13.1
 
-  semver@6.3.2: {}
+  semver@6.3.2:
+    optional: true
 
   semver@7.8.6: {}
 
@@ -10517,55 +10436,6 @@ snapshots:
     dependencies:
       any-promise: 1.3.0
 
-  loopzero@0.60.0(@opentelemetry/api@1.10.0)(@getloopscale/loopzero-sdk@15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(@types/node@22.20.5)(@types/ws@8.18.2)(csstype@3.2.3)(jiti@2.7.0)(react-dom@19.3.1(react@19.3.1))(react-router@8.5.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(yaml@2.9.1)(zod@4.6.7):
-    dependencies:
-      '@getloopscale/loopzero-agents': 12.1.0(@opentelemetry/api@1.10.0)(@getloopscale/loopzero-http@1.2.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7))(@types/ws@8.18.2)(react@19.3.1)(vitest@4.1.12)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))(zod@4.6.7)
-      '@getloopscale/loopzero-http': 1.2.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(reflect-metadata@0.2.2)(zod@4.6.7)
-      '@getloopscale/loopzero-presenter': 0.8.0(@getloopscale/loopzero-sdk@15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)))(zod@4.6.7)
-      '@vitejs/plugin-react': 4.7.0(vite@7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
-      busboy: 1.6.0
-      cac: 6.7.14
-      cron-parser: 5.10.4
-      devalue: 6.0.3
-      dotenv: 16.6.1
-      dotenv-expand: 11.0.7
-      goober: 2.1.19(csstype@3.2.3)
-      picomatch: 4.0.7
-      react: 19.3.1
-      react-dom: 19.3.1(react@19.3.1)
-      react-router: 8.5.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      reflect-metadata: 0.2.2
-      superjson: 2.2.6
-      tsx: 4.23.15
-      typescript: 5.9.3
-      vite: 7.3.7(@types/node@22.20.5)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      zod: 4.6.7
-    optionalDependencies:
-      '@getloopscale/loopzero-sdk': 15.0.0(@opentelemetry/api@1.10.0)(@types/ws@8.18.2)(ws@8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10))
-      ws: 8.22.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-    transitivePeerDependencies:
-      - '@lancedb/lancedb'
-      - '@opentelemetry/api'
-      - '@swc/core'
-      - '@types/node'
-      - '@types/ws'
-      - better-sqlite3
-      - csstype
-      - jiti
-      - less
-      - lightningcss
-      - proper-lockfile
-      - sass
-      - sass-embedded
-      - simple-git
-      - sqlite-vec
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-      - vitest
-      - yaml
-
   thread-stream@3.2.0:
     dependencies:
       real-require: 0.2.0
@@ -10849,7 +10719,6 @@ snapshots:
       '@vitest/coverage-v8': 4.1.12(vitest@4.1.12)
     transitivePeerDependencies:
       - msw
-    optional: true
 
   vitest@4.1.12(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@4.1.12)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)):
     dependencies:
@@ -10988,7 +10857,10 @@ snapshots:
 
   yaeti@0.0.6: {}
 
-  yallist@3.1.1: {}
+  yallist@3.1.1:
+    optional: true
+
+  yaml@2.9.0: {}
 
   yaml@2.9.1: {}
 

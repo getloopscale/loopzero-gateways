@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-signal",
-  "version": "0.4.0",
+  "version": "0.1.0",
   "description": "Signal platform adapter for @getloopscale/loopzero-gateway, driving signal-cli's JSON-RPC mode over stdio.",
   "license": "Apache-2.0",
   "repository": {
@@ -41,7 +41,7 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.27.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.1.0 <1.0.0"
   },
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",

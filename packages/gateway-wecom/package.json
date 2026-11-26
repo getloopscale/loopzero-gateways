@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-wecom",
-  "version": "0.3.1",
+  "version": "0.1.0",
   "description": "WeCom (企业微信) self-built application adapter for @getloopscale/loopzero-gateway (encrypted XML callback in, application message API out).",
   "license": "Apache-2.0",
   "repository": {
@@ -41,7 +41,7 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.26.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.1.0 <1.0.0"
   },
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",

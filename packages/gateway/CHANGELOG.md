@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.33.0
+
+### Minor Changes
+
+- d4c45f8: Widen the `@getloopscale/loopzero-sdk` peer range to `>=4.62.0 <16` so `@getloopscale/loopzero-host` installs with sdk 13 and 15. The gateway's tests and typecheck now run against `@getloopscale/loopzero-sdk@15.0.0` and pass without source changes.
+
 ## 0.32.0
 
 ### Minor Changes
@@ -753,7 +759,7 @@
   when the prose is rewritten around the same facts.
 
   Both adapters' published docblocks stated that a LoopZero app's `onMessage` runs AFTER the 200 is
-  answered, so a throw there had no status left to change. Measured against `loopzero@0.48.14`,
+  answered, so a throw there had no status left to change. Measured against `@getloopscale/loopzero@0.48.14`,
   `handleChannelWebhook` awaits `onMessage` BEFORE building the response and catches nothing around
   it: a throw means the 200 is never built, and mounted in a LoopZero route the rejection reaches that
   route's error boundary and is answered 500 where the platform expected an acknowledgement. `parseInbound` returning `null`

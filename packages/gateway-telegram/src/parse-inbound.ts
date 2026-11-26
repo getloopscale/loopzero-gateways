@@ -140,7 +140,7 @@ function narrowSender(value: unknown): UserLike | undefined {
  *
  * Returns `null` — never throws. The caller is `onMessage`, which LoopZero awaits BEFORE it builds
  * the 200, with nothing catching around it — so a throw here escapes `handleChannelWebhook` entirely
- * and the 200 is never built. Measured against `loopzero@0.48.14`; the original
+ * and the 200 is never built. Measured against `@getloopscale/loopzero@0.48.14`; the original
  * rationale here ("runs after the 200") was measured false on 2026-08-24.
  *
  * **`null` answers two different questions, and a caller cannot tell them apart.** That is a real

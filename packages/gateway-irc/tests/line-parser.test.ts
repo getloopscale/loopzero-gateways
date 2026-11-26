@@ -67,7 +67,7 @@ describe("privmsgToMessageEvent", () => {
   });
 
   it("its own nick is dropped, compared case-insensitively", () => {
-    const raw = ":LoopZeroBot!a@host PRIVMSG #loopzero :echo";
+    const raw = ":LoopBot!a@host PRIVMSG #loopzero :echo";
 
     expect(privmsgToMessageEvent(parseIrcLine(raw)!, raw, OWN, 1000, 1)).toBeUndefined();
   });

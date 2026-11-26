@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-nostr",
-  "version": "0.2.1",
+  "version": "0.1.0",
   "description": "Nostr platform adapter for @getloopscale/loopzero-gateway: NIP-17 and NIP-04 direct messages over a pool of relay WebSockets.",
   "license": "Apache-2.0",
   "repository": {
@@ -45,7 +45,7 @@
     "nostr-tools": "^2.25.2"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.26.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.1.0 <1.0.0"
   },
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",
