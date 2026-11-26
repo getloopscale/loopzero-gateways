@@ -75,7 +75,7 @@ export function parseInbound(
     // whatever its type: `decodeURIComponent` raises `URIError` on a malformed percent-escape
     // (`From=%zz`) and `normalizeE164` raises `ConfigurationError` on a number the body carried.
     // Both are bad requests, and returning `null` is what keeps them from failing the request:
-    // measured against `loopzero@0.48.14`, `handleChannelWebhook` awaits `onMessage` BEFORE
+    // measured against `@getloopscale/loopzero@0.48.14`, `handleChannelWebhook` awaits `onMessage` BEFORE
     // building the 200 and catches nothing around it, so a throw here escapes it entirely and
     // the 200 is never built (ADR D428, whose original rationale — "runs after the 200" — was
     // measured false on 2026-08-24).

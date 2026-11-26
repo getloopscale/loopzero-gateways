@@ -42,7 +42,7 @@
     "@types/node": "^22.20.1",
     "@vitest/coverage-v8": "4.1.12",
     "knip": "^5.88.1",
-    "loopzero": "^0.60.0",
+    "@getloopscale/loopzero": "^0.1.0",
     "typescript": "5.9.3"
   },
   "pnpm": {

@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-feishu-lark",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Feishu/Lark platform adapter for @getloopscale/loopzero-gateway, over the open platform SDK's long connection.",
   "license": "Apache-2.0",
   "repository": {
@@ -42,7 +42,7 @@
   },
   "peerDependencies": {
     "@larksuiteoapi/node-sdk": "^1.76.0",
-    "@getloopscale/loopzero-gateway": ">=0.21.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.1.0 <1.0.0"
   },
   "peerDependenciesMeta": {
     "@larksuiteoapi/node-sdk": {

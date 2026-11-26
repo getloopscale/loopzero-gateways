@@ -78,7 +78,7 @@ Thread replies (`root_id` set on the Mattermost post) become `channel.type: "thr
 The default `requireMention: true` is enforced via:
 
 1. **`metadata.mentions` array first** — Mattermost's API returns a list of user-ids mentioned in the post. The adapter checks if the bot's user-id is in this list. No ambiguity.
-2. **Text regex fallback** — when metadata is absent, the adapter matches `\b@${botUsername}\b` with word boundary. This prevents `@hypothesis_dept` from matching a bot called `loopzero`.
+2. **Text regex fallback** — when metadata is absent, the adapter matches `\b@${botUsername}\b` with word boundary. This prevents `@loopzero_dept` from matching a bot called `loopzero`.
 
 Override with `requireMention: false` to make the bot respond to every message in every channel it's a member of (loud — use cautiously).
 

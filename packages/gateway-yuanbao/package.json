@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-yuanbao",
-  "version": "0.5.0",
+  "version": "0.1.0",
   "description": "Tencent Yuanbao (元宝) bot adapter for @getloopscale/loopzero-gateway (signed JSON webhook in, bot message API out).",
   "license": "Apache-2.0",
   "repository": {
@@ -41,7 +41,7 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.26.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.1.0 <1.0.0"
   },
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",

@@ -1,5 +1,5 @@
 /**
- * The LINE half of a framework channel webhook, in the shape `loopzero/server/webhook` validators
+ * The LINE half of a framework channel webhook, in the shape `@getloopscale/loopzero/server/webhook` validators
  * take: `(request) => Promise<{ ok: true } | { ok: false; reason }>`. The shape is structural, so
  * this package imports nothing from the framework.
  *

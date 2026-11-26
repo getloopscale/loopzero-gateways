@@ -21,8 +21,8 @@ function atLeast(version, minimum) {
 
 describe("@getloopscale/loopzero-sdk peer ceiling", () => {
   it.each([
-    ["gateway", ">=4.62.0 <16"],
-    ["gateway-agent", ">=5.3.0 <10"],
+    ["gateway", ">=0.1.0 <1.0.0"],
+    ["gateway-agent", ">=0.1.0 <1.0.0"],
   ])("%s admits the sdk majors its range names", (pkg, range) => {
     expect(read(pkg).peerDependencies["@getloopscale/loopzero-sdk"]).toBe(range);
   });
@@ -33,7 +33,7 @@ describe("@getloopscale/loopzero-sdk peer floor", () => {
     "%s does not admit sdk releases with broken declarations",
     (pkg) => {
       const range = read(pkg).peerDependencies["@getloopscale/loopzero-sdk"];
-      expect(atLeast(lowerBound(range), [4, 62, 0])).toBe(true);
+      expect(atLeast(lowerBound(range), [0, 1, 0])).toBe(true);
     },
   );
 

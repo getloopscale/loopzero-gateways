@@ -23,11 +23,11 @@ describe("check-peer-floor", () => {
   it("finds every adapter with a readable floor, and the twelve raised floors", () => {
     const byName = Object.fromEntries(publishableAdapters().map((a) => [a.name, a.floor]));
     for (const a of Object.values(byName)) expect(a).toMatch(/^\d+\.\d+\.\d+$/);
-    expect(byName["@getloopscale/loopzero-gateway-zalo"]).toBe("0.26.0");
-    expect(byName["@getloopscale/loopzero-gateway-qq"]).toBe("0.26.0");
-    expect(byName["@getloopscale/loopzero-gateway-buzz"]).toBe("0.26.0");
-    expect(byName["@getloopscale/loopzero-gateway-clickclack"]).toBe("0.26.0");
-    expect(byName["@getloopscale/loopzero-gateway-feishu-lark"]).toBe("0.21.0");
+    expect(byName["@getloopscale/loopzero-gateway-zalo"]).toBe("0.1.0");
+    expect(byName["@getloopscale/loopzero-gateway-qq"]).toBe("0.1.0");
+    expect(byName["@getloopscale/loopzero-gateway-buzz"]).toBe("0.1.0");
+    expect(byName["@getloopscale/loopzero-gateway-clickclack"]).toBe("0.1.0");
+    expect(byName["@getloopscale/loopzero-gateway-feishu-lark"]).toBe("0.1.0");
   });
 });
 
@@ -61,8 +61,8 @@ describe("check-peer-floor main", () => {
       },
     });
     expect(code).toBe(0);
-    expect(seen["@getloopscale/loopzero-gateway-zalo"]).toBe("0.26.0");
-    expect(seen["@getloopscale/loopzero-gateway-qq"]).toBe("0.26.0");
+    expect(seen["@getloopscale/loopzero-gateway-zalo"]).toBe("0.1.0");
+    expect(seen["@getloopscale/loopzero-gateway-qq"]).toBe("0.1.0");
   });
 
   it("rejects --adapter without --core", async () => {
@@ -77,7 +77,7 @@ describe("gateway-x peer floor", () => {
         readFileSync(new URL(`../../packages/${p}/package.json`, import.meta.url), "utf8"),
       );
     const floor = floorOf(read("gateway-x").peerDependencies["@getloopscale/loopzero-gateway"]);
-    expect(floor).toBe("0.26.0");
+    expect(floor).toBe("0.1.0");
     const num = (v) => v.split(".").map(Number);
     const [a, b] = [num(read("gateway").version), num(floor)];
     const cmp = a[0] - b[0] || a[1] - b[1] || a[2] - b[2];

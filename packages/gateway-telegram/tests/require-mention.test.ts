@@ -3,7 +3,7 @@ import { TelegramAdapter } from "../src/adapter.js";
 import { telegramChannel } from "../src/channel.js";
 import { ConfigurationError } from "../src/errors.js";
 
-const ME = { id: 42, is_bot: true, first_name: "B", username: "LoopZeroBot" };
+const ME = { id: 42, is_bot: true, first_name: "B", username: "LoopBot" };
 
 function make(requireMention?: boolean, identity = true) {
   const adapter = new TelegramAdapter({

@@ -7,7 +7,7 @@ import { frameUntrusted } from "./frame-untrusted.js";
 import { runAgentText } from "./run-agent-text.js";
 
 /**
- * Same shape as loopzero/server/webhook `VerifyFn`, declared here structurally.
+ * Same shape as @getloopscale/loopzero/server/webhook `VerifyFn`, declared here structurally.
  *
  * @public
  */

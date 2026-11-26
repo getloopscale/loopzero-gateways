@@ -3,7 +3,7 @@
 //
 // Three repositories share one seam and no document connected them. LoopZero owns the channel route
 // and the signature check; these packages translate the payload it hands over; the SDK's role is
-// one redaction helper, which B-012 is open about. Measured against `loopzero@0.48.14`: the seam is
+// one redaction helper, which B-012 is open about. Measured against `@getloopscale/loopzero@0.48.14`: the seam is
 // documented ONLY in `dist/server/agent/index.d.ts` — which is where someone already inside the
 // type looks, and B-010 measured that to be exactly where developers do not go first.
 //

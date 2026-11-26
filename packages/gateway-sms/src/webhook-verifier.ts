@@ -1,7 +1,7 @@
 /**
  * The SMS half of a channel webhook, in the shape a framework webhook seam expects.
  *
- * `loopzero/server/webhook` ships validators for the platforms whose signature is a plain HMAC it
+ * `@getloopscale/loopzero/server/webhook` ships validators for the platforms whose signature is a plain HMAC it
  * can compute itself. SMS is not one of them: Twilio signs the URL plus the sorted POST parameters,
  * Plivo signs a different string again, and Vonage uses a JWT. Those three schemes already exist in
  * this package, correctly, with their own tests — reimplementing them one repository over would put

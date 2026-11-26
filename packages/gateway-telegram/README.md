@@ -10,7 +10,7 @@ Telegram platform adapter for `@getloopscale/loopzero-gateway`. Wraps [grammy](h
 **Long polling by default.** grammY pulls updates and they reach `onInbound` once `connect()`
 resolves.
 
-**Webhook.** Telegram also supports a webhook, and `loopzero/server/webhook` exports `telegram()` for
+**Webhook.** Telegram also supports a webhook, and `@getloopscale/loopzero/server/webhook` exports `telegram()` for
 the secret token it sends in `X-Telegram-Bot-Api-Secret-Token`. Set `inbound: "webhook"` so
 `connect()` checks the token but does not start long polling (a bot with a webhook set cannot call
 `getUpdates`), and `disconnect()` does not stop a poller. Parsed updates go to `adapter.deliver(event)`.

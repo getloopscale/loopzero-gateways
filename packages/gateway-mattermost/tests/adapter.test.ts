@@ -230,7 +230,7 @@ describe("MattermostAdapter inbound dispatch", () => {
     }
   });
 
-  it("EC-2: ignores @hypothesis_dept in a channel for a 'loopzero' bot", async () => {
+  it("EC-2: ignores @loopzero_dept in a channel for a 'loopzero' bot", async () => {
     const adapter = new MattermostAdapter({ baseUrl: "https://x.com", accessToken: "tok" });
     const handle = makeMockHandle({
       channels: { "c-open": { id: "c-open", team_id: "t-1", type: "O" } },
@@ -244,7 +244,7 @@ describe("MattermostAdapter inbound dispatch", () => {
     listener?.(
       makeWSPostedMessage({
         channel_id: "c-open",
-        message: "@hypothesis_dept please review",
+        message: "@loopzero_dept please review",
       }),
     );
     await new Promise((r) => setTimeout(r, 5));
