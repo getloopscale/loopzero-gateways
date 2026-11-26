@@ -15,7 +15,7 @@
 //
 // EVERY SPECIFIER, NOT JUST OURS. The first version matched `@getloopscale/loopzero-*` alone, which made an import
 // from any other package invisible to it — including the framework this ecosystem is built on. The
-// sibling repository `loopzero-plugins` found ten documented names missing from `loopzero` itself
+// sibling repository `loopzero-plugins` found ten documented names missing from `@getloopscale/loopzero` itself
 // while a gate scoped like the first version would have reported all-clear. A gate that cannot see
 // a whole class of import reports an absence it never checked.
 //

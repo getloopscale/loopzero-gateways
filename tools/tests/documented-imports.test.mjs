@@ -83,13 +83,13 @@ describe("importsIn", () => {
     // The first version matched `@getloopscale/loopzero-*` alone. `loopzero-plugins` found ten documented names
     // missing from the framework itself while a gate scoped that way reported all-clear.
     const markdown = [
-      'import { route } from "loopzero/server";',
+      'import { route } from "@getloopscale/loopzero/server";',
       'import { z } from "zod";',
       'import { Adapter } from "@getloopscale/loopzero-gateway";',
     ].join("\n");
 
     expect(importsIn("readme.md", markdown).map((claim) => claim.specifier)).toEqual([
-      "loopzero/server",
+      "@getloopscale/loopzero/server",
       "zod",
       "@getloopscale/loopzero-gateway",
     ]);

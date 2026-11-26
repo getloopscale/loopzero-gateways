@@ -104,7 +104,7 @@ if (event !== null) {
 
 `parseInbound` returns `null` rather than throwing for a body it does not recognise (in
 `gateway-sms` an unsupported provider in the options still throws — that is configuration, not a
-body). Measured against `loopzero@0.48.14`: your `onMessage`
+body). Measured against `@getloopscale/loopzero@0.48.14`: your `onMessage`
 is awaited **before** the 200 is built, and nothing inside `handleChannelWebhook` catches — so a
 throw on an unparseable payload means the 200 is never built. Mounted in a LoopZero route, the
 rejection reaches that route's error boundary and is answered **500**: the platform sees a failed
@@ -112,18 +112,18 @@ delivery where it expected an acknowledgement. Mounted anywhere else, whatever a
 framework's. Returning `null` lets an app ignore a
 message it cannot read and still answer normally.
 
-### WhatsApp, since `loopzero@0.60.0`
+### WhatsApp, since `@getloopscale/loopzero@0.60.0`
 
-Until that release this was impossible rather than undocumented: `loopzero/server/webhook`
+Until that release this was impossible rather than undocumented: `@getloopscale/loopzero/server/webhook`
 exported no `whatsapp` validator, so the `validators` map could not carry one and the path
 answered 404 by construction. Meta's subscribe handshake had no seam at all
 ([getloopscale/loopzero#556](https://github.com/getloopscale/loopzero/issues/556), filed from
 here). Both halves exist now, and the wiring needs three things that are easy to miss:
 
 ```ts
-import { handleChannelWebhook } from "loopzero/server/agent";
-import { route } from "loopzero/server/define";
-import { whatsapp, whatsappSubscribe } from "loopzero/server/webhook";
+import { handleChannelWebhook } from "@getloopscale/loopzero/server/agent";
+import { route } from "@getloopscale/loopzero/server/define";
+import { whatsapp, whatsappSubscribe } from "@getloopscale/loopzero/server/webhook";
 import { normalizeInboundMessages, parseWebhookPayload } from "@getloopscale/loopzero-gateway-whatsapp";
 
 const handle = ({ request }: { request: Request }) =>
@@ -163,9 +163,9 @@ and they are what `gateway-sms` uses through its own `createWebhookServer`.
 
 Not verified here: the `loopzero` behaviour above was measured by the session that shipped
 0.60.0, driving a scaffolded app over HTTP. What this repository checked is narrower and
-stated as such — that `loopzero@0.60.0` does export `whatsapp` and `whatsappSubscribe` from
-`loopzero/server/webhook`, that `route` lives on `loopzero/server/define` rather than on the
-`loopzero/server` umbrella that warns it is deprecated, and that `parseWebhookPayload` takes the
+stated as such — that `@getloopscale/loopzero@0.60.0` does export `whatsapp` and `whatsappSubscribe` from
+`@getloopscale/loopzero/server/webhook`, that `route` lives on `@getloopscale/loopzero/server/define` rather than on the
+`@getloopscale/loopzero/server` umbrella that warns it is deprecated, and that `parseWebhookPayload` takes the
 `unknown` payload `onMessage` hands over. A real delivery from Meta needs an approved app and a public URL, and
 has not happened on either side.
 

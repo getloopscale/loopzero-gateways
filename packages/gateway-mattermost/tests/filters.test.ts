@@ -21,8 +21,8 @@ describe("hasMentionWithBoundary (EC-2)", () => {
   });
 
   it("ignores substring match for longer username", () => {
-    // EC-2: @hypothesis_dept should NOT match a bot called @loopzero.
-    expect(hasMentionWithBoundary("hi @hypothesis_dept sync today", "loopzero")).toBe(false);
+    // EC-2: @loopzero_dept should NOT match a bot called @loopzero.
+    expect(hasMentionWithBoundary("hi @loopzero_dept sync today", "loopzero")).toBe(false);
   });
 
   it("matches at start of message", () => {
@@ -120,8 +120,8 @@ describe("shouldRespond pipeline (D403)", () => {
     ).toBe(true);
   });
 
-  it("EC-2: word-boundary text fallback — @hypothesis_dept ignored, @loopzero matched", () => {
-    const ambig = makePost({ message: "@hypothesis_dept please review" });
+  it("EC-2: word-boundary text fallback — @loopzero_dept ignored, @loopzero matched", () => {
+    const ambig = makePost({ message: "@loopzero_dept please review" });
     expect(
       shouldRespond({
         post: ambig,

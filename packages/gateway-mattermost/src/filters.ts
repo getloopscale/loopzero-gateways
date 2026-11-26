@@ -11,7 +11,7 @@
  * 6. Else: ignore.
  *
  * EC-2: substring match (`post.message.includes("@loopzero")`) catches
- * `@hypothesis_dept` and dispatches false-positive. The fix is two-fold:
+ * `@loopzero_dept` and dispatches false-positive. The fix is two-fold:
  * prefer the unambiguous `metadata.mentions` array (API-provided
  * user-ids), and when text fallback is required, use `\b` boundaries.
  */
@@ -69,7 +69,7 @@ export function isBotMentioned(
 /**
  * Word-boundary match for `@${botUsername}`. Word boundaries land at
  * `\b` (start/end of `\w` regions), so `@loopzero` at the head of `@loopzeros`
- * does NOT match because `\b` is between `o` and `r` only when the
+ * does NOT match because `\b` falls after the final `o` only when the
  * NEXT char is a non-word char.
  *
  * @public — exported for unit tests + consumer-side reuse.

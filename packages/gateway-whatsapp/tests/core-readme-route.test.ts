@@ -25,7 +25,7 @@ async function loadOnMessage(allowed: string | undefined): Promise<OnMessage> {
   if (block === undefined) throw new Error("core README has no WhatsApp ts block");
   const source = block
     .split("\n")
-    .filter((l) => !/^import .* from "loopzero\//.test(l))
+    .filter((l) => !/^import .* from "@getloopscale\/loopzero\//.test(l))
     .join("\n");
   const cut = source.slice(0, source.indexOf("const handle"));
   const target = JSON.stringify(join(PACKAGE_DIR, "src", "index.ts"));

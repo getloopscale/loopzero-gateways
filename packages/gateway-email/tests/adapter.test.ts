@@ -725,14 +725,14 @@ describe("EmailAdapter", () => {
     });
 
     it("formats From: as name+address when fromName provided", async () => {
-      const { adapter, smtp } = mk({ fromName: "LoopZeroBot" });
+      const { adapter, smtp } = mk({ fromName: "LoopBot" });
       await adapter.connect();
       await adapter.sendMessage({
         channel: { id: "alice@x.com", type: "dm" },
         text: "hi",
       });
       const from = smtp.sent[0]?.from;
-      expect(from).toEqual({ name: "LoopZeroBot", address: "bot@example.com" });
+      expect(from).toEqual({ name: "LoopBot", address: "bot@example.com" });
       await adapter.disconnect();
     });
   });

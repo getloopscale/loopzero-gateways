@@ -1,6 +1,6 @@
 {
   "name": "@getloopscale/loopzero-gateway-zalo-personal",
-  "version": "0.3.1",
+  "version": "0.1.0",
   "description": "Zalo Personal platform adapter for @getloopscale/loopzero-gateway, over the unofficial zca-js web session (a personal account, not an Official Account).",
   "license": "Apache-2.0",
   "repository": {
@@ -41,7 +41,7 @@
     "test": "vitest run"
   },
   "peerDependencies": {
-    "@getloopscale/loopzero-gateway": ">=0.22.0 <1.0.0"
+    "@getloopscale/loopzero-gateway": ">=0.1.0 <1.0.0"
   },
   "devDependencies": {
     "@getloopscale/loopzero-gateway": "workspace:*",
