@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/loopzero-logo-on-dark.svg">
+    <img src="./assets/loopzero-logo-on-light.svg" alt="LoopZero" height="40">
+  </picture>
+</p>
+
 # loopzero-gateways
 
 Multi-channel gateway packages for the LoopScale ecosystem, extracted from `loopzero-sdk` (2026-06-18, plan `monorepo-cohesion-split`) so the SDK stays a cohesive Agent-AI **Harness** while these platform adapters evolve on their own cadence.
